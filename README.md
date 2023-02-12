@@ -1,5 +1,5 @@
 # mustafos.github.io
-Personal web page
+
 Welcome to my personal website! This is a platform where I can showcase my skills, interests, and achievements to the world. Here, you can learn about who I am, what I do, and what I have accomplished so far. 
 
 My website provides a comprehensive overview of my professional background, including my education, work experience, and expertise. It also highlights my personal interests and hobbies, as well as any volunteer work or community service I have been involved in.
