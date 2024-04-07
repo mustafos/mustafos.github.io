@@ -1,84 +1,113 @@
-// MENU SHOW Y HIDDEN
-const navMenu = document.getElementById('nav-menu'),
-    navToggle = document.getElementById('nav-toggle'),
-    navClose = document.getElementById('nav-close')
-
-// MENU SHOW
-/* Validate if constant exists */
-if(navToggle){
-    navToggle.addEventListener('click', () =>{
-        navMenu.classList.add('show-menu')
-    })
-}
-
-// MENU HIDDEN
-/* Validate if constant exists */
-if(navClose){
-    navClose.addEventListener('click', () =>{
-        navMenu.classList.remove('show-menu')
-    })
-}
-
-// REMOVE MENU MOBILE
-const navLink = document.querySelectorAll('.nav__link')
-
-function linkAction(){
-    const navMenu = document.getElementById('nav-menu')
-    // When we click on each nav__link we remove the show-menu class
-    navMenu.classList.remove('show-menu')
-}
-navLink.forEach(n => n.addEventListener('click', linkAction))
-
-// ACCORDION SKILLS
-const skillsContent = document.getElementsByClassName('skills__content'), 
-      skillsHeader = document.querySelectorAll('.skills__header')
-
-function toggleSkills(){
-    let itemClass = this.parentNode.className
-
-    for(i = 0; i < skillsContent.length; i++){
-        skillsContent[i].className = 'skills__content skills__close'
-    }
-    if(itemClass === 'skills__content skills__close'){
-        this.parentNode.className = 'skills__content skills__open'
+/* ----- NAVIGATION BAR FUNCTION ----- */
+function myMenuFunction(){
+    var menuBtn = document.getElementById("myNavMenu");
+    
+    if(menuBtn.className === "nav-menu"){
+        menuBtn.className += " responsive";
+    } else {
+        menuBtn.className = "nav-menu";
     }
 }
 
-skillsHeader.forEach((el) =>{
-    el.addEventListener('click', toggleSkills)
+/* ----- ADD SHADOW ON NAVIGATION BAR WHILE SCROLLING ----- */
+window.onscroll = function() {headerShadow()};
+
+function headerShadow() {
+    const navHeader =document.getElementById("header");
+    
+    if (document.body.scrollTop > 50 || document.documentElement.scrollTop >  50) {
+        
+        navHeader.style.boxShadow = "0 1px 6px rgba(0, 0, 0, 0.1)";
+        navHeader.style.height = "70px";
+        navHeader.style.lineHeight = "70px";
+        
+    } else {
+        
+        navHeader.style.boxShadow = "none";
+        navHeader.style.height = "90px";
+        navHeader.style.lineHeight = "90px";
+        
+    }
+}
+
+/* ----- TYPING EFFECT ----- */
+var typingEffect = new Typed(".typedText",{
+    strings : ["iOS","Swift","Mobile", "Apple"],
+    loop : true,
+    typeSpeed : 100,
+    backSpeed : 80,
+    backDelay : 2000
 })
 
-// QUALIFICATION TABS
-const tabs = document.querySelectorAll('[data-target'), 
-tabContents = document.querySelectorAll('[data-content')
+/* ----- ## -- SCROLL REVEAL ANIMATION -- ## ----- */
+const sr = ScrollReveal({
+origin: 'top',
+distance: '80px',
+duration: 2000,
+reset: true
+})
 
-tabs.forEach(tab =>{
-    tab.addEventListener('click', () =>{
-        const target = document.querySelector(tab.dataset.target)
+/* -- HOME -- */
+sr.reveal('.featured-text-card',{})
+sr.reveal('.featured-name',{delay: 100})
+sr.reveal('.featured-text-info',{delay: 200})
+sr.reveal('.featured-text-btn',{delay: 200})
+sr.reveal('.social_icons',{delay: 200})
+sr.reveal('.featured-image',{delay: 300})
 
-        tabContents.forEach(tabContents =>{
-            tabContents.classList.remove('qualification__active')
-        })
-        target.classList.add("qualification__active")
 
-        tab.forEach(tab =>{
-            tab.classList.remove('qualification__active')
-        })
-        tab.classList.add('qualification__active')
+/* -- PROJECT BOX -- */
+sr.reveal('.project-box',{interval: 200})
+
+/* -- HEADINGS -- */
+sr.reveal('.top-header',{})
+
+/* ----- ## -- SCROLL REVEAL LEFT_RIGHT ANIMATION -- ## ----- */
+
+/* -- ABOUT INFO & CONTACT INFO -- */
+const srLeft = ScrollReveal({
+origin: 'left',
+distance: '80px',
+duration: 2000,
+reset: true
+})
+
+srLeft.reveal('.about-info',{delay: 100})
+srLeft.reveal('.contact-info',{delay: 100})
+
+/* -- ABOUT SKILLS & FORM BOX -- */
+const srRight = ScrollReveal({
+origin: 'right',
+distance: '80px',
+duration: 2000,
+reset: true
+})
+
+srRight.reveal('.skills-box',{delay: 100})
+srRight.reveal('.form-control',{delay: 100})
+
+
+/* ----- CHANGE ACTIVE LINK ----- */
+const sections = document.querySelectorAll('section[id]')
+
+function scrollActive() {
+    const scrollY = window.scrollY;
+    
+    sections.forEach(current =>{
+        const sectionHeight = current.offsetHeight,
+        sectionTop = current.offsetTop - 50,
+        sectionId = current.getAttribute('id')
+        
+        if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+            
+            document.querySelector('.nav-menu a[href*=' + sectionId + ']').classList.add('active-link')
+            
+        }  else {
+            
+            document.querySelector('.nav-menu a[href*=' + sectionId + ']').classList.remove('active-link')
+            
+        }
     })
-})
+}
 
-/*==================== PORTFOLIO SWIPER  ====================*/
-let swiper = new Swiper('.portfolio__container', {
-    cssMode: true,
-    loop: true,
-
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-    },
-  });
+window.addEventListener('scroll', scrollActive)
