@@ -437,6 +437,10 @@ h3{
 .contact-info p>i{
     font-size: 18px;
 }
+.contact-link {
+    color: var(--color-black);
+    text-decoration: none; /* Remove underline */
+}
 .contact-info::after{
     background: var(--color-white);
 }
