@@ -12,16 +12,14 @@
                         
                         <!-- --------- FAVICON ---------- -->
                         <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
-                            
-                            <title>Bekirov's | Portfolio</title>
+                            <title>Mustafa Bekirov</title>
                         </head>
     <body>
         <div class="container">
             <!-- --------------- HEADER --------------- -->
             <nav id="header">
                 <div class="nav-logo">
-                    <p class="nav-name">Doe</p>
-                    <span>.</span>
+                    <p class="nav-name">M</p>
                 </div>
                 <div class="nav-menu" id="myNavMenu">
                     <ul class="nav_menu_list">
@@ -181,20 +179,17 @@
                         <span>Practice Makes Perfect</span>
                     </div>
                     <div class="project-container">
-                        <div class="project-box">
-                            <i class="uil uil-briefcase-alt"></i>
-                            <h3>Completed</h3>
-                            <label>15+ Finished Projects</label>
+                        <!--DriverPro-->
+                        <div class="project-box" onmouseover="showText(this)" onmouseleave="hideText(this)" onclick="openURL('https://apps.apple.com/cz/app/driverpro-plan-study-test/id6474212227')">
+                            <img src="assets/images/project1.png" alt="DriverPro" class="project-image">
                         </div>
-                        <div class="project-box">
-                            <i class="uil uil-users-alt"></i>
-                            <h3>Clients</h3>
-                            <label>25+ Happy Clients</label>
+                        <!--MarsSnap-->
+                        <div class="project-box" onmouseover="showText(this)" onmouseleave="hideText(this)" onclick="openURL('https://github.com/mustafos/MarsSnap')">
+                            <img src="assets/images/project2.png" alt="MarsSnap" class="project-image">
                         </div>
-                        <div class="project-box">
-                            <i class="uil uil-award"></i>
-                            <h3>Experience</h3>
-                            <label>7+ Years in the field</label>
+                        <!--Chance-->
+                        <div class="project-box" onmouseover="showText(this)" onmouseleave="hideText(this)" onclick="openURL('https://www.chance.cz/mobil')">
+                            <img src="assets/images/project3.png" alt="Chance" class="project-image">
                         </div>
                     </div>
                 </section>
@@ -231,8 +226,10 @@
             <!-- --------------- FOOTER --------------- -->
             <footer>
                 <div class="top-footer">
-                    <h1>Mustafa</h1>
-                    <span class="footer__subtitle">Apple Developer</span>
+                    <div class="nav-logo">
+                        <img src="assets/images/footer.png" alt="Apple Developer">
+                        <p class="nav-name">Developer</p>
+                    </div>
                 </div>
                 <div class="middle-footer">
                     <ul class="footer-menu">

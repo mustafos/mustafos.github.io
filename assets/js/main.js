@@ -59,6 +59,18 @@ sr.reveal('.featured-image',{delay: 300})
 /* -- PROJECT BOX -- */
 sr.reveal('.project-box',{interval: 200})
 
+function toggleProjectInfo(projectBox) {
+    const projectImage = projectBox.querySelector('.project-image');
+    const projectText = projectBox.querySelector('h3, label');
+
+    projectImage.classList.toggle('hidden');
+    projectText.classList.toggle('hidden');
+}
+
+function openURL(url) {
+    window.open(url, '_blank');
+}
+
 /* -- HEADINGS -- */
 sr.reveal('.top-header',{})
 
