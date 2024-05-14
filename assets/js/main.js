@@ -98,6 +98,10 @@ reset: true
 srRight.reveal('.skills-box',{delay: 100})
 srRight.reveal('.form-control',{delay: 100})
 
+/* -- GO BACK BUTTON -- */
+function goBack() {
+    window.history.back();
+}
 
 /* ----- CHANGE ACTIVE LINK ----- */
 const sections = document.querySelectorAll('section[id]')
