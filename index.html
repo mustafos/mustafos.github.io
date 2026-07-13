@@ -6,8 +6,8 @@
     <meta name="description" content="Mustafa Bekirov is an iOS Developer helping startups and product teams build, improve and release native iOS applications with Swift, SwiftUI and UIKit.">
     <meta name="author" content="Mustafa Bekirov">
     <meta name="robots" content="index, follow">
-    <meta name="theme-color" content="#f6f7f9" media="(prefers-color-scheme: light)">
-    <meta name="theme-color" content="#050608" media="(prefers-color-scheme: dark)">
+    <meta name="theme-color" content="#f5f5f7" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#08090b" media="(prefers-color-scheme: dark)">
     <meta name="color-scheme" content="light dark">
     <link rel="canonical" href="https://www.mustafabekirov.com/">
 
@@ -25,10 +25,6 @@
     <title>Mustafa Bekirov — iOS Developer &amp; Mobile Product Engineer</title>
 
     <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
-    <link rel="icon" href="assets/images/favicon.png" type="image/png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
 
     <script type="application/ld+json">
@@ -53,8 +49,8 @@
     <header class="header" id="header">
         <div class="wrap header__inner">
             <a href="#hero" class="brand" aria-label="Home">
-                <svg class="brand__mark" width="26" height="26" viewBox="0 0 28 28" fill="none" aria-hidden="true">
-                    <path d="M5 23V5h4.2l4.8 11.2L18.8 5H23v18h-3.8V10.8L14.4 23h-0.8L8.8 10.8V23H5z" fill="currentColor"/>
+                <svg class="brand__mark" width="24" height="24" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+                    <path d="M6 24V4h3.8l5.2 12.4L20.2 4H24v20h-4.2V11.6L14.4 24h-0.8L8.2 11.6V24H6z" fill="currentColor"/>
                 </svg>
             </a>
 
@@ -95,14 +91,13 @@
 
         <!-- Hero -->
         <section class="hero" id="hero" data-nav-section>
-            <div class="hero__ambient" aria-hidden="true"></div>
             <div class="wrap hero__grid">
                 <div class="hero__copy reveal">
-                    <div class="badge">
-                        <span class="badge__dot" aria-hidden="true"></span>
+                    <p class="hero__status">
+                        <span class="hero__status-dot" aria-hidden="true"></span>
                         Available for selected remote opportunities
-                    </div>
-                    <p class="eyebrow eyebrow--accent">Mustafa Bekirov</p>
+                    </p>
+                    <p class="eyebrow">Mustafa Bekirov</p>
                     <h1 class="display">I build reliable iOS products that are ready to grow.</h1>
                     <p class="lead">I help startups and product teams build, improve and release production-ready iOS applications using Swift, SwiftUI and UIKit.</p>
                     <div class="hero__cta">
@@ -119,29 +114,15 @@
                     </ul>
                 </div>
 
-                <div class="hero__visual reveal" role="img" aria-label="Illustration of an iPhone interface surrounded by iOS engineering capabilities">
-                    <div class="hero__visual-glow" aria-hidden="true"></div>
-                    <div class="hero-chips" id="hero-floats" aria-hidden="true"></div>
-                    <div class="iphone">
-                        <div class="iphone__shell">
-                            <div class="iphone__island" aria-hidden="true"></div>
-                            <div class="iphone__screen">
-                                <div class="iphone__status" aria-hidden="true"><span>9:41</span></div>
-                                <div class="iphone__ui">
-                                    <div class="iphone__skeleton iphone__skeleton--title"></div>
-                                    <div class="iphone__card">
-                                        <div class="iphone__skeleton"></div>
-                                        <div class="iphone__skeleton iphone__skeleton--short"></div>
-                                    </div>
-                                    <div class="iphone__card iphone__card--highlight">
-                                        <div class="iphone__skeleton iphone__skeleton--metric"></div>
-                                        <div class="iphone__skeleton iphone__skeleton--short"></div>
-                                    </div>
-                                    <div class="iphone__row">
-                                        <div class="iphone__pill"></div>
-                                        <div class="iphone__pill"></div>
-                                        <div class="iphone__pill"></div>
-                                    </div>
+                <div class="hero__visual reveal" aria-label="Interactive iPhone preview of iOS engineering capabilities">
+                    <div class="hero__stage">
+                        <div class="hero-chips" id="hero-floats"></div>
+                        <div class="iphone">
+                            <div class="iphone__shell">
+                                <div class="iphone__island" aria-hidden="true"></div>
+                                <div class="iphone__screen">
+                                    <div class="iphone__slides" id="iphone-slides" aria-live="polite"></div>
+                                    <div class="iphone__dots" id="iphone-dots" aria-hidden="true"></div>
                                 </div>
                             </div>
                         </div>
@@ -159,8 +140,15 @@
                 </header>
                 <div class="split reveal">
                     <div class="prose">
-                        <p>I am an iOS developer focused on building and evolving real mobile products. I work across implementation, architecture, API integration, release processes and collaboration with cross-functional teams.</p>
-                        <p>I care about maintainable code, predictable delivery and user experience. My goal is not only to complete a ticket, but to understand the product context and deliver a solution that works reliably in production.</p>
+                        <div class="about-intro">
+                            <figure class="about-avatar">
+                                <img src="assets/images/avatar.png" alt="Portrait of Mustafa Bekirov" width="80" height="80" loading="lazy" decoding="async">
+                            </figure>
+                            <div class="about-intro__body">
+                                <p>I build and evolve native iOS products for startups and product teams — across implementation, architecture, API integration, release workflows and cross-functional collaboration.</p>
+                                <p>I focus on maintainable Swift code, clear communication and dependable delivery. I align engineering work with product goals and ship features that remain reliable in production.</p>
+                            </div>
+                        </div>
                         <a href="assets/pdf/BekirovCV.pdf" class="btn btn--ghost" download>Download CV</a>
                     </div>
                     <div class="stack">
@@ -182,7 +170,7 @@
         </section>
 
         <!-- Expertise -->
-        <section class="section section--muted" id="expertise" data-nav-section>
+        <section class="section" id="expertise" data-nav-section>
             <div class="wrap">
                 <header class="section__header reveal">
                     <p class="eyebrow">Expertise</p>
@@ -210,7 +198,7 @@
         </section>
 
         <!-- Projects -->
-        <section class="section section--muted" id="projects" data-nav-section>
+        <section class="section" id="projects" data-nav-section>
             <div class="wrap">
                 <header class="section__header reveal">
                     <p class="eyebrow">Projects</p>
@@ -237,7 +225,7 @@
                 <header class="section__header section__header--center reveal">
                     <p class="eyebrow">Experience</p>
                     <h2 class="heading">Experience with complex mobile products</h2>
-                    <p class="section__lead">I have experience working with mobile products that require multiple application configurations, different environments, API-driven content and coordinated releases. This includes collaboration with backend, QA, design, DevOps and product stakeholders in distributed teams.</p>
+                    <p class="section__lead section__lead--wide">I have experience working with mobile products that require multiple application configurations, different environments, API-driven content and coordinated releases. This includes collaboration with backend, QA, design, DevOps and product stakeholders in distributed teams.</p>
                 </header>
                 <ul class="focus-grid" id="focus-grid"></ul>
                 <noscript>
@@ -247,7 +235,7 @@
         </section>
 
         <!-- Articles -->
-        <section class="section section--muted" id="articles" data-nav-section>
+        <section class="section" id="articles" data-nav-section>
             <div class="wrap">
                 <header class="section__header reveal">
                     <p class="eyebrow">Writing</p>
@@ -329,5 +317,6 @@
     <script src="assets/js/icons.js" defer></script>
     <script src="assets/js/data.js" defer></script>
     <script src="assets/js/render.js" defer></script>
+    <script src="assets/js/hero-device.js" defer></script>
     <script src="assets/js/main.js" defer></script></body>
 </html>

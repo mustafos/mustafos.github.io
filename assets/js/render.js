@@ -22,8 +22,60 @@
         if (!root) return;
         root.innerHTML = '';
         data.heroFloats.forEach(function (item, i) {
-            root.appendChild(el('div', 'hero-chip hero-chip--' + (i + 1), icon(item.icon) + '<span>' + item.label + '</span>'));
+            var chip = el('button', 'hero-chip hero-chip--' + (i + 1), icon(item.icon) + '<span>' + item.label + '</span>');
+            chip.type = 'button';
+            chip.setAttribute('aria-label', item.title + ' — show details');
+            chip.setAttribute('aria-pressed', 'false');
+            chip.setAttribute('data-slide', String(i + 1));
+            root.appendChild(chip);
         });
+    }
+
+    function renderIphoneSlides() {
+        var slidesRoot = document.getElementById('iphone-slides');
+        var dotsRoot = document.getElementById('iphone-dots');
+        if (!slidesRoot || !dotsRoot) return;
+
+        slidesRoot.innerHTML = '';
+        dotsRoot.innerHTML = '';
+
+        var allSlides = [{ type: 'profile' }].concat(data.heroFloats);
+
+        allSlides.forEach(function (slide, i) {
+            var isProfile = slide.type === 'profile';
+            var profile = data.heroProfile;
+            var tags = '';
+
+            if (isProfile && profile.tags) {
+                tags = '<ul class="iphone__tags">' + profile.tags.map(function (t) {
+                    return '<li>' + t + '</li>';
+                }).join('') + '</ul>';
+            }
+
+            var iconHtml = isProfile
+                ? '<div class="iphone__slide-icon iphone__slide-icon--brand">' + (window.heroBrandMark || '') + '</div>'
+                : '<div class="iphone__slide-icon">' + icon(slide.icon) + '</div>';
+
+            slidesRoot.appendChild(el('article', 'iphone__slide' + (i === 0 ? ' is-active' : ''), ''
+                + iconHtml
+                + '<h3 class="iphone__slide-title">' + (isProfile ? profile.title : slide.title) + '</h3>'
+                + '<p class="iphone__slide-role">' + (isProfile ? profile.role : slide.label) + '</p>'
+                + '<p class="iphone__slide-text">' + (isProfile ? profile.text : slide.text) + '</p>'
+                + (isProfile ? tags : '')
+                + '<div class="iphone__slide-progress" aria-hidden="true"><span></span></div>'
+            ));
+
+            dotsRoot.appendChild(el('button', 'iphone__dot' + (i === 0 ? ' is-active' : ''), ''));
+        });
+
+        dotsRoot.querySelectorAll('.iphone__dot').forEach(function (dot) {
+            dot.type = 'button';
+            dot.setAttribute('aria-label', 'Show slide');
+        });
+
+        if (typeof window.initHeroDevice === 'function') {
+            window.initHeroDevice();
+        }
     }
 
     function renderExpertise() {
@@ -64,7 +116,7 @@
                 return '<li class="tag">' + t + '</li>';
             }).join('');
             root.appendChild(el('article', 'panel panel--project reveal', ''
-                + '<a href="' + p.url + '" class="panel__media" target="_blank" rel="noopener noreferrer">'
+                + '<a href="' + p.url + '" class="panel__media" target="_blank" rel="noopener noreferrer" aria-label="' + p.title + ' — view project">'
                 + '<img src="' + p.image + '" alt="' + p.alt + '" width="400" height="250" loading="lazy">'
                 + '</a>'
                 + '<div class="panel__body">'
@@ -114,15 +166,13 @@
         var root = document.getElementById('process-track');
         if (!root) return;
         root.innerHTML = '';
-        data.process.forEach(function (step, i) {
-            var isLast = i === data.process.length - 1;
+        data.process.forEach(function (step) {
             root.appendChild(el('article', 'process-item reveal', ''
                 + '<div class="process-item__marker"><span>' + step.step + '</span></div>'
                 + '<div class="process-item__content">'
                 + '<h3 class="panel__title">' + step.title + '</h3>'
                 + '<p class="panel__text">' + step.text + '</p>'
                 + '</div>'
-                + (isLast ? '' : '<div class="process-item__line" aria-hidden="true"></div>')
             ));
         });
         observeNewReveal(root);
@@ -130,6 +180,7 @@
 
     window.renderSiteSections = function () {
         renderHeroFloats();
+        renderIphoneSlides();
         renderExpertise();
         renderTech();
         renderProjects();

@@ -148,12 +148,48 @@ window.SITE_DATA = {
         { step: '03', title: 'Build', text: 'I implement the solution, communicate progress and verify important edge cases.' },
         { step: '04', title: 'Deliver', text: 'I prepare the feature for testing, release and future maintenance.' }
     ],
+    heroProfile: {
+        title: 'Mustafa Bekirov',
+        role: 'iOS Developer',
+        text: 'I build and ship native iOS products for startups and product teams.',
+        tags: ['Swift', 'SwiftUI', 'UIKit']
+    },
     heroFloats: [
-        { icon: 'chart', label: 'Analytics' },
-        { icon: 'zap', label: 'Performance' },
-        { icon: 'layout', label: 'SwiftUI' },
-        { icon: 'layers', label: 'Firebase' },
-        { icon: 'link', label: 'REST API' },
-        { icon: 'rocket', label: 'CI/CD' }
+        {
+            icon: 'layout',
+            label: 'SwiftUI',
+            title: 'SwiftUI',
+            text: 'Declarative interfaces for scalable, maintainable iOS products.'
+        },
+        {
+            icon: 'code',
+            label: 'Swift',
+            title: 'Swift',
+            text: 'Modern Swift with async/await, Combine and clean architecture.'
+        },
+        {
+            icon: 'link',
+            label: 'REST API',
+            title: 'API Integration',
+            text: 'REST APIs, authentication, Firebase and third-party SDKs.'
+        },
+        {
+            icon: 'layers',
+            label: 'Firebase',
+            title: 'Firebase',
+            text: 'Analytics, push notifications and cloud-backed features.'
+        },
+        {
+            icon: 'zap',
+            label: 'Performance',
+            title: 'Performance',
+            text: 'Startup time, memory usage and smooth UI responsiveness.'
+        },
+        {
+            icon: 'rocket',
+            label: 'CI/CD',
+            title: 'CI/CD & Release',
+            text: 'TestFlight, App Store delivery and repeatable build pipelines.'
+        }
     ]
 };
