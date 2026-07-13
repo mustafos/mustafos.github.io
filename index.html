@@ -1,328 +1,684 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                
-                <!-- --------- UNICONS ---------- -->
-                <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
-                    
-                    <!-- --------- CSS ---------- -->
-                    <link rel="stylesheet" href="assets/css/style.css">
-                        
-                        <!-- --------- FAVICON ---------- -->
-                        <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
-                            <title>Mustafa Bekirov</title>
-                        </head>
-    <body>
-        <div class="container">
-            <!-- --------------- HEADER --------------- -->
-            <nav id="header">
-                <div class="nav-logo">
-                    <p class="nav-name">M</p>
-                </div>
-                <div class="nav-menu" id="myNavMenu">
-                    <ul class="nav_menu_list">
-                        <li class="nav_list">
-                            <a href="#home" class="nav-link active-link">Home</a>
-                            <div class="circle"></div>
-                        </li>
-                        <li class="nav_list">
-                            <a href="#about" class="nav-link">About</a>
-                            <div class="circle"></div>
-                        </li>
-                        <li class="nav_list">
-                            <a href="#projects" class="nav-link">Projects</a>
-                            <div class="circle"></div>
-                        </li>
-                        <li class="nav_list">
-                            <a href="#contact" class="nav-link">Contact</a>
-                            <div class="circle"></div>
-                        </li>
-                    </ul>
-                </div>
-                <div class="nav-button">
-                    <button class="btn" onclick="window.location.href='assets/pdf/BekirovCV.pdf'">Download CV<i class="uil uil-file-alt"></i></button>
-                </div>
-                <div class="nav-menu-btn">
-                    <i class="uil uil-bars" onclick="myMenuFunction()"></i>
-                </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Mustafa Bekirov is an iOS Developer helping startups and product teams build, improve and release native iOS applications with Swift, SwiftUI and UIKit.">
+    <meta name="author" content="Mustafa Bekirov">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#07090f">
+    <link rel="canonical" href="https://www.mustafabekirov.com/">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.mustafabekirov.com/">
+    <meta property="og:title" content="Mustafa Bekirov — iOS Developer">
+    <meta property="og:description" content="Native iOS development for startups and product teams using Swift, SwiftUI and UIKit.">
+    <meta property="og:image" content="https://www.mustafabekirov.com/assets/images/avatar.png">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Mustafa Bekirov — iOS Developer">
+    <meta name="twitter:description" content="Native iOS development for startups and product teams using Swift, SwiftUI and UIKit.">
+    <meta name="twitter:image" content="https://www.mustafabekirov.com/assets/images/avatar.png">
+
+    <title>Mustafa Bekirov — iOS Developer &amp; Mobile Product Engineer</title>
+
+    <link rel="icon" href="assets/images/favicon.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Mustafa Bekirov",
+        "url": "https://www.mustafabekirov.com",
+        "jobTitle": "iOS Developer",
+        "email": "mailto:mustafa.bekirov.tech@gmail.com",
+        "sameAs": [
+            "https://www.linkedin.com/in/mustafabekirov/",
+            "https://github.com/mustafos",
+            "https://t.me/mustafosID"
+        ]
+    }
+    </script>
+</head>
+<body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
+    <!-- Header -->
+    <header class="site-header" id="header">
+        <div class="container header-inner">
+            <a href="#hero" class="logo" aria-label="Mustafa Bekirov — Home">
+                <span class="logo-monogram" aria-hidden="true">MB</span>
+                <span class="logo-text">Mustafa Bekirov</span>
+            </a>
+
+            <nav class="nav-desktop" aria-label="Main navigation">
+                <ul class="nav-list">
+                    <li><a href="#about" class="nav-link" data-nav="about">About</a></li>
+                    <li><a href="#expertise" class="nav-link" data-nav="expertise">Expertise</a></li>
+                    <li><a href="#work" class="nav-link" data-nav="work">Work</a></li>
+                    <li><a href="#articles" class="nav-link" data-nav="articles">Articles</a></li>
+                    <li><a href="#contact" class="nav-link" data-nav="contact">Contact</a></li>
+                </ul>
             </nav>
-            
-            
-            <!-- -------------- MAIN ---------------- -->
-            <main class="wrapper">
-                <!-- -------------- FEATURED BOX ---------------- -->
-                <section class="featured-box" id="home">
-                    <div class="featured-text">
-                        <div class="featured-text-card">
-                            <span>Mustafa Bekirov</span>
-                        </div>
-                        <div class="featured-name">
-                            <p>I'm <span class="typedText"></span>Developer</p>
-                        </div>
-                        <div class="featured-text-info">
-                            <p>Passionate about creating innovative and user-friendly mobile applications that solve real-world problems. With every line of code, I strive to build seamless, efficient, and elegant solutions that make a difference.
-                            </p>
-                        </div>
-                        <div class="featured-text-btn">
-                            <button class="btn blue-btn" onclick="window.open('https://t.me/mustafosID', '_blank')">Hire Me</button>
-                            <button class="btn" onclick="window.location.href='assets/pdf/BekirovCV.pdf'">Download CV<i class="uil uil-file-alt"></i></button>
-                        </div>
-                        <div class="social_icons">
-                            <div class="icon">
-                                <a href="https://www.linkedin.com/in/mustafabekirov/" target="_blank" class="footer__social">
-                                    <i class="uil uil-linkedin-alt"></i>
-                                </a>
-                            </div>
-                            <div class="icon">
-                                <a href="https://github.com/mustafos" target="_blank" class="footer__social">
-                                    <i class="uil uil-github-alt"></i>
-                                </a>
-                            </div>
-                            <div class="icon">
-                                <a href="https://t.me/mustafosID" target="_blank" class="footer__social">
-                                    <i class="uil uil-telegram-alt"></i>
-                                </a>
-                            </div>
-                            <div class="icon">
-                                <a href="https://www.upwork.com/freelancers/~011f344b230ef86aa7?companyReference=1603853865739673601&mp_source=share" target="_blank" class="footer__social">
-                                    <i class="uil uil-facebook-messenger-alt"></i>
-                                </a>
-                            </div>
-                        </div>
+
+            <div class="header-actions">
+                <a href="assets/pdf/BekirovCV.pdf" class="btn btn-secondary btn-sm" download>Download CV</a>
+                <button
+                    class="menu-toggle"
+                    id="menu-toggle"
+                    type="button"
+                    aria-label="Open menu"
+                    aria-expanded="false"
+                    aria-controls="mobile-nav"
+                >
+                    <svg class="icon-menu" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+                        <line x1="3" y1="6" x2="21" y2="6"/>
+                        <line x1="3" y1="12" x2="21" y2="12"/>
+                        <line x1="3" y1="18" x2="21" y2="18"/>
+                    </svg>
+                    <svg class="icon-close" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+                        <line x1="18" y1="6" x2="6" y2="18"/>
+                        <line x1="6" y1="6" x2="18" y2="18"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation" hidden>
+            <ul class="mobile-nav-list">
+                <li><a href="#about" class="mobile-nav-link" data-nav="about">About</a></li>
+                <li><a href="#expertise" class="mobile-nav-link" data-nav="expertise">Expertise</a></li>
+                <li><a href="#work" class="mobile-nav-link" data-nav="work">Work</a></li>
+                <li><a href="#articles" class="mobile-nav-link" data-nav="articles">Articles</a></li>
+                <li><a href="#contact" class="mobile-nav-link" data-nav="contact">Contact</a></li>
+                <li><a href="assets/pdf/BekirovCV.pdf" class="mobile-nav-link" download>Download CV</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content">
+
+        <!-- Hero -->
+        <section class="hero section" id="hero">
+            <div class="container hero-grid">
+                <div class="hero-content reveal">
+                    <div class="status-badge">
+                        <span class="status-dot" aria-hidden="true"></span>
+                        Available for selected remote opportunities
                     </div>
-                    <div class="featured-image">
-                        <div class="image">
-                            <img src="assets/images/avatar.png" alt="avatar">
-                        </div>
+                    <p class="hero-name">Mustafa Bekirov</p>
+                    <h1 class="hero-title">I build reliable iOS products that are ready to grow.</h1>
+                    <p class="hero-subtitle">I help startups and product teams build, improve and release production-ready iOS applications using Swift, SwiftUI and UIKit.</p>
+                    <p class="hero-detail">From new features and architecture improvements to API integrations, performance optimization and App Store delivery.</p>
+
+                    <div class="hero-actions">
+                        <a href="https://t.me/mustafosID" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+                            Discuss a project
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                        </a>
+                        <a href="#work" class="btn btn-secondary">View my work</a>
                     </div>
-                    <div class="scroll-icon-box">
-                        <a href="#about" class="scroll-btn">
-                            <i class="uil uil-mouse-alt"></i>
-                            <p>Scroll Down</p>
+
+                    <div class="hero-social">
+                        <a href="https://www.linkedin.com/in/mustafabekirov/" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+                        </a>
+                        <a href="https://github.com/mustafos" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+                        </a>
+                        <a href="https://t.me/mustafosID" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Telegram">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg>
                         </a>
                     </div>
-                    
-                </section>
-                <!-- -------------- ABOUT BOX ---------------- -->
-                <section class="section" id="about">
-                    <div class="top-header">
-                        <h1>About Me</h1>
-                        <span>Per aspera ad astra</span>
-                    </div>
-                    <div class="row">
-                        <div class="col">
-                            <div class="about-info">
-                                <h3>Tech for Good</h3>
-                                <p>My ultimate goal is to contribute to technology that impacts millions of lives, inspires innovation, and simplifies the way we interact with the digital world. I believe in continuous learning, sharing knowledge, and pushing the boundaries of what’s possible in mobile development. Let’s build the future, one app at a time.
-                                </p>
-                                <br>
-                                <button class="btn" onclick="window.location.href='assets/pdf/BekirovCV.pdf'">Download CV <i class="uil uil-import"></i></button>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="skills-box">
-                                <div class="skills-header">
-                                    <h3>Stack</h3>
-                                </div>
-                                <div class="skills-list">
-                                    <span>Swift</span>
-                                    <span>UIKit</span>
-                                    <span>SwiftUI</span>
-                                    <span>Xcode</span>
-                                    <span>Combine</span>
-                                    <span>Firebase</span>
-                                    <span>CoreData</span>
-                                    <span>Realm</span>
-                                    <span>Alamofire</span>
-                                </div>
-                            </div>
-                            <div class="skills-box">
-                                <div class="skills-header">
-                                    <h3>Fundamental</h3>
-                                </div>
-                                <div class="skills-list">
-                                    <span>OOP</span>
-                                    <span>Concurrency</span>
-                                    <span>REST</span>
-                                    <span>TDD</span>
-                                    <span>KISS</span>
-                                    <span>FIRST</span>
-                                    <span>Patterns</span>
-                                    <span>SOLID</span>
-                                    <span>GCD</span>
-                                </div>
-                            </div>
-                            <div class="skills-box">
-                                <div class="skills-header">
-                                    <h3>Other</h3>
-                                </div>
-                                <div class="skills-list">
-                                    <span>Git</span>
-                                    <span>Figma</span>
-                                    <span>StoreKit</span>
-                                    <span>Swiftlint</span>
-                                    <span>Jira</span>
-                                    <span>Slack</span>
-                                    <span>Trello</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                
-                <!-- -------------- PROJECT BOX ---------------- -->
-                <section class="section" id="projects">
-                    <div class="top-header">
-                        <h1>Projects</h1>
-                        <span>Practice Makes Perfect</span>
-                    </div>
-                    <div class="project-container">
-                        <!--Sevensix-->
-                        <div class="project-box" onmouseover="showText(this)" onmouseleave="hideText(this)" onclick="openURL('https://apps.apple.com/app/id1505604446')">
-                            <img src="assets/images/project1.png" alt="Sevensix" class="project-image">
-                        </div>
-                        <!--QırımKey-->
-                        <div class="project-box" onmouseover="showText(this)" onmouseleave="hideText(this)" onclick="openURL('https://apps.apple.com/app/id6739430313')">
-                            <img src="assets/images/project2.png" alt="QırımKey" class="project-image">
-                        </div>
-                        <!--DriverPro-->
-                        <div class="project-box" onmouseover="showText(this)" onmouseleave="hideText(this)" onclick="openURL('https://appadvice.com/app/driverpro-plan-study-test/6474212227')">
-                            <img src="assets/images/project3.png" alt="DriverPro" class="project-image">
-                        </div>
-                        <!--Pulse Measure-->
-                        <div class="project-box" onmouseover="showText(this)" onmouseleave="hideText(this)" onclick="openURL('https://apps.apple.com/app/id1589931101')">
-                            <img src="assets/images/project4.png" alt="Pulse Measure" class="project-image">
-                        </div>
-                        <!--Super VPN-->
-                        <div class="project-box" onmouseover="showText(this)" onmouseleave="hideText(this)" onclick="openURL('https://www.vpnsuper.com')">
-                            <img src="assets/images/project5.png" alt="Super VPN" class="project-image">
-                        </div>
-                        <!--Business Empire-->
-                        <div class="project-box" onmouseover="showText(this)" onmouseleave="hideText(this)" onclick="openURL('https://apps.apple.com/app/id6451208928')">
-                            <img src="assets/images/project6.png" alt="Business Empire" class="project-image">
-                        </div>
-                    </div>
-                </section>
-                
-                <!-- -------------- PUBLICATION BOX ---------------- -->
-                <section class="section" id="projects">
-                    <div class="top-header">
-                        <h1>Publications</h1>
-                        <span>Cogito ergo sum</span>
-                    </div>
-                    <div class="project-container">
-                        <!--Generics-->
-                        <div class="project-box" onmouseover="showText(this)" onmouseleave="hideText(this)" onclick="openURL('https://medium.com/@mustafos/ai-in-ios-7280407e5b9f')">
-                            <img src="assets/images/public1.png" alt="AI in iOS" class="project-image">
-                        </div>
-                        <!--CI/CD-->
-                        <div class="project-box" onmouseover="showText(this)" onmouseleave="hideText(this)" onclick="openURL('https://medium.com/@mustafos/tricky-generics-in-swift-mastering-complexity-in-swiftui-projects-4a4a3fc884a6')">
-                            <img src="assets/images/public2.png" alt="Genetics in Swift" class="project-image">
-                        </div>
-                        <!--HELLO-->
-                        <div class="project-box" onmouseover="showText(this)" onmouseleave="hideText(this)" onclick="openURL('https://medium.com/@mustafos/swift-concurrency-leveraging-async-await-in-ios-applications-5784c3c2b1af')">
-                            <img src="assets/images/public3.png" alt="Swift Concurrency" class="project-image">
-                        </div>
-                    </div>
-                </section>
-                
-                <!-- -------------- CONTACT BOX ---------------- -->
-                
-                <section class="section" id="contact">
-                    <div class="top-header">
-                        <h1>Get in touch</h1>
-                        <span>Do you have a project in your mind, contact me here</span>
-                    </div>
-                    <div class="row">
-                        <div class="col">
-                            <div class="contact-info">
-                                <h2>Looking forward to hearing from you!</h2>
-                                <p>I noticed your job offer and I'm interested in joining your team. Please feel free to contact me and we can discuss further. If you're looking for an independent and self-developing employee who is ready to work hard for results, then I'm your person!
-                                </p>
-                            </div>
-                        </div>
-                        
-                        
-                        
-                        <div class="col">
-                            <div class="contact-info">
-                                <h2>Find Me <i class="uil uil-corner-right-down"></i></h2>
-                                <p><i class="uil uil-envelope"></i><a href="mailto:mustafa.bekirov.tech@gmail.com" class="contact-link">Email: mustafa.bekirov.tech@gmail.com</a></p>
-                                <p><i class="uil uil-phone"></i><a href="https://t.me/mustafosID" class="contact-link">Tel: +420 *** *** ***</a></p>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-            </main>
-            
-            <!-- --------------- FOOTER --------------- -->
-            <footer>
-                <div class="top-footer">
-                    <div class="nav-logo">
-                        <img src="assets/images/footer.png" alt="Apple Developer">
-                        <p class="nav-name">Developer</p>
-                    </div>
-                </div>
-                <div class="middle-footer">
-                    <ul class="footer-menu">
-                        <li class="footer_menu_list">
-                            <a href="#home">Home</a>
+
+                    <ul class="trust-list" aria-label="Key strengths">
+                        <li class="trust-item">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"/><path d="M12 18h.01"/></svg>
+                            Native iOS development
                         </li>
-                        <li class="footer_menu_list">
-                            <a href="#about">About</a>
+                        <li class="trust-item">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                            Production-focused engineering
                         </li>
-                        <li class="footer_menu_list">
-                            <a href="#projects">Projects</a>
-                        </li>
-                        <li class="footer_menu_list">
-                            <a href="#contact">Contact</a>
-                        </li>
-                        <li class="footer_menu_list">
-                            <a href="terms.html">Terms of Use</a>
-                        </li>
-                        <li class="footer_menu_list">
-                            <a href="privacy.html">Privacy</a>
+                        <li class="trust-item">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+                            Remote collaboration
                         </li>
                     </ul>
                 </div>
-                <div class="footer-social-icons">
-                    <div class="icon">
-                        <a href="https://www.linkedin.com/in/mustafabekirov/" target="_blank" class="footer__social">
-                            <i class="uil uil-linkedin-alt"></i>
-                        </a>
-                    </div>
-                    <div class="icon">
-                        <a href="https://github.com/mustafos" target="_blank" class="footer__social">
-                            <i class="uil uil-github-alt"></i>
-                        </a>
-                    </div>
-                    <div class="icon">
-                        <a href="https://t.me/mustafosID" target="_blank" class="footer__social">
-                            <i class="uil uil-telegram-alt"></i>
-                        </a>
-                    </div>
-                    <div class="icon">
-                        <a href="https://www.upwork.com/freelancers/~011f344b230ef86aa7?companyReference=1603853865739673601&mp_source=share" target="_blank" class="footer__social">
-                            <i class="uil uil-facebook-messenger-alt"></i>
-                        </a>
+
+                <div class="hero-visual reveal" aria-hidden="true">
+                    <div class="hero-visual-inner">
+                        <div class="dev-card">
+                            <div class="dev-card-header">
+                                <img src="assets/images/avatar.png" alt="Mustafa Bekirov, iOS Developer" class="dev-card-avatar" width="56" height="56">
+                                <div>
+                                    <p class="dev-card-name">Mustafa Bekirov</p>
+                                    <p class="dev-card-role">iOS Developer</p>
+                                </div>
+                            </div>
+                            <div class="dev-card-tags">
+                                <span>Swift</span>
+                                <span>SwiftUI</span>
+                                <span>UIKit</span>
+                            </div>
+                        </div>
+                        <div class="phone-mockup">
+                            <div class="phone-screen">
+                                <div class="phone-status-bar">
+                                    <span>9:41</span>
+                                </div>
+                                <div class="phone-content">
+                                    <div class="phone-card"></div>
+                                    <div class="phone-card phone-card--short"></div>
+                                    <div class="phone-card phone-card--accent"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="code-snippet">
+                            <div class="code-header">
+                                <span class="code-dot"></span>
+                                <span class="code-dot"></span>
+                                <span class="code-dot"></span>
+                            </div>
+                            <pre class="code-body"><code><span class="code-kw">struct</span> <span class="code-type">ProductView</span>: <span class="code-type">View</span> {
+  <span class="code-kw">var</span> body: <span class="code-kw">some</span> <span class="code-type">View</span> {
+    <span class="code-type">ContentView</span>()
+      .task { <span class="code-kw">await</span> load() }
+  }
+}</code></pre>
+                        </div>
                     </div>
                 </div>
-                <div class="bottom-footer">
-                    <p>Copyright &#169; 2021 - 2025 <a href="#home" style="text-decoration: none;">Mustafa Bekirov.</a> All rights reserved.</p>
+            </div>
+        </section>
+
+        <!-- About -->
+        <section class="section" id="about">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2 class="section-title">Engineering mobile products, not just screens.</h2>
                 </div>
-            </footer>
-            
+                <div class="about-grid reveal">
+                    <div class="about-text">
+                        <p>I am an iOS developer focused on building and evolving real mobile products. I work across implementation, architecture, API integration, release processes and collaboration with cross-functional teams.</p>
+                        <p>I care about maintainable code, predictable delivery and user experience. My goal is not only to complete a ticket, but to understand the product context and deliver a solution that works reliably in production.</p>
+                        <a href="assets/pdf/BekirovCV.pdf" class="btn btn-secondary" download>Download CV</a>
+                    </div>
+                    <div class="principles">
+                        <article class="principle-card">
+                            <h3 class="principle-title">Product context first</h3>
+                            <p>I start by understanding the user goal, business constraints and how a feature fits into the existing product before writing code.</p>
+                        </article>
+                        <article class="principle-card">
+                            <h3 class="principle-title">Maintainable engineering</h3>
+                            <p>I write clear, testable Swift code with sensible architecture so the team can extend and support the application over time.</p>
+                        </article>
+                        <article class="principle-card">
+                            <h3 class="principle-title">Reliable delivery</h3>
+                            <p>I communicate progress, handle edge cases and prepare work for QA, TestFlight and App Store release with care.</p>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Expertise -->
+        <section class="section section--alt" id="expertise">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2 class="section-title">What I can help your team with</h2>
+                </div>
+                <div class="expertise-grid">
+                    <article class="expertise-card reveal">
+                        <div class="expertise-icon" aria-hidden="true">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"/><path d="M12 18h.01"/></svg>
+                        </div>
+                        <h3 class="expertise-title">iOS Product Development</h3>
+                        <p>Building native iOS features and applications with Swift, SwiftUI and UIKit, from initial implementation to production release.</p>
+                    </article>
+                    <article class="expertise-card reveal">
+                        <div class="expertise-icon" aria-hidden="true">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 16 4-4-4-4"/><path d="m6 8-4 4 4 4"/><path d="m14.5 4-5 16"/></svg>
+                        </div>
+                        <h3 class="expertise-title">Architecture &amp; Refactoring</h3>
+                        <p>Improving code structure, separating responsibilities and making existing applications easier to maintain and extend.</p>
+                    </article>
+                    <article class="expertise-card reveal">
+                        <div class="expertise-icon" aria-hidden="true">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+                        </div>
+                        <h3 class="expertise-title">API &amp; Service Integration</h3>
+                        <p>Integrating REST APIs, authentication, analytics, push notifications, Firebase and external SDKs.</p>
+                    </article>
+                    <article class="expertise-card reveal">
+                        <div class="expertise-icon" aria-hidden="true">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                        </div>
+                        <h3 class="expertise-title">Performance &amp; Stability</h3>
+                        <p>Investigating bottlenecks, reducing unnecessary work, improving startup time and making application behavior more predictable.</p>
+                    </article>
+                    <article class="expertise-card reveal">
+                        <div class="expertise-icon" aria-hidden="true">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></svg>
+                        </div>
+                        <h3 class="expertise-title">CI/CD &amp; App Store Delivery</h3>
+                        <p>Preparing repeatable build pipelines, TestFlight distributions, multiple environments and App Store releases.</p>
+                    </article>
+                    <article class="expertise-card reveal">
+                        <div class="expertise-icon" aria-hidden="true">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                        </div>
+                        <h3 class="expertise-title">Existing Product Development</h3>
+                        <p>Joining established teams, understanding existing codebases and delivering new functionality without destabilizing the product.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technology Stack -->
+        <section class="section" id="stack">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2 class="section-title">Core technologies</h2>
+                </div>
+                <div class="tech-grid reveal">
+                    <div class="tech-group">
+                        <h3 class="tech-group-title">iOS</h3>
+                        <ul class="tech-tags">
+                            <li>Swift</li>
+                            <li>SwiftUI</li>
+                            <li>UIKit</li>
+                            <li>Combine</li>
+                            <li>Concurrency</li>
+                            <li>Grand Central Dispatch</li>
+                            <li>Core Data</li>
+                            <li>StoreKit</li>
+                        </ul>
+                    </div>
+                    <div class="tech-group">
+                        <h3 class="tech-group-title">Architecture</h3>
+                        <ul class="tech-tags">
+                            <li>MVVM</li>
+                            <li>Clean Architecture</li>
+                            <li>SOLID</li>
+                            <li>Dependency Injection</li>
+                            <li>Design Patterns</li>
+                            <li>Modularization</li>
+                        </ul>
+                    </div>
+                    <div class="tech-group">
+                        <h3 class="tech-group-title">Networking and Services</h3>
+                        <ul class="tech-tags">
+                            <li>REST API</li>
+                            <li>Firebase</li>
+                            <li>Alamofire</li>
+                            <li>Push Notifications</li>
+                            <li>Analytics</li>
+                        </ul>
+                    </div>
+                    <div class="tech-group">
+                        <h3 class="tech-group-title">Engineering Tools</h3>
+                        <ul class="tech-tags">
+                            <li>Xcode</li>
+                            <li>Git</li>
+                            <li>XCTest</li>
+                            <li>SwiftLint</li>
+                            <li>CI/CD</li>
+                            <li>Jira</li>
+                            <li>Figma</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Selected Work -->
+        <section class="section section--alt" id="work">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2 class="section-title">Selected work</h2>
+                    <p class="section-subtitle">A selection of mobile products and technical projects I have worked on.</p>
+                </div>
+                <div class="projects-grid">
+                    <article class="project-card reveal">
+                        <div class="project-image-wrap">
+                            <img src="assets/images/project1.png" alt="Sevensix app screenshot" class="project-image" width="400" height="250" loading="lazy">
+                        </div>
+                        <div class="project-body">
+                            <h3 class="project-title">Sevensix</h3>
+                            <p class="project-desc">A native iOS application focused on delivering a polished mobile experience with structured data and smooth user interactions.</p>
+                            <p class="project-role"><strong>Role:</strong> iOS Developer</p>
+                            <ul class="project-tags">
+                                <li>Swift</li>
+                                <li>UIKit</li>
+                                <li>REST API</li>
+                            </ul>
+                            <ul class="project-highlights">
+                                <li>Implemented core app features and UI flows</li>
+                                <li>Integrated backend services and data handling</li>
+                                <li>Prepared builds for App Store release</li>
+                            </ul>
+                            <a href="https://apps.apple.com/app/id1505604446" class="project-link" target="_blank" rel="noopener noreferrer">
+                                View project
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="project-card reveal">
+                        <div class="project-image-wrap">
+                            <img src="assets/images/project2.png" alt="QırımKey app screenshot" class="project-image" width="400" height="250" loading="lazy">
+                        </div>
+                        <div class="project-body">
+                            <h3 class="project-title">QırımKey</h3>
+                            <p class="project-desc">A custom keyboard application providing localized input support with a focus on usability and system integration.</p>
+                            <p class="project-role"><strong>Role:</strong> iOS Developer</p>
+                            <ul class="project-tags">
+                                <li>Swift</li>
+                                <li>SwiftUI</li>
+                                <li>UIKit</li>
+                            </ul>
+                            <ul class="project-highlights">
+                                <li>Built keyboard extension and main app components</li>
+                                <li>Handled system-level integration requirements</li>
+                                <li>Delivered App Store-ready release</li>
+                            </ul>
+                            <a href="https://apps.apple.com/app/id6739430313" class="project-link" target="_blank" rel="noopener noreferrer">
+                                View project
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="project-card reveal">
+                        <div class="project-image-wrap">
+                            <img src="assets/images/project3.png" alt="DriverPro app screenshot" class="project-image" width="400" height="250" loading="lazy">
+                        </div>
+                        <div class="project-body">
+                            <h3 class="project-title">DriverPro</h3>
+                            <p class="project-desc">A study and preparation app helping users plan and practice for driving tests with structured learning content.</p>
+                            <p class="project-role"><strong>Role:</strong> iOS Developer</p>
+                            <ul class="project-tags">
+                                <li>Swift</li>
+                                <li>SwiftUI</li>
+                                <li>Firebase</li>
+                            </ul>
+                            <ul class="project-highlights">
+                                <li>Developed learning flows and content presentation</li>
+                                <li>Integrated Firebase services for data and analytics</li>
+                                <li>Implemented in-app purchase functionality</li>
+                            </ul>
+                            <a href="https://appadvice.com/app/driverpro-plan-study-test/6474212227" class="project-link" target="_blank" rel="noopener noreferrer">
+                                View project
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="project-card reveal">
+                        <div class="project-image-wrap">
+                            <img src="assets/images/project4.png" alt="Pulse Measure app screenshot" class="project-image" width="400" height="250" loading="lazy">
+                        </div>
+                        <div class="project-body">
+                            <h3 class="project-title">Pulse Measure</h3>
+                            <p class="project-desc">A health-focused iOS application for measuring and tracking vital data with a clear, accessible interface.</p>
+                            <p class="project-role"><strong>Role:</strong> iOS Developer</p>
+                            <ul class="project-tags">
+                                <li>Swift</li>
+                                <li>UIKit</li>
+                                <li>Core Data</li>
+                            </ul>
+                            <ul class="project-highlights">
+                                <li>Built measurement and tracking features</li>
+                                <li>Implemented local data persistence</li>
+                                <li>Optimized UI for consistent performance</li>
+                            </ul>
+                            <a href="https://apps.apple.com/app/id1589931101" class="project-link" target="_blank" rel="noopener noreferrer">
+                                View project
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="project-card reveal">
+                        <div class="project-image-wrap">
+                            <img src="assets/images/project5.png" alt="Super VPN app screenshot" class="project-image" width="400" height="250" loading="lazy">
+                        </div>
+                        <div class="project-body">
+                            <h3 class="project-title">Super VPN</h3>
+                            <p class="project-desc">A VPN application providing secure connectivity with subscription management and a streamlined onboarding experience.</p>
+                            <p class="project-role"><strong>Role:</strong> iOS Developer</p>
+                            <ul class="project-tags">
+                                <li>Swift</li>
+                                <li>UIKit</li>
+                                <li>StoreKit</li>
+                            </ul>
+                            <ul class="project-highlights">
+                                <li>Developed connection and settings flows</li>
+                                <li>Integrated subscription and in-app purchase logic</li>
+                                <li>Improved app stability across device configurations</li>
+                            </ul>
+                            <a href="https://www.vpnsuper.com" class="project-link" target="_blank" rel="noopener noreferrer">
+                                View project
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="project-card reveal">
+                        <div class="project-image-wrap">
+                            <img src="assets/images/project6.png" alt="Business Empire app screenshot" class="project-image" width="400" height="250" loading="lazy">
+                        </div>
+                        <div class="project-body">
+                            <h3 class="project-title">Business Empire</h3>
+                            <p class="project-desc">A business simulation game with progression mechanics, in-app purchases and engaging mobile gameplay.</p>
+                            <p class="project-role"><strong>Role:</strong> iOS Developer</p>
+                            <ul class="project-tags">
+                                <li>Swift</li>
+                                <li>UIKit</li>
+                                <li>StoreKit</li>
+                            </ul>
+                            <ul class="project-highlights">
+                                <li>Implemented game mechanics and UI systems</li>
+                                <li>Integrated monetization and StoreKit flows</li>
+                                <li>Delivered updates through App Store release cycle</li>
+                            </ul>
+                            <a href="https://apps.apple.com/app/id6451208928" class="project-link" target="_blank" rel="noopener noreferrer">
+                                View project
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                            </a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Professional Focus -->
+        <section class="section" id="focus">
+            <div class="container">
+                <div class="focus-block reveal">
+                    <h2 class="section-title">Experience with complex mobile products</h2>
+                    <p class="focus-text">I have experience working with mobile products that require multiple application configurations, different environments, API-driven content and coordinated releases. This includes collaboration with backend, QA, design, DevOps and product stakeholders in distributed teams.</p>
+                    <ul class="focus-list">
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                            Multiple iOS app configurations
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                            White-label architecture
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                            Environment-based configurations
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                            API-driven content
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                            Authentication &amp; analytics
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                            TestFlight &amp; release workflows
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                            Distributed team collaboration
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                            Production application support
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Publications -->
+        <section class="section section--alt" id="articles">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2 class="section-title">Writing about iOS development</h2>
+                </div>
+                <div class="articles-grid">
+                    <article class="article-card reveal">
+                        <a href="https://medium.com/@mustafos/ai-in-ios-7280407e5b9f" class="article-card-link" target="_blank" rel="noopener noreferrer">
+                            <div class="article-image-wrap">
+                                <img src="assets/images/public1.png" alt="AI in iOS article cover" class="article-image" width="400" height="220" loading="lazy">
+                            </div>
+                            <div class="article-body">
+                                <span class="article-category">iOS Development</span>
+                                <h3 class="article-title">AI in iOS</h3>
+                                <p class="article-desc">Exploring how artificial intelligence capabilities can be integrated into native iOS applications.</p>
+                                <span class="article-read">
+                                    Read article
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                                </span>
+                            </div>
+                        </a>
+                    </article>
+
+                    <article class="article-card reveal">
+                        <a href="https://medium.com/@mustafos/tricky-generics-in-swift-mastering-complexity-in-swiftui-projects-4a4a3fc884a6" class="article-card-link" target="_blank" rel="noopener noreferrer">
+                            <div class="article-image-wrap">
+                                <img src="assets/images/public2.png" alt="Generics in Swift article cover" class="article-image" width="400" height="220" loading="lazy">
+                            </div>
+                            <div class="article-body">
+                                <span class="article-category">Swift</span>
+                                <h3 class="article-title">Generics in Swift</h3>
+                                <p class="article-desc">Mastering complex generics in SwiftUI projects and writing more flexible, reusable Swift code.</p>
+                                <span class="article-read">
+                                    Read article
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                                </span>
+                            </div>
+                        </a>
+                    </article>
+
+                    <article class="article-card reveal">
+                        <a href="https://medium.com/@mustafos/swift-concurrency-leveraging-async-await-in-ios-applications-5784c3c2b1af" class="article-card-link" target="_blank" rel="noopener noreferrer">
+                            <div class="article-image-wrap">
+                                <img src="assets/images/public3.png" alt="Swift Concurrency article cover" class="article-image" width="400" height="220" loading="lazy">
+                            </div>
+                            <div class="article-body">
+                                <span class="article-category">Concurrency</span>
+                                <h3 class="article-title">Swift Concurrency</h3>
+                                <p class="article-desc">Leveraging async/await in iOS applications for cleaner asynchronous code and better performance.</p>
+                                <span class="article-read">
+                                    Read article
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                                </span>
+                            </div>
+                        </a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- How I Work -->
+        <section class="section" id="process">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2 class="section-title">A straightforward way of working</h2>
+                </div>
+                <div class="process-grid">
+                    <article class="process-step reveal">
+                        <span class="process-number">01</span>
+                        <h3 class="process-title">Understand</h3>
+                        <p>I clarify the product goal, technical context, constraints and expected outcome.</p>
+                    </article>
+                    <article class="process-step reveal">
+                        <span class="process-number">02</span>
+                        <h3 class="process-title">Plan</h3>
+                        <p>I break the task into a practical implementation plan and identify potential risks.</p>
+                    </article>
+                    <article class="process-step reveal">
+                        <span class="process-number">03</span>
+                        <h3 class="process-title">Build</h3>
+                        <p>I implement the solution, communicate progress and verify important edge cases.</p>
+                    </article>
+                    <article class="process-step reveal">
+                        <span class="process-number">04</span>
+                        <h3 class="process-title">Deliver</h3>
+                        <p>I prepare the feature for testing, release and future maintenance.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="section" id="contact">
+            <div class="container">
+                <div class="cta-block reveal">
+                    <h2 class="cta-title">Need an iOS developer who can take ownership?</h2>
+                    <p class="cta-text">Tell me about your product, current challenge and the result you want to achieve. I'll be glad to discuss how I can help.</p>
+                    <div class="cta-actions">
+                        <a href="https://t.me/mustafosID" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+                            Message me on Telegram
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                        </a>
+                        <a href="mailto:mustafa.bekirov.tech@gmail.com" class="btn btn-secondary">Send an email</a>
+                    </div>
+                    <p class="cta-note">Open to remote contracts, product teams and selected long-term opportunities.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <p class="footer-name">Mustafa Bekirov</p>
+                <p class="footer-role">iOS Developer &amp; Mobile Product Engineer</p>
+            </div>
+            <div class="footer-links">
+                <a href="https://www.linkedin.com/in/mustafabekirov/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                <a href="https://github.com/mustafos" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a href="https://t.me/mustafosID" target="_blank" rel="noopener noreferrer">Telegram</a>
+                <a href="mailto:mustafa.bekirov.tech@gmail.com">Email</a>
+            </div>
+            <div class="footer-legal">
+                <a href="terms.html">Terms of Use</a>
+                <a href="privacy.html">Privacy Policy</a>
+            </div>
         </div>
-        
-        <!-- ----- TYPING JS Link ----- -->
-        <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
-        
-        <!-- ----- SCROLL REVEAL JS Link----- -->
-        <script src="https://unpkg.com/scrollreveal"></script>
-        
-        <!-- ----- MAIN JS ----- -->
-        <script src="assets/js/main.js"></script>
-    </body>
+        <div class="container footer-bottom">
+            <p>&copy; <span id="year"></span> Mustafa Bekirov. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js" defer></script>
+</body>
 </html>
