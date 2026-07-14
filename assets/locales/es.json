@@ -112,86 +112,43 @@
   },
   "projects": {
     "eyebrow": "Proyectos",
-    "heading": "Trabajo seleccionado",
-    "lead": "Trabajo iOS seleccionado en productos de consumo, fintech, cripto y equipos de plataforma.",
-    "moreHeading": "Additional shipped products",
-    "moreLead": "More iOS work across fitness, AI, and consumer products.",
+    "heading": "Selected work",
+    "lead": "Platform, fintech, and crypto.",
+    "moreHeading": "More shipped products",
     "flagship": [
       {
         "positioning": "White-label hockey platform — 15 App Store apps from one shared iOS codebase.",
-        "context": "Una plataforma de hockey de marca blanca entregada como 15 aplicaciones desde una única base de código, construida sobre flujos de datos GraphQL, UI gestionada por CMS y autenticación con Auth0.",
-        "role": "iOS Developer on a shared platform team",
-        "owned": [
-          "Shared SwiftUI modules for CMS-driven screens across tenant app variants",
-          "GraphQL data layer and Auth0 authentication flows used platform-wide",
-          "Release support for multi-app TestFlight and App Store submissions"
-        ],
-        "problem": "One codebase had to power multiple branded apps with different CMS content, auth tenants, and release schedules.",
-        "solution": [
-          "Built reusable screen modules driven by CMS schema instead of per-app duplication",
-          "Centralized GraphQL and Auth0 integration so tenant differences stayed in configuration"
-        ],
         "outcome": "15 branded apps maintained from one shared iOS codebase.",
         "alt": "Captura de pantalla de la app Elite Prospects Hockey Stats"
       },
       {
         "positioning": "Business fintech app — secure card and payment flows with SwiftUI and TCA.",
-        "context": "Una app fintech para tarjetas empresariales y flujos de pago, construida con SwiftUI y TCA para dar soporte a flujos seguros y una entrega escalable.",
-        "role": "iOS Developer on the product team",
-        "owned": [
-          "Core card and payment flows in SwiftUI with TCA state management",
-          "Secure API integration and edge-case handling for transaction states",
-          "TestFlight and CI/CD release participation"
-        ],
-        "problem": "Payment flows needed predictable state handling and safe UX under backend latency and failure cases.",
-        "solution": [
-          "Used TCA to isolate payment state and side effects per feature domain",
-          "Structured async API work with explicit loading, success, and failure UI states"
-        ],
         "outcome": "Production payment and card flows shipped for live business users.",
         "alt": "Captura de pantalla de la app Wallester business"
       },
       {
         "positioning": "Self-custody crypto wallet — high-stakes asset flows on native iOS.",
-        "context": "Un monedero cripto de autocustodia para la gestión segura de activos digitales, con énfasis en la claridad, la confianza y la seguridad propias de iOS nativo.",
-        "role": "iOS Developer",
-        "owned": [
-          "Wallet onboarding, asset views, and transaction flows in SwiftUI",
-          "Secure storage patterns and defensive UX for irreversible actions",
-          "App Store release preparation and submission"
-        ],
-        "problem": "Wallet actions are irreversible, so unclear UX or weak error handling directly risks user trust and funds.",
-        "solution": [
-          "Designed step-by-step flows with confirmation and recovery paths for critical actions",
-          "Separated sensitive operations into explicit, testable modules with strict state handling"
-        ],
         "outcome": "Wallet product released on the App Store with production-ready iOS flows.",
         "alt": "Captura de pantalla del monedero cripto Braavos"
       }
     ],
     "archive": [
       {
-        "desc": "Cross-platform fitness app with KMP shared logic and native iOS and Android store releases.",
         "alt": "BURN fitness app screenshot"
       },
       {
-        "desc": "Una herramienta iOS de planificación de plantas para crear, editar y visualizar distribuciones de interiores en 2D y en 3D en tiempo real.",
         "alt": "Captura de pantalla de la app Floor Planner"
       },
       {
-        "desc": "App de fitness para iOS y Android con Kotlin Multiplatform, centrada en entrenamientos guiados, vídeo y suscripciones, desde la idea del cliente hasta su publicación en ambas tiendas.",
         "alt": "Captura de pantalla de la app de fitness BURN"
       },
       {
-        "desc": "Una app VPN centrada en la conectividad segura, las suscripciones y un onboarding fiable.",
         "alt": "Captura de pantalla de la app Super VPN"
       },
       {
-        "desc": "Un juego de simulación de negocios construido alrededor de sistemas de progresión, monetización e interacción basada en toques.",
         "alt": "Captura de pantalla de la app Business Empire"
       },
       {
-        "desc": "Una app de preparación para el examen de conducir con flujos de estudio estructurados, seguimiento del progreso y datos de aprendizaje sincronizados.",
         "alt": "Captura de pantalla de la app DriverPro"
       }
     ]
@@ -199,21 +156,18 @@
   "writing": {
     "eyebrow": "Artículos",
     "heading": "Artículos sobre desarrollo iOS",
-    "lead": "Selected engineering notes on production Swift, security, and reliability.",
     "featured": {
       "category": "Seguridad",
-      "desc": "Una guía para construir apps iOS más seguras con patrones modernos de seguridad en Swift y prácticas orientadas a producción.",
+      "desc": "Modern Swift security patterns for production iOS apps.",
       "alt": "Portada del artículo Security in Swift"
     },
     "more": [
       {
         "category": "Caché",
-        "desc": "Una mirada práctica a la estrategia de caché en iOS: cómo se almacenan, actualizan y sirven los datos cuando la red es lenta o no está disponible.",
         "alt": "Portada del artículo The Coffee Shop Problem"
       },
       {
         "category": "Memoria y ARC",
-        "desc": "Encontrar y corregir fugas de memoria relacionadas con ARC en SwiftUI: ciclos de retención, referencias fuertes y depuración con Instruments.",
         "alt": "Portada del artículo Fixing Memory Leaks in a SwiftUI App"
       }
     ]

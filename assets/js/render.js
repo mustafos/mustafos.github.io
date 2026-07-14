@@ -30,6 +30,10 @@
             .replace(/"/g, '&quot;');
     }
 
+    function limitTags(tags, max) {
+        return (tags || []).slice(0, max);
+    }
+
     function profileContent(profile) {
         return {
             title: safe(t('hero.profile.title') || (profile && profile.title)),
@@ -41,27 +45,6 @@
     function observeNewReveal(root) {
         if (!window.__observeReveal || !root) return;
         root.querySelectorAll('.reveal').forEach(window.__observeReveal);
-    }
-
-    function renderListItems(items) {
-        if (!items || !items.length) return '';
-        return '<ul class="case-study__list">' + items.map(function (item) {
-            return '<li>' + escapeHtml(item) + '</li>';
-        }).join('') + '</ul>';
-    }
-
-    function limitTags(tags, max) {
-        return (tags || []).slice(0, max);
-    }
-
-    function renderCaseStudyField(label, content, modifier) {
-        if (!content) return '';
-        var mod = modifier ? ' case-study__field--' + modifier : '';
-        return ''
-            + '<div class="case-study__field' + mod + '">'
-            + '<dt class="case-study__label">' + escapeHtml(label) + '</dt>'
-            + '<dd class="case-study__value">' + content + '</dd>'
-            + '</div>';
     }
 
     function renderHeroFloats() {
@@ -144,33 +127,23 @@
         root.innerHTML = '';
 
         siteData.flagshipProjects.forEach(function (p) {
-            var tags = (p.tags || []).map(function (tag) {
-                return '<li class="tag">' + escapeHtml(tag) + '</li>';
+            var tags = limitTags(p.tags, 3).map(function (tag) {
+                return '<li class="tag tag--showcase">' + escapeHtml(tag) + '</li>';
             }).join('');
 
-            var owned = Array.isArray(p.owned) ? p.owned : [];
-            var solution = Array.isArray(p.solution) ? p.solution : [];
-
-            var details = ''
-                + renderCaseStudyField(t('common.caseContext'), '<p>' + escapeHtml(p.context) + '</p>', 'compact')
-                + renderCaseStudyField(t('common.caseRole'), '<p>' + escapeHtml(p.role) + '</p>', 'compact')
-                + renderCaseStudyField(t('common.caseOwned'), renderListItems(owned), 'wide')
-                + renderCaseStudyField(t('common.caseProblem'), '<p>' + escapeHtml(p.problem) + '</p>', 'wide')
-                + renderCaseStudyField(t('common.caseSolution'), renderListItems(solution), 'wide')
-                + renderCaseStudyField(t('common.caseOutcome'), '<p>' + escapeHtml(p.outcome) + '</p>', 'wide');
-
-            root.appendChild(el('article', 'panel panel--case-study reveal', ''
-                + '<div class="panel__media">'
-                + '<img src="' + safe(p.image) + '" alt="' + escapeHtml(p.alt) + '" width="400" height="250" loading="lazy">'
+            root.appendChild(el('article', 'showcase-card reveal', ''
+                + '<a href="' + safe(p.url) + '" class="showcase-card__link" target="_blank" rel="noopener noreferrer" data-track="click_project" data-project-name="' + escapeHtml(p.title) + '" data-track-location="projects">'
+                + '<div class="showcase-card__media">'
+                + '<img src="' + safe(p.image) + '" alt="' + escapeHtml(p.alt) + '" width="360" height="225" loading="lazy" decoding="async">'
                 + '</div>'
-                + '<div class="panel__body">'
-                + '<div class="panel__head"><h3 class="panel__title">' + escapeHtml(p.title) + '</h3>'
-                + '<ul class="tag-list tag-list--sm">' + tags + '</ul></div>'
-                + '<p class="case-study__positioning">' + escapeHtml(p.positioning) + '</p>'
-                + '<dl class="case-study__details">' + details + '</dl>'
-                + '<a href="' + safe(p.url) + '" class="text-link case-study__link" target="_blank" rel="noopener noreferrer" data-track="click_project" data-project-name="' + escapeHtml(p.title) + '" data-track-location="projects">'
-                + escapeHtml(t('common.viewProject')) + ' ' + icon('external') + '</a>'
+                + '<div class="showcase-card__body">'
+                + '<h3 class="showcase-card__title">' + escapeHtml(p.title) + '</h3>'
+                + '<p class="showcase-card__line">' + escapeHtml(p.positioning) + '</p>'
+                + '<ul class="tag-list tag-list--sm showcase-card__tags">' + tags + '</ul>'
+                + '<p class="showcase-card__proof">' + escapeHtml(p.outcome) + '</p>'
+                + '<span class="text-link showcase-card__cta">' + escapeHtml(t('common.viewProject')) + ' ' + icon('external') + '</span>'
                 + '</div>'
+                + '</a>'
             ));
         });
 
@@ -184,19 +157,18 @@
         root.innerHTML = '';
 
         siteData.archiveProjects.forEach(function (p) {
-            var tags = limitTags(p.tags, 3).map(function (tag) {
-                return '<li class="tag tag--rail">' + escapeHtml(tag) + '</li>';
-            }).join('');
+            var tag = limitTags(p.tags, 2).map(function (item) {
+                return escapeHtml(item);
+            }).join(' · ');
 
             var card = el('article', 'work-rail__card reveal', ''
                 + '<a href="' + safe(p.url) + '" class="work-rail__link" target="_blank" rel="noopener noreferrer" data-track="click_project" data-project-name="' + escapeHtml(p.title) + '" data-track-location="archive">'
                 + '<div class="work-rail__media">'
-                + '<img src="' + safe(p.image) + '" alt="' + escapeHtml(p.alt) + '" width="260" height="146" loading="lazy" decoding="async">'
+                + '<img src="' + safe(p.image) + '" alt="' + escapeHtml(p.alt) + '" width="200" height="112" loading="lazy" decoding="async">'
                 + '</div>'
                 + '<div class="work-rail__body">'
                 + '<h4 class="work-rail__name">' + escapeHtml(p.title) + '</h4>'
-                + '<ul class="tag-list tag-list--sm work-rail__tags">' + tags + '</ul>'
-                + '<p class="work-rail__desc">' + escapeHtml(p.desc) + '</p>'
+                + (tag ? '<p class="work-rail__meta">' + tag + '</p>' : '')
                 + '</div>'
                 + '</a>'
             );
@@ -216,14 +188,14 @@
         root.innerHTML = '';
         root.appendChild(el('article', 'writing-featured reveal', ''
             + '<a href="' + safe(a.url) + '" class="writing-featured__link" target="_blank" rel="noopener noreferrer" data-track="click_article" data-article-name="' + escapeHtml(a.title) + '" data-track-location="writing-featured">'
-            + '<div class="writing-featured__media">'
-            + '<img src="' + safe(a.image) + '" alt="' + escapeHtml(a.alt) + '" width="480" height="270" loading="lazy" decoding="async">'
-            + '</div>'
             + '<div class="writing-featured__body">'
             + '<span class="eyebrow">' + escapeHtml(a.category) + '</span>'
             + '<h3 class="writing-featured__title">' + escapeHtml(a.title) + '</h3>'
             + '<p class="writing-featured__desc">' + escapeHtml(a.desc) + '</p>'
             + '<span class="text-link writing-featured__cta">' + escapeHtml(t('common.readArticle')) + ' ' + icon('arrow') + '</span>'
+            + '</div>'
+            + '<div class="writing-featured__media">'
+            + '<img src="' + safe(a.image) + '" alt="' + escapeHtml(a.alt) + '" width="320" height="180" loading="lazy" decoding="async">'
             + '</div>'
             + '</a>'
         ));
@@ -231,17 +203,16 @@
     }
 
     function renderMoreArticles() {
-        var root = document.getElementById('writing-rail');
+        var root = document.getElementById('writing-secondary');
         var siteData = data();
         if (!root || !siteData) return;
         root.innerHTML = '';
 
         siteData.moreArticles.forEach(function (a) {
-            var card = el('article', 'writing-rail__card reveal', ''
-                + '<a href="' + safe(a.url) + '" class="writing-rail__link" target="_blank" rel="noopener noreferrer" data-track="click_article" data-article-name="' + escapeHtml(a.title) + '" data-track-location="writing-rail">'
-                + '<span class="writing-rail__category">' + escapeHtml(a.category) + '</span>'
-                + '<h4 class="writing-rail__title">' + escapeHtml(a.title) + '</h4>'
-                + '<p class="writing-rail__desc">' + escapeHtml(a.desc) + '</p>'
+            var card = el('article', 'writing-secondary__card reveal', ''
+                + '<a href="' + safe(a.url) + '" class="writing-secondary__link" target="_blank" rel="noopener noreferrer" data-track="click_article" data-article-name="' + escapeHtml(a.title) + '" data-track-location="writing-secondary">'
+                + '<span class="writing-secondary__category">' + escapeHtml(a.category) + '</span>'
+                + '<h4 class="writing-secondary__title">' + escapeHtml(a.title) + '</h4>'
                 + '</a>'
             );
             card.setAttribute('role', 'listitem');

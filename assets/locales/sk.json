@@ -113,85 +113,42 @@
   "projects": {
     "eyebrow": "Projekty",
     "heading": "Vybraná práca",
-    "lead": "Vybrané iOS projekty z oblasti spotrebiteľských aplikácií, fintechu, kryptomien a platformových tímov.",
-    "moreHeading": "Additional shipped products",
-    "moreLead": "More iOS work across fitness, AI, and consumer products.",
+    "lead": "Platform, fintech, and crypto.",
+    "moreHeading": "More shipped products",
     "flagship": [
       {
         "positioning": "White-label hockey platform — 15 App Store apps from one shared iOS codebase.",
-        "context": "White-label hokejová platforma dodaná ako 15 aplikácií z jednej spoločnej codebase, postavená na GraphQL dátových tokoch, UI riadenom cez CMS a autentifikácii Auth0.",
-        "role": "iOS Developer on a shared platform team",
-        "owned": [
-          "Shared SwiftUI modules for CMS-driven screens across tenant app variants",
-          "GraphQL data layer and Auth0 authentication flows used platform-wide",
-          "Release support for multi-app TestFlight and App Store submissions"
-        ],
-        "problem": "One codebase had to power multiple branded apps with different CMS content, auth tenants, and release schedules.",
-        "solution": [
-          "Built reusable screen modules driven by CMS schema instead of per-app duplication",
-          "Centralized GraphQL and Auth0 integration so tenant differences stayed in configuration"
-        ],
         "outcome": "15 branded apps maintained from one shared iOS codebase.",
         "alt": "Snímka obrazovky aplikácie Elite Prospects Hockey Stats"
       },
       {
         "positioning": "Business fintech app — secure card and payment flows with SwiftUI and TCA.",
-        "context": "Fintech aplikácia pre firemné karty a platobné procesy, postavená na SwiftUI a TCA s dôrazom na bezpečné toky a škálovateľné dodávanie.",
-        "role": "iOS Developer on the product team",
-        "owned": [
-          "Core card and payment flows in SwiftUI with TCA state management",
-          "Secure API integration and edge-case handling for transaction states",
-          "TestFlight and CI/CD release participation"
-        ],
-        "problem": "Payment flows needed predictable state handling and safe UX under backend latency and failure cases.",
-        "solution": [
-          "Used TCA to isolate payment state and side effects per feature domain",
-          "Structured async API work with explicit loading, success, and failure UI states"
-        ],
         "outcome": "Production payment and card flows shipped for live business users.",
         "alt": "Snímka obrazovky aplikácie Wallester business"
       },
       {
         "positioning": "Self-custody crypto wallet — high-stakes asset flows on native iOS.",
-        "context": "Self-custody kryptopeňaženka na bezpečnú správu digitálnych aktív, s dôrazom na prehľadnosť, dôveru a bezpečnosť natívneho iOS riešenia.",
-        "role": "iOS Developer",
-        "owned": [
-          "Wallet onboarding, asset views, and transaction flows in SwiftUI",
-          "Secure storage patterns and defensive UX for irreversible actions",
-          "App Store release preparation and submission"
-        ],
-        "problem": "Wallet actions are irreversible, so unclear UX or weak error handling directly risks user trust and funds.",
-        "solution": [
-          "Designed step-by-step flows with confirmation and recovery paths for critical actions",
-          "Separated sensitive operations into explicit, testable modules with strict state handling"
-        ],
         "outcome": "Wallet product released on the App Store with production-ready iOS flows.",
         "alt": "Snímka obrazovky kryptopeňaženky Braavos"
       }
     ],
     "archive": [
       {
-        "desc": "Cross-platform fitness app with KMP shared logic and native iOS and Android store releases.",
         "alt": "BURN fitness app screenshot"
       },
       {
-        "desc": "iOS nástroj na plánovanie pôdorysov, ktorý slúži na vytváranie, úpravu a vizualizáciu interiérových dispozícií v 2D aj v reálnom 3D.",
         "alt": "Snímka obrazovky aplikácie Floor Planner"
       },
       {
-        "desc": "Fitness aplikácia pre iOS a Android postavená na Kotlin Multiplatform, zameraná na riadené tréningy, video lekcie a predplatné — od nápadu klienta až po vydanie v oboch obchodoch.",
         "alt": "Snímka obrazovky fitness aplikácie BURN"
       },
       {
-        "desc": "VPN aplikácia zameraná na bezpečné pripojenie, predplatné a spoľahlivý onboarding.",
         "alt": "Snímka obrazovky aplikácie Super VPN"
       },
       {
-        "desc": "Biznis simulačná hra postavená na progresných systémoch, monetizácii a zapojení prostredníctvom jednoduchých tapov.",
         "alt": "Snímka obrazovky aplikácie Business Empire"
       },
       {
-        "desc": "Aplikácia na prípravu na autoškolu so štruktúrovanými študijnými postupmi, sledovaním pokroku a synchronizovanými výučbovými dátami.",
         "alt": "Snímka obrazovky aplikácie DriverPro"
       }
     ]
@@ -199,21 +156,18 @@
   "writing": {
     "eyebrow": "Články",
     "heading": "Písanie o vývoji pre iOS",
-    "lead": "Selected engineering notes on production Swift, security, and reliability.",
     "featured": {
       "category": "Bezpečnosť",
-      "desc": "Návod na tvorbu bezpečnejších iOS aplikácií s modernými bezpečnostnými vzormi vo Swifte a postupmi zameranými na produkčné nasadenie.",
+      "desc": "Modern Swift security patterns for production iOS apps.",
       "alt": "Titulný obrázok článku Security in Swift"
     },
     "more": [
       {
         "category": "Kešovanie",
-        "desc": "Praktický pohľad na stratégiu kešovania v iOS .",
         "alt": "Titulný obrázok článku The Coffee Shop Problem"
       },
       {
         "category": "Pamäť a ARC",
-        "desc": "Hľadanie a odstraňovanie memory leakov súvisiacich s ARC vo SwiftUI .",
         "alt": "Titulný obrázok článku Fixing Memory Leaks in a SwiftUI App"
       }
     ]

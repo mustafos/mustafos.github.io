@@ -94,109 +94,63 @@ window.__LOCALE_FALLBACK={
     ]
   },
   "projects": {
-    "eyebrow": "Selected work",
-    "heading": "Products I helped build and release",
-    "lead": "Three flagship projects across platform, fintech, and crypto.",
-    "moreHeading": "Additional shipped products",
-    "moreLead": "More iOS work across fitness, AI, and consumer products.",
+    "eyebrow": "Work",
+    "heading": "Selected work",
+    "lead": "Platform, fintech, and crypto.",
+    "moreHeading": "More shipped products",
     "flagship": [
       {
         "positioning": "White-label hockey platform — 15 App Store apps from one shared iOS codebase.",
-        "context": "Multi-tenant sports platform shipping branded iOS apps for leagues and partners.",
-        "role": "iOS Developer on a shared platform team",
-        "owned": [
-          "Shared SwiftUI modules for CMS-driven screens across tenant app variants",
-          "GraphQL data layer and Auth0 authentication flows used platform-wide",
-          "Release support for multi-app TestFlight and App Store submissions"
-        ],
-        "problem": "One codebase had to power multiple branded apps with different CMS content, auth tenants, and release schedules.",
-        "solution": [
-          "Built reusable screen modules driven by CMS schema instead of per-app duplication",
-          "Centralized GraphQL and Auth0 integration so tenant differences stayed in configuration"
-        ],
-        "outcome": "15 branded apps maintained from one shared iOS codebase.",
+        "outcome": "15 branded apps from one shared codebase.",
         "alt": "Elite Prospects Hockey Stats app screenshot"
       },
       {
         "positioning": "Business fintech app — secure card and payment flows with SwiftUI and TCA.",
-        "context": "Production fintech product for business card and payment operations.",
-        "role": "iOS Developer on the product team",
-        "owned": [
-          "Core card and payment flows in SwiftUI with TCA state management",
-          "Secure API integration and edge-case handling for transaction states",
-          "TestFlight and CI/CD release participation"
-        ],
-        "problem": "Payment flows needed predictable state handling and safe UX under backend latency and failure cases.",
-        "solution": [
-          "Used TCA to isolate payment state and side effects per feature domain",
-          "Structured async API work with explicit loading, success, and failure UI states"
-        ],
-        "outcome": "Production payment and card flows shipped for live business users.",
+        "outcome": "Production payment flows for live business users.",
         "alt": "Wallester business app screenshot"
       },
       {
         "positioning": "Self-custody crypto wallet — high-stakes asset flows on native iOS.",
-        "context": "Security-sensitive wallet product for digital asset management.",
-        "role": "iOS Developer",
-        "owned": [
-          "Wallet onboarding, asset views, and transaction flows in SwiftUI",
-          "Secure storage patterns and defensive UX for irreversible actions",
-          "App Store release preparation and submission"
-        ],
-        "problem": "Wallet actions are irreversible, so unclear UX or weak error handling directly risks user trust and funds.",
-        "solution": [
-          "Designed step-by-step flows with confirmation and recovery paths for critical actions",
-          "Separated sensitive operations into explicit, testable modules with strict state handling"
-        ],
-        "outcome": "Wallet product released on the App Store with production-ready iOS flows.",
+        "outcome": "Wallet released on the App Store with production-ready iOS flows.",
         "alt": "Braavos crypto wallet app screenshot"
       }
     ],
     "archive": [
       {
-        "desc": "Cross-platform fitness app with KMP shared logic and native iOS and Android store releases.",
         "alt": "BURN fitness app screenshot"
       },
       {
-        "desc": "An AI-powered iOS tennis app that turns structured training data into a polished coaching experience.",
         "alt": "Sevensix app screenshot"
       },
       {
-        "desc": "An iOS floor planning tool for creating, editing, and visualizing interior layouts in 2D and real-time 3D.",
         "alt": "Floor Planner app screenshot"
       },
       {
-        "desc": "A VPN app centered on secure connectivity, subscriptions, and dependable onboarding.",
         "alt": "Super VPN app screenshot"
       },
       {
-        "desc": "A business simulation game shaped around progression systems, monetization, and tap-driven engagement.",
         "alt": "Business Empire app screenshot"
       },
       {
-        "desc": "A driving-test preparation app with structured study flows, progress tracking, and synced learning data.",
         "alt": "DriverPro app screenshot"
       }
     ]
   },
   "writing": {
     "eyebrow": "Writing",
-    "heading": "Notes on building iOS products",
-    "lead": "Selected engineering notes on production Swift, security, and reliability.",
+    "heading": "Writing",
     "featured": {
       "category": "Security",
-      "desc": "A guide to building safer iOS apps with modern Swift security patterns and production-minded practices.",
+      "desc": "Modern Swift security patterns for production iOS apps.",
       "alt": "Security in Swift article cover"
     },
     "more": [
       {
         "category": "Caching",
-        "desc": "A practical look at caching strategy in iOS when the network is slow or unavailable.",
         "alt": "The Coffee Shop Problem article cover"
       },
       {
         "category": "Memory & ARC",
-        "desc": "Finding and fixing ARC-related memory leaks in SwiftUI with Instruments.",
         "alt": "Fixing Memory Leaks in a SwiftUI App article cover"
       }
     ]

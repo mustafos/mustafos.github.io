@@ -63,7 +63,7 @@ function createDom() {
     'projects-grid': '',
     'archive-grid': '',
     'writing-featured': '',
-    'writing-rail': ''
+    'writing-secondary': ''
   };
 
   const elements = new Map();
