@@ -163,7 +163,9 @@
         }
     }
 
-    if (window.I18n) {
+    if (document.body && document.body.getAttribute('data-legal-title')) {
+        initLegalPage();
+    } else if (window.I18n) {
         window.I18n.init().then(function () {
             boot();
             if (window.Analytics) {
