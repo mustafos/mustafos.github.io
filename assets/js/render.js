@@ -24,7 +24,7 @@
         data.heroFloats.forEach(function (item, i) {
             var chip = el('button', 'hero-chip hero-chip--' + (i + 1), icon(item.icon) + '<span>' + item.label + '</span>');
             chip.type = 'button';
-            chip.setAttribute('aria-label', item.title + ' — show details');
+            chip.setAttribute('aria-label', item.label + ' capability');
             chip.setAttribute('aria-pressed', 'false');
             chip.setAttribute('data-slide', String(i + 1));
             root.appendChild(chip);
@@ -56,10 +56,14 @@
                 ? '<div class="iphone__slide-icon iphone__slide-icon--brand">' + (window.heroBrandMark || '') + '</div>'
                 : '<div class="iphone__slide-icon">' + icon(slide.icon) + '</div>';
 
+            var metaHtml = isProfile
+                ? '<p class="iphone__slide-role">' + profile.role + '</p>'
+                : '<p class="iphone__slide-eyebrow">' + slide.category + '</p>';
+
             slidesRoot.appendChild(el('article', 'iphone__slide' + (i === 0 ? ' is-active' : ''), ''
                 + iconHtml
+                + metaHtml
                 + '<h3 class="iphone__slide-title">' + (isProfile ? profile.title : slide.title) + '</h3>'
-                + '<p class="iphone__slide-role">' + (isProfile ? profile.role : slide.label) + '</p>'
                 + '<p class="iphone__slide-text">' + (isProfile ? profile.text : slide.text) + '</p>'
                 + (isProfile ? tags : '')
                 + '<div class="iphone__slide-progress" aria-hidden="true"><span></span></div>'

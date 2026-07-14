@@ -209,38 +209,58 @@ window.SITE_DATA = {
         {
             icon: 'layout',
             label: 'SwiftUI',
+            category: 'Interface',
             title: 'SwiftUI',
             text: 'Declarative UI for scalable, maintainable iOS products.'
         },
         {
             icon: 'code',
             label: 'Swift',
+            category: 'Language',
             title: 'Swift',
-            text: 'Modern Swift with concurrency, clear abstractions, and production-focused code.'
-        },
-        {
-            icon: 'link',
-            label: 'REST API',
-            title: 'REST API',
-            text: 'API integration, authentication, Firebase, and third-party SDKs.'
+            text: 'Modern Swift with concurrency and production-focused code.'
         },
         {
             icon: 'layers',
-            label: 'Firebase',
-            title: 'Firebase',
-            text: 'Analytics, notifications, and cloud-backed product features.'
+            label: 'Architecture',
+            category: 'Structure',
+            title: 'Architecture',
+            text: 'Clear structure for products that need to grow over time.'
+        },
+        {
+            icon: 'link',
+            label: 'API Integration',
+            category: 'Services',
+            title: 'API Integration',
+            text: 'Authentication, backend data flows, and third-party services.'
         },
         {
             icon: 'zap',
             label: 'Performance',
+            category: 'Quality',
             title: 'Performance',
             text: 'Faster startup, lower overhead, and smoother interaction.'
         },
         {
+            icon: 'shield',
+            label: 'Security',
+            category: 'Trust',
+            title: 'Security',
+            text: 'Safer mobile flows for fintech, crypto, and user data.'
+        },
+        {
+            icon: 'sparkles',
+            label: 'AI / LLM',
+            category: 'Intelligence',
+            title: 'AI / LLM',
+            text: 'Integrating modern AI capabilities into native iOS products.'
+        },
+        {
             icon: 'rocket',
             label: 'CI/CD',
+            category: 'Delivery',
             title: 'CI/CD',
-            text: 'TestFlight, App Store release, and repeatable delivery workflows.'
+            text: 'TestFlight, repeatable builds, and release-ready workflows.'
         }
     ]
 };

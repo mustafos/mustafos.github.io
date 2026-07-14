@@ -5,7 +5,7 @@
 
     var currentIndex = 0;
     var timer = null;
-    var interval = 4500;
+    var interval = 5000;
     var slides = [];
     var chips = [];
     var dots = [];
