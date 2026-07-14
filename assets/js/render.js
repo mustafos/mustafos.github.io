@@ -53,7 +53,9 @@
             }
 
             var iconHtml = isProfile
-                ? '<div class="iphone__slide-icon iphone__slide-icon--brand">' + (window.heroBrandMark || '') + '</div>'
+                ? '<div class="iphone__slide-icon iphone__slide-icon--avatar">'
+                    + '<img src="' + profile.avatar + '" alt="Portrait of ' + profile.title + '" width="72" height="72" decoding="async">'
+                    + '</div>'
                 : '<div class="iphone__slide-icon">' + icon(slide.icon) + '</div>';
 
             var metaHtml = isProfile
@@ -104,11 +106,12 @@
             var tags = group.items.map(function (t) {
                 return '<li class="tag">' + t + '</li>';
             }).join('');
-            root.appendChild(el('div', 'panel panel--flat', ''
+            root.appendChild(el('div', 'panel panel--flat panel--stack reveal', ''
                 + '<h3 class="panel__label">' + group.title + '</h3>'
-                + '<ul class="tag-list">' + tags + '</ul>'
+                + '<ul class="tag-list tag-list--sm">' + tags + '</ul>'
             ));
         });
+        observeNewReveal(root);
     }
 
     function renderProjects() {

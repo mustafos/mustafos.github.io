@@ -34,20 +34,24 @@ window.SITE_DATA = {
     ],
     tech: [
         {
-            title: 'iOS',
-            items: ['Swift', 'SwiftUI', 'UIKit', 'Combine', 'Concurrency', 'Grand Central Dispatch', 'Core Data', 'StoreKit']
+            title: 'iOS Foundations',
+            items: ['Swift', 'SwiftUI', 'UIKit', 'Combine', 'Swift Concurrency', 'GCD', 'Core Data', 'StoreKit']
         },
         {
             title: 'Architecture',
-            items: ['MVVM', 'Clean Architecture', 'SOLID', 'Dependency Injection', 'Design Patterns', 'Modularization']
+            items: ['MVVM', 'TCA', 'Clean Architecture', 'SOLID', 'Dependency Injection', 'Modularization', 'Design Patterns']
         },
         {
-            title: 'Networking and Services',
-            items: ['REST API', 'Firebase', 'Alamofire', 'Push Notifications', 'Analytics']
+            title: 'Data & Integrations',
+            items: ['REST API', 'GraphQL', 'Firebase', 'Supabase', 'Auth0', 'Push Notifications', 'Analytics']
         },
         {
-            title: 'Engineering Tools',
-            items: ['Xcode', 'Git', 'XCTest', 'SwiftLint', 'CI/CD', 'Jira', 'Figma']
+            title: 'Quality & Performance',
+            items: ['XCTest', 'Unit Testing', 'UI Testing', 'Instruments', 'Performance Optimization', 'Memory Profiling', 'Debugging']
+        },
+        {
+            title: 'Delivery & Tools',
+            items: ['Xcode', 'Git', 'CI/CD', 'TestFlight', 'App Store Connect', 'SwiftLint', 'Jira', 'Figma']
         }
     ],
     projects: [
@@ -203,6 +207,7 @@ window.SITE_DATA = {
         title: 'Mustafa Bekirov',
         role: 'iOS Developer',
         text: 'I build and ship native iOS products for startups and product teams.',
+        avatar: 'assets/images/avatar.png',
         tags: ['Swift', 'SwiftUI', 'UIKit']
     },
     heroFloats: [
