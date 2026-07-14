@@ -141,7 +141,14 @@
         updateLegalLinks();
     }
 
+    function isLegalPage() {
+        return !!(document.body && document.body.getAttribute('data-legal-title'));
+    }
+
     function updateSeo() {
+        document.documentElement.lang = (messages.meta && messages.meta.lang) || currentLocale;
+        if (isLegalPage()) return;
+
         var meta = messages.meta || getFallback().meta || {};
         var title = meta.title || t('meta.title') || document.title;
         var description = meta.description || t('meta.description') || '';
@@ -156,6 +163,7 @@
         setMeta('og:title', ogTitle, 'property');
         setMeta('og:description', ogDescription, 'property');
         setMeta('og:url', canonical, 'property');
+        setMeta('og:locale', getOgLocale(currentLocale), 'property');
         setMeta('twitter:title', ogTitle);
         setMeta('twitter:description', ogDescription);
 
@@ -164,6 +172,11 @@
 
         updateHreflang();
         updateJsonLd();
+    }
+
+    function getOgLocale(locale) {
+        var map = { en: 'en_US', cs: 'cs_CZ', es: 'es_ES', uk: 'uk_UA', sk: 'sk_SK' };
+        return map[locale] || 'en_US';
     }
 
     function setMeta(name, content, attr) {
@@ -179,7 +192,7 @@
     }
 
     function updateHreflang() {
-        document.querySelectorAll('link[data-hreflang]').forEach(function (el) {
+        document.querySelectorAll('link[rel="alternate"][hreflang]').forEach(function (el) {
             el.parentNode.removeChild(el);
         });
 
@@ -188,7 +201,6 @@
             link.rel = 'alternate';
             link.hreflang = locale;
             link.href = localeUrl(locale);
-            link.setAttribute('data-hreflang', 'true');
             document.head.appendChild(link);
         });
 
@@ -196,19 +208,29 @@
         xDefault.rel = 'alternate';
         xDefault.hreflang = 'x-default';
         xDefault.href = SITE_URL + '/';
-        xDefault.setAttribute('data-hreflang', 'true');
         document.head.appendChild(xDefault);
     }
 
     function updateJsonLd() {
         var script = document.getElementById('person-jsonld');
-        if (!script) return;
-        try {
-            var data = JSON.parse(script.textContent);
-            var jobTitle = t('meta.jobTitle');
-            if (jobTitle) data.jobTitle = jobTitle;
-            script.textContent = JSON.stringify(data);
-        } catch (e) { /* ignore */ }
+        if (script) {
+            try {
+                var data = JSON.parse(script.textContent);
+                var jobTitle = t('meta.jobTitle');
+                if (jobTitle) data.jobTitle = jobTitle;
+                script.textContent = JSON.stringify(data);
+            } catch (e) { /* ignore */ }
+        }
+
+        var websiteScript = document.getElementById('website-jsonld');
+        if (websiteScript) {
+            try {
+                var website = JSON.parse(websiteScript.textContent);
+                var description = t('meta.description');
+                if (description) website.description = description;
+                websiteScript.textContent = JSON.stringify(website);
+            } catch (e) { /* ignore */ }
+        }
     }
 
     function localizedSlice(collection, path, index) {
@@ -289,6 +311,12 @@
                     var locale = button.getAttribute('data-locale');
                     closeLanguageMenu(menu, trigger);
                     if (!locale || locale === currentLocale) return;
+                    if (window.Analytics) {
+                        window.Analytics.trackEvent('language_switch', {
+                            locale: locale,
+                            previous_locale: currentLocale
+                        });
+                    }
                     setLocale(locale, true);
                 });
             });

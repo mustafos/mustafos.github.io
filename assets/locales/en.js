@@ -14,6 +14,12 @@ window.__LOCALE_FALLBACK={
     "uk": "Українська",
     "sk": "Slovenčina"
   },
+  "consent": {
+    "message": "This site uses privacy-friendly analytics to understand traffic and improve the portfolio experience. You can accept or decline analytics cookies.",
+    "accept": "Accept analytics",
+    "reject": "Decline",
+    "privacy": "Privacy Policy"
+  },
   "common": {
     "skipToContent": "Skip to content",
     "home": "Home",

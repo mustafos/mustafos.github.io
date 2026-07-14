@@ -31,6 +31,21 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Inject GA4 measurement ID
+        env:
+          GA_MEASUREMENT_ID: ${{ secrets.GA_MEASUREMENT_ID }}
+        run: |
+          if [ -n "$GA_MEASUREMENT_ID" ]; then
+            node -e "
+              const fs = require('fs');
+              const file = 'assets/js/config.js';
+              const content = fs.readFileSync(file, 'utf8').replace(
+                /gaMeasurementId:\\s*''/,
+                \"gaMeasurementId: '\" + process.env.GA_MEASUREMENT_ID + \"'\"
+              );
+              fs.writeFileSync(file, content);
+            "
+          fi
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact

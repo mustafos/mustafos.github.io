@@ -151,7 +151,7 @@
                 return '<li class="tag">' + tag + '</li>';
             }).join('');
             root.appendChild(el('article', 'panel panel--project reveal', ''
-                + '<a href="' + p.url + '" class="panel__media" target="_blank" rel="noopener noreferrer" aria-label="' + p.title + ' — ' + t('common.viewProject') + '">'
+                + '<a href="' + p.url + '" class="panel__media" target="_blank" rel="noopener noreferrer" aria-label="' + p.title + ' — ' + t('common.viewProject') + '" data-track="click_project" data-project-name="' + p.title + '" data-track-location="projects">'
                 + '<img src="' + p.image + '" alt="' + p.alt + '" width="400" height="250" loading="lazy">'
                 + '</a>'
                 + '<div class="panel__body">'
@@ -159,7 +159,7 @@
                 + '<ul class="tag-list tag-list--sm">' + tags + '</ul></div>'
                 + '<p class="panel__text">' + p.desc + '</p>'
                 + '<p class="panel__meta">' + t('common.projectRole') + ' · ' + p.scope + '</p>'
-                + '<a href="' + p.url + '" class="text-link" target="_blank" rel="noopener noreferrer">'
+                + '<a href="' + p.url + '" class="text-link" target="_blank" rel="noopener noreferrer" data-track="click_project" data-project-name="' + p.title + '" data-track-location="projects">'
                 + t('common.viewProject') + ' ' + icon('external') + '</a>'
                 + '</div>'
             ));
