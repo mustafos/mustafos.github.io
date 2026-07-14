@@ -4,12 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="noindex, follow">
-    <meta name="theme-color" content="#f5f5f7" media="(prefers-color-scheme: light)">
-    <meta name="theme-color" content="#08090b" media="(prefers-color-scheme: dark)">
-    <meta name="color-scheme" content="light dark">
+    <meta name="description" content="Privacy Policy for mustafabekirov.com, including analytics and cookie usage.">
+    <link rel="canonical" href="https://www.mustafabekirov.com/privacy.html">
     <title>Privacy Policy — Mustafa Bekirov</title>
     <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/js/consent-init.js"></script>
+    <script src="assets/js/config.js"></script>
+    <script src="assets/locales/en.js"></script>
+    <script src="assets/js/analytics.js"></script>
 </head>
 <body data-legal-title="legal.privacyTitle">
     <header class="header is-scrolled" id="header">
@@ -61,14 +64,11 @@
                 <p>When You access the Service by or through a mobile device, We may collect certain information automatically, including, but not limited to, the type of mobile device You use, Your mobile device unique ID, the IP address of Your mobile device, Your mobile operating system, the type of mobile Internet browser You use, unique device identifiers and other diagnostic data.</p>
                 <p>We may also collect information that Your browser sends whenever You visit our Service or when You access the Service by or through a mobile device.</p>
                 <h3>Tracking Technologies and Cookies</h3>
-                <p>We use Cookies and similar tracking technologies to track the activity on Our Service and store certain information. Tracking technologies used are beacons, tags, and scripts to collect and track information and to improve and analyze Our Service. The technologies We use may include:</p>
-                <p><strong>Cookies or Browser Cookies.</strong> A cookie is a small file placed on Your Device. You can instruct Your browser to refuse all Cookies or to indicate when a Cookie is being sent. However, if You do not accept Cookies, You may not be able to use some parts of our Service. Unless you have adjusted Your browser setting so that it will refuse Cookies, our Service may use Cookies.</p>
-                <p><strong>Web Beacons.</strong> Certain sections of our Service and our emails may contain small electronic files known as web beacons (also referred to as clear gifs, pixel tags, and single-pixel gifs) that permit the Company, for example, to count users who have visited those pages or opened an email and for other related website statistics (for example, recording the popularity of a certain section and verifying system and server integrity).</p>
-                <p>Cookies can be &quot;Persistent&quot; or &quot;Session&quot; Cookies. Persistent Cookies remain on Your personal computer or mobile device when You go offline, while Session Cookies are deleted as soon as You close Your web browser.</p>
-                <p>We use both Session and Persistent Cookies for the purposes set out below:</p>
-                <p><strong>Necessary / Essential Cookies</strong> — Type: Session Cookies. Administered by: Us. Purpose: These Cookies are essential to provide You with services available through the Website and to enable You to use some of its features.</p>
-                <p><strong>Cookies Policy / Notice Acceptance Cookies</strong> — Type: Persistent Cookies. Administered by: Us. Purpose: These Cookies identify if users have accepted the use of cookies on the Website.</p>
-                <p><strong>Functionality Cookies</strong> — Type: Persistent Cookies. Administered by: Us. Purpose: These Cookies allow us to remember choices You make when You use the Website, such as remembering your login details or language preference.</p>
+                <p>We use cookies and similar technologies to remember your language preference, store your analytics consent choice, and understand how the website is used.</p>
+                <p><strong>Essential cookies.</strong> These are required for basic site functionality, such as remembering your selected language and consent choice.</p>
+                <p><strong>Analytics cookies.</strong> With your consent, we use Google Analytics 4 (GA4) to collect aggregated usage data such as pages visited, approximate location, device type, browser type, and referral source. Analytics is loaded only after you accept analytics cookies. IP anonymization is enabled, and advertising features are disabled.</p>
+                <p>You can accept or decline analytics cookies through the consent banner. You can also clear site data in your browser at any time. If you decline analytics cookies, GA4 will not be loaded.</p>
+                <p>For more information about Google Analytics, see <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google's Privacy Policy</a>.</p>
 
                 <h3>Use of Your Personal Data</h3>
                 <p>The Company may use Personal Data for the following purposes:</p>
@@ -119,14 +119,25 @@
         </div>
     </main>
 
+    <aside class="consent-banner" id="consent-banner" hidden aria-live="polite" aria-label="Cookie consent">
+        <div class="wrap consent-banner__inner">
+            <p class="consent-banner__text" data-i18n="consent.message">This site uses privacy-friendly analytics to understand traffic and improve the portfolio experience. You can accept or decline analytics cookies.</p>
+            <div class="consent-banner__actions">
+                <button type="button" class="btn btn--ghost btn--sm" data-consent="reject" data-i18n="consent.reject">Decline</button>
+                <button type="button" class="btn btn--primary btn--sm" data-consent="accept" data-i18n="consent.accept">Accept analytics</button>
+            </div>
+            <a href="privacy.html" class="consent-banner__link" data-i18n="consent.privacy">Privacy Policy</a>
+        </div>
+    </aside>
+
     <footer class="footer">
         <div class="wrap footer__bar">
             <p data-i18n-copyright>&copy; <span id="year"></span> Mustafa Bekirov. All rights reserved.</p>
         </div>
     </footer>
 
-    <script src="assets/locales/en.js"></script>
     <script src="assets/js/i18n.js" defer></script>
+    <script src="assets/js/consent.js" defer></script>
     <script src="assets/js/main.js" defer></script>
     <script>document.addEventListener('DOMContentLoaded', initLegalPage);</script>
 </body>

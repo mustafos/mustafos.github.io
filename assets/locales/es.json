@@ -14,6 +14,12 @@
     "uk": "Українська",
     "sk": "Slovenčina"
   },
+  "consent": {
+    "message": "Este sitio usa analítica respetuosa con la privacidad para entender el tráfico y mejorar la experiencia del portfolio. Puedes aceptar o rechazar las cookies analíticas.",
+    "accept": "Aceptar analítica",
+    "reject": "Rechazar",
+    "privacy": "Política de privacidad"
+  },
   "common": {
     "skipToContent": "Saltar al contenido",
     "home": "Inicio",

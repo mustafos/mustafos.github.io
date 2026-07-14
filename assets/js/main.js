@@ -164,10 +164,18 @@
     }
 
     if (window.I18n) {
-        window.I18n.init().then(boot);
+        window.I18n.init().then(function () {
+            boot();
+            if (window.Analytics) {
+                window.Analytics.trackPageView();
+            }
+        });
         document.addEventListener('localechange', function () {
             if (typeof window.renderSiteSections === 'function') {
                 window.renderSiteSections();
+            }
+            if (window.Analytics) {
+                window.Analytics.trackPageView();
             }
             mobileLinks.forEach(function (link) {
                 link.removeEventListener('click', closeDrawer);
@@ -202,5 +210,8 @@ function initLegalPage() {
         });
         var yearEl = document.getElementById('year');
         if (yearEl) yearEl.textContent = new Date().getFullYear();
+        if (window.Analytics) {
+            window.Analytics.trackPageView();
+        }
     });
 }

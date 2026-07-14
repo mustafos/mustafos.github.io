@@ -14,6 +14,12 @@
     "uk": "Українська",
     "sk": "Slovenčina"
   },
+  "consent": {
+    "message": "Táto stránka používa šetrnú analytiku na pochopenie návštevnosti a zlepšenie portfólia. Analytické cookies môžete prijať alebo odmietnuť.",
+    "accept": "Prijať analytiku",
+    "reject": "Odmietnuť",
+    "privacy": "Zásady ochrany osobných údajov"
+  },
   "common": {
     "skipToContent": "Prejsť na obsah",
     "home": "Domov",

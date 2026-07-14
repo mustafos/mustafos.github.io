@@ -4,12 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="noindex, follow">
-    <meta name="theme-color" content="#f5f5f7" media="(prefers-color-scheme: light)">
-    <meta name="theme-color" content="#08090b" media="(prefers-color-scheme: dark)">
-    <meta name="color-scheme" content="light dark">
+    <meta name="description" content="Terms of Use for mustafabekirov.com.">
+    <link rel="canonical" href="https://www.mustafabekirov.com/terms.html">
     <title>Terms of Use — Mustafa Bekirov</title>
     <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/js/consent-init.js"></script>
+    <script src="assets/js/config.js"></script>
+    <script src="assets/locales/en.js"></script>
+    <script src="assets/js/analytics.js"></script>
 </head>
 <body data-legal-title="legal.termsTitle">
     <header class="header is-scrolled" id="header">
@@ -105,14 +108,25 @@
         </div>
     </main>
 
+    <aside class="consent-banner" id="consent-banner" hidden aria-live="polite" aria-label="Cookie consent">
+        <div class="wrap consent-banner__inner">
+            <p class="consent-banner__text" data-i18n="consent.message">This site uses privacy-friendly analytics to understand traffic and improve the portfolio experience. You can accept or decline analytics cookies.</p>
+            <div class="consent-banner__actions">
+                <button type="button" class="btn btn--ghost btn--sm" data-consent="reject" data-i18n="consent.reject">Decline</button>
+                <button type="button" class="btn btn--primary btn--sm" data-consent="accept" data-i18n="consent.accept">Accept analytics</button>
+            </div>
+            <a href="privacy.html" class="consent-banner__link" data-i18n="consent.privacy">Privacy Policy</a>
+        </div>
+    </aside>
+
     <footer class="footer">
         <div class="wrap footer__bar">
             <p data-i18n-copyright>&copy; <span id="year"></span> Mustafa Bekirov. All rights reserved.</p>
         </div>
     </footer>
 
-    <script src="assets/locales/en.js"></script>
     <script src="assets/js/i18n.js" defer></script>
+    <script src="assets/js/consent.js" defer></script>
     <script src="assets/js/main.js" defer></script>
     <script>document.addEventListener('DOMContentLoaded', initLegalPage);</script>
 </body>
