@@ -15,8 +15,9 @@ Local testing: copy `assets/js/config.example.js` values into `assets/js/config.
 1. **Google Analytics 4**
    - Create a GA4 property for `mustafabekirov.com`
    - Copy the measurement ID (`G-XXXXXXXXXX`)
-   - Add it as GitHub secret `GA_MEASUREMENT_ID`
+   - Add it as GitHub repository secret `GA_MEASUREMENT_ID` (or in the `github-pages` environment)
    - Redeploy via push to `master`
+   - Verify deploy artifact: open `https://www.mustafabekirov.com/assets/js/config.js` and confirm `gaMeasurementId: 'G-...'` is not empty
 
 2. **Google Search Console**
    - Add property `https://www.mustafabekirov.com`
