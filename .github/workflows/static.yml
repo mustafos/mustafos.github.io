@@ -1,3 +1,6 @@
+# Sole production GitHub Pages workflow for this static site.
+# Pages must use Source = GitHub Actions in repo settings.
+# Branch-based Pages deploy runs jekyll-build-pages and bypasses GA injection.
 name: Deploy static content to Pages
 
 on:
@@ -20,20 +23,28 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
       - name: Inject GA4 measurement ID
         env:
-          GA_MEASUREMENT_ID: ${{ secrets.GA_MEASUREMENT_ID }}
+          GA_MEASUREMENT_ID: ${{ vars.GA_MEASUREMENT_ID || secrets.GA_MEASUREMENT_ID }}
         run: node scripts/inject-site-config.mjs
+
+      - name: Verify GA measurement ID in site config
+        run: |
+          if ! grep -Eq "gaMeasurementId: 'G-[A-Z0-9]+'" assets/js/config.js; then
+            echo "::error::assets/js/config.js does not contain a valid injected GA measurement ID."
+            cat assets/js/config.js
+            exit 1
+          fi
+          echo "Verified GA measurement ID present in config.js."
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
-      - name: Upload artifact
+      - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: '.'
