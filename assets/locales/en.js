@@ -30,52 +30,53 @@ window.__LOCALE_FALLBACK={
     "language": "Language",
     "viewProject": "View project",
     "readArticle": "Read article",
-    "projectRole": "iOS Developer",
     "capability": "capability",
     "showSlide": "Show slide",
+    "slideOf": "of",
     "socialProfiles": "Social profiles",
     "heroVisual": "Interactive iPhone preview of iOS engineering capabilities",
     "portraitAlt": "Portrait of Mustafa Bekirov",
     "rightsReserved": "All rights reserved.",
     "mainNav": "Main navigation",
-    "mobileNav": "Mobile navigation"
+    "mobileNav": "Mobile navigation",
+    "caseContext": "Context",
+    "caseRole": "My role",
+    "caseOwned": "What I owned",
+    "caseProblem": "Hard problem",
+    "caseSolution": "How I solved it",
+    "caseOutcome": "Outcome"
   },
   "nav": {
+    "work": "Work",
     "about": "About",
-    "expertise": "Expertise",
-    "projects": "Projects",
-    "articles": "Articles",
+    "articles": "Writing",
     "contact": "Contact",
     "downloadCv": "Download CV"
   },
   "hero": {
     "status": "Available for selected remote opportunities",
     "eyebrow": "Mustafa Bekirov",
-    "title": "I build and improve native iOS products for startups and product teams.",
-    "lead": "I help startups and product teams build, refine, and release native iOS applications with Swift, SwiftUI, and UIKit.",
+    "title": "I build and ship native iOS products for startups and product teams.",
+    "proof": "White-label platforms, fintech, and crypto — from architecture to App Store release.",
+    "lead": "Swift, SwiftUI, and UIKit across complex product environments.",
     "ctaPrimary": "Start a conversation",
     "ctaSecondary": "View selected work",
     "profile": {
       "title": "Mustafa Bekirov",
-      "role": "iOS Developer",
-      "text": "I build and ship native iOS products for startups and product teams."
+      "role": "Mobile Product Engineer",
+      "text": "Platform, fintech, and cross-platform delivery."
     },
     "floats": [
       { "label": "SwiftUI", "category": "Interface", "text": "Declarative UI for scalable, maintainable iOS products." },
-      { "label": "Swift", "category": "Language", "text": "Modern Swift with concurrency and production-focused code." },
       { "label": "Architecture", "category": "Structure", "text": "Clear structure for products that need to grow over time." },
-      { "label": "API Integration", "category": "Services", "text": "Authentication, backend data flows, and third-party services." },
-      { "label": "Performance", "category": "Quality", "text": "Faster startup, lower overhead, and smoother interaction." },
       { "label": "Security", "category": "Trust", "text": "Safer mobile flows for fintech, crypto, and user data." },
-      { "label": "AI / LLM", "category": "Intelligence", "text": "Integrating modern AI capabilities into native iOS products." },
       { "label": "CI/CD", "category": "Delivery", "text": "TestFlight, repeatable builds, and release-ready workflows." }
     ]
   },
   "about": {
     "eyebrow": "About",
-    "heading": "Engineering mobile products, not just features.",
-    "p1": "I build and evolve native iOS products for startups and product teams, across implementation, architecture, API integration, release workflows, and cross-functional collaboration.",
-    "p2": "I value maintainable Swift code, clear communication, and dependable delivery. My goal is to align engineering work with product needs and ship features that remain reliable in production.",
+    "heading": "Product-minded iOS engineering",
+    "p1": "I join startups and product teams to build, improve, and release native iOS work that holds up in production — from implementation and architecture to API integration and App Store delivery.",
     "downloadCv": "Download CV",
     "values": [
       {
@@ -93,164 +94,117 @@ window.__LOCALE_FALLBACK={
     ]
   },
   "projects": {
-    "eyebrow": "Projects",
-    "heading": "Selected work",
-    "lead": "Selected iOS product work across consumer, fintech, crypto, and platform teams.",
-    "items": [
+    "eyebrow": "Selected work",
+    "heading": "Products I helped build and release",
+    "lead": "Three flagship projects across platform, fintech, and crypto.",
+    "moreHeading": "Additional shipped products",
+    "moreLead": "More iOS work across fitness, AI, and consumer products.",
+    "flagship": [
       {
-        "desc": "A white-label hockey platform delivered as 15 apps from one shared codebase, built around GraphQL data flows, CMS-driven UI, and Auth0 authentication.",
-        "scope": "Shared codebase, CMS-driven UI, multi-tenant architecture",
+        "positioning": "White-label hockey platform — 15 App Store apps from one shared iOS codebase.",
+        "context": "Multi-tenant sports platform shipping branded iOS apps for leagues and partners.",
+        "role": "iOS Developer on a shared platform team",
+        "owned": [
+          "Shared SwiftUI modules for CMS-driven screens across tenant app variants",
+          "GraphQL data layer and Auth0 authentication flows used platform-wide",
+          "Release support for multi-app TestFlight and App Store submissions"
+        ],
+        "problem": "One codebase had to power multiple branded apps with different CMS content, auth tenants, and release schedules.",
+        "solution": [
+          "Built reusable screen modules driven by CMS schema instead of per-app duplication",
+          "Centralized GraphQL and Auth0 integration so tenant differences stayed in configuration"
+        ],
+        "outcome": "15 branded apps maintained from one shared iOS codebase.",
         "alt": "Elite Prospects Hockey Stats app screenshot"
       },
       {
-        "desc": "A fintech app for business card and payment workflows, built with SwiftUI and TCA to support secure flows and scalable delivery.",
-        "scope": "TCA architecture, secure payment flows, CI/CD",
+        "positioning": "Business fintech app — secure card and payment flows with SwiftUI and TCA.",
+        "context": "Production fintech product for business card and payment operations.",
+        "role": "iOS Developer on the product team",
+        "owned": [
+          "Core card and payment flows in SwiftUI with TCA state management",
+          "Secure API integration and edge-case handling for transaction states",
+          "TestFlight and CI/CD release participation"
+        ],
+        "problem": "Payment flows needed predictable state handling and safe UX under backend latency and failure cases.",
+        "solution": [
+          "Used TCA to isolate payment state and side effects per feature domain",
+          "Structured async API work with explicit loading, success, and failure UI states"
+        ],
+        "outcome": "Production payment and card flows shipped for live business users.",
         "alt": "Wallester business app screenshot"
       },
       {
-        "desc": "A self-custody crypto wallet for secure digital asset management, with an emphasis on native iOS clarity, trust, and safety.",
-        "scope": "Wallet flows, secure storage, App Store release",
+        "positioning": "Self-custody crypto wallet — high-stakes asset flows on native iOS.",
+        "context": "Security-sensitive wallet product for digital asset management.",
+        "role": "iOS Developer",
+        "owned": [
+          "Wallet onboarding, asset views, and transaction flows in SwiftUI",
+          "Secure storage patterns and defensive UX for irreversible actions",
+          "App Store release preparation and submission"
+        ],
+        "problem": "Wallet actions are irreversible, so unclear UX or weak error handling directly risks user trust and funds.",
+        "solution": [
+          "Designed step-by-step flows with confirmation and recovery paths for critical actions",
+          "Separated sensitive operations into explicit, testable modules with strict state handling"
+        ],
+        "outcome": "Wallet product released on the App Store with production-ready iOS flows.",
         "alt": "Braavos crypto wallet app screenshot"
+      }
+    ],
+    "archive": [
+      {
+        "desc": "Cross-platform fitness app with KMP shared logic and native iOS and Android store releases.",
+        "alt": "BURN fitness app screenshot"
       },
       {
         "desc": "An AI-powered iOS tennis app that turns structured training data into a polished coaching experience.",
-        "scope": "AI integration, API-driven features, App Store release",
         "alt": "Sevensix app screenshot"
       },
       {
         "desc": "An iOS floor planning tool for creating, editing, and visualizing interior layouts in 2D and real-time 3D.",
-        "scope": "2D layout editor, Canvas drawing, 3D rendering",
         "alt": "Floor Planner app screenshot"
       },
       {
-        "desc": "A fitness app for iOS and Android built with Kotlin Multiplatform, centered on guided workouts, video training, and subscriptions from client idea through dual-store release.",
-        "scope": "Kotlin Multiplatform, shared business logic, native iOS & Android apps",
-        "alt": "BURN fitness app screenshot"
-      },
-      {
         "desc": "A VPN app centered on secure connectivity, subscriptions, and dependable onboarding.",
-        "scope": "Connection flows, subscriptions, stability",
         "alt": "Super VPN app screenshot"
       },
       {
         "desc": "A business simulation game shaped around progression systems, monetization, and tap-driven engagement.",
-        "scope": "Game mechanics, StoreKit, release cycle",
         "alt": "Business Empire app screenshot"
       },
       {
         "desc": "A driving-test preparation app with structured study flows, progress tracking, and synced learning data.",
-        "scope": "Learning flows, local persistence, sync architecture",
         "alt": "DriverPro app screenshot"
       }
     ]
   },
-  "expertise": {
-    "eyebrow": "Expertise",
-    "heading": "Where I can help",
-    "items": [
-      {
-        "title": "iOS Product Development",
-        "text": "Building native iOS features and applications with Swift, SwiftUI, and UIKit, from implementation through production release."
-      },
-      {
-        "title": "Architecture & Refactoring",
-        "text": "Improving code structure, clarifying responsibilities, and making products easier to maintain and extend."
-      },
-      {
-        "title": "API & Service Integration",
-        "text": "Integrating REST APIs, authentication, analytics, push notifications, Firebase, and external SDKs."
-      },
-      {
-        "title": "Performance & Stability",
-        "text": "Investigating bottlenecks, reducing unnecessary work, improving startup time, and making application behavior more predictable."
-      },
-      {
-        "title": "CI/CD & App Store Delivery",
-        "text": "Preparing repeatable build pipelines, TestFlight distributions, multiple environments, and App Store releases."
-      },
-      {
-        "title": "Existing Product Development",
-        "text": "Joining established teams, understanding existing codebases, and delivering new functionality without destabilizing the product."
-      }
-    ]
-  },
-  "stack": {
-    "eyebrow": "Stack",
-    "heading": "Core technologies",
-    "lead": "A focused set of technologies and practices I use to build, improve, and ship native iOS products.",
-    "groups": [
-      { "title": "iOS Foundations" },
-      { "title": "Architecture" },
-      { "title": "Data & Integrations" },
-      { "title": "Quality & Performance" },
-      { "title": "Delivery & Tools" }
-    ]
-  },
-  "experience": {
-    "eyebrow": "Experience",
-    "heading": "Experience with complex mobile products",
-    "lead": "I have experience working with mobile products that require multiple app configurations, environment-based setup, API-driven content, and coordinated release workflows. This includes collaboration with backend, QA, design, DevOps, and product stakeholders in distributed teams.",
-    "items": [
-      "Multiple iOS app configurations",
-      "White-label architecture",
-      "Environment-based configurations",
-      "API-driven content",
-      "Authentication and analytics",
-      "TestFlight and release workflows",
-      "Distributed team collaboration",
-      "Production application support"
-    ]
-  },
-  "process": {
-    "eyebrow": "Process",
-    "heading": "A clear way of working",
-    "items": [
-      { "title": "Understand", "text": "I clarify the product goal, technical context, constraints, and expected outcome." },
-      { "title": "Plan", "text": "I break the work into a practical implementation plan and identify potential risks early." },
-      { "title": "Build", "text": "I implement the solution, communicate progress, and verify important edge cases." },
-      { "title": "Deliver", "text": "I prepare the feature for testing, release, and future maintenance." }
-    ]
-  },
   "writing": {
     "eyebrow": "Writing",
-    "heading": "Writing about iOS development",
-    "items": [
-      {
-        "category": "Security",
-        "desc": "A guide to building safer iOS apps with modern Swift security patterns and production-minded practices.",
-        "alt": "Security in Swift article cover"
-      },
+    "heading": "Notes on building iOS products",
+    "lead": "Selected engineering notes on production Swift, security, and reliability.",
+    "featured": {
+      "category": "Security",
+      "desc": "A guide to building safer iOS apps with modern Swift security patterns and production-minded practices.",
+      "alt": "Security in Swift article cover"
+    },
+    "more": [
       {
         "category": "Caching",
-        "desc": "A practical look at caching strategy in iOS — how data is stored, refreshed, and served when the network is slow or unavailable.",
+        "desc": "A practical look at caching strategy in iOS when the network is slow or unavailable.",
         "alt": "The Coffee Shop Problem article cover"
       },
       {
         "category": "Memory & ARC",
-        "desc": "Finding and fixing ARC-related memory leaks in SwiftUI — retain cycles, strong references, and debugging with Instruments.",
+        "desc": "Finding and fixing ARC-related memory leaks in SwiftUI with Instruments.",
         "alt": "Fixing Memory Leaks in a SwiftUI App article cover"
-      },
-      {
-        "category": "AI & ML",
-        "desc": "Integrating Core ML and LLMs into native iOS apps — practical patterns for adding on-device intelligence and smarter product features.",
-        "alt": "How iOS Developers Can Use AI in Their Projects article cover"
-      },
-      {
-        "category": "Swift Fundamentals",
-        "desc": "Swift generics syntax and motivation — why generics exist, how they work, and how to use them cleanly in SwiftUI projects.",
-        "alt": "Generics in Swift article cover"
-      },
-      {
-        "category": "Concurrency",
-        "desc": "Using async/await in iOS applications for cleaner asynchronous code and more predictable execution.",
-        "alt": "Swift Concurrency article cover"
       }
     ]
   },
   "contact": {
     "eyebrow": "Contact",
-    "heading": "Open to thoughtful product work",
-    "lead": "If you're building or improving an iOS product, share the context and what you need help with. I'll respond with a clear next step.",
+    "heading": "Open to selected product work",
+    "lead": "Share what you're building — I'll reply with whether I can help and a clear next step.",
     "ctaPrimary": "Message on Telegram",
     "ctaSecondary": "Send an email",
     "note": "Open to remote contracts, product teams, and selected long-term engagements."

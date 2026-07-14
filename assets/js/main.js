@@ -69,10 +69,6 @@
         hero: null,
         about: 'about',
         projects: 'projects',
-        expertise: 'expertise',
-        stack: 'expertise',
-        focus: 'expertise',
-        process: 'about',
         articles: 'articles',
         contact: 'contact'
     };

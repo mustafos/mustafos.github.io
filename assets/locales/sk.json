@@ -38,12 +38,18 @@
     "portraitAlt": "Portrét Mustafu Bekirova",
     "rightsReserved": "Všetky práva vyhradené.",
     "mainNav": "Hlavná navigácia",
-    "mobileNav": "Mobilná navigácia"
+    "mobileNav": "Mobilná navigácia",
+    "slideOf": "of",
+    "caseContext": "Context",
+    "caseRole": "My role",
+    "caseOwned": "What I owned",
+    "caseProblem": "Hard problem",
+    "caseSolution": "How I solved it",
+    "caseOutcome": "Outcome"
   },
   "nav": {
+    "work": "Projekty",
     "about": "O mne",
-    "expertise": "Odbornosť",
-    "projects": "Projekty",
     "articles": "Články",
     "contact": "Kontakt",
     "downloadCv": "Stiahnuť CV"
@@ -61,21 +67,33 @@
       "text": "Vytváram a vydávam natívne iOS produkty pre startupy a produktové tímy."
     },
     "floats": [
-      { "label": "SwiftUI", "category": "Rozhranie", "text": "Deklaratívne UI pre škálovateľné a udržateľné iOS produkty." },
-      { "label": "Swift", "category": "Jazyk", "text": "Moderný Swift so súbežnosťou a kódom zameraným na produkciu." },
-      { "label": "Architektúra", "category": "Štruktúra", "text": "Prehľadná štruktúra pre produkty, ktoré sa v čase rozrastajú." },
-      { "label": "Integrácia API", "category": "Služby", "text": "Autentifikácia, backendové dátové toky a integrácie tretích strán." },
-      { "label": "Výkon", "category": "Kvalita", "text": "Rýchlejší štart aplikácie, nižšia záťaž a plynulejšia interakcia." },
-      { "label": "Bezpečnosť", "category": "Dôvera", "text": "Bezpečnejšie mobilné procesy pre fintech, kryptomeny a používateľské dáta." },
-      { "label": "AI / LLM", "category": "Inteligencia", "text": "Integrácia moderných schopností AI do natívnych iOS produktov." },
-      { "label": "CI/CD", "category": "Nasadenie", "text": "TestFlight, opakovateľné buildy a procesy pripravené na vydanie." }
-    ]
+      {
+        "label": "SwiftUI",
+        "category": "Rozhranie",
+        "text": "Deklaratívne UI pre škálovateľné a udržateľné iOS produkty."
+      },
+      {
+        "label": "Architektúra",
+        "category": "Štruktúra",
+        "text": "Prehľadná štruktúra pre produkty, ktoré sa v čase rozrastajú."
+      },
+      {
+        "label": "Bezpečnosť",
+        "category": "Dôvera",
+        "text": "Bezpečnejšie mobilné procesy pre fintech, kryptomeny a používateľské dáta."
+      },
+      {
+        "label": "CI/CD",
+        "category": "Nasadenie",
+        "text": "TestFlight, opakovateľné buildy a procesy pripravené na vydanie."
+      }
+    ],
+    "proof": "White-label platforms, fintech, and crypto — from architecture to App Store release."
   },
   "about": {
     "eyebrow": "O mne",
     "heading": "Vytváram mobilné produkty, nielen jednotlivé funkcie.",
     "p1": "Vytváram a rozvíjam natívne iOS produkty pre startupy a produktové tímy — od implementácie cez architektúru a integráciu API až po procesy vydávania a spoluprácu medzi tímami.",
-    "p2": "Cením si udržateľný kód vo Swifte, jasnú komunikáciu a spoľahlivé dodávanie práce. Mojím cieľom je zosúladiť vývoj s potrebami produktu a dodávať funkcie, ktoré zostávajú v produkcii stabilné.",
     "downloadCv": "Stiahnuť CV",
     "values": [
       {
@@ -96,154 +114,107 @@
     "eyebrow": "Projekty",
     "heading": "Vybraná práca",
     "lead": "Vybrané iOS projekty z oblasti spotrebiteľských aplikácií, fintechu, kryptomien a platformových tímov.",
-    "items": [
+    "moreHeading": "Additional shipped products",
+    "moreLead": "More iOS work across fitness, AI, and consumer products.",
+    "flagship": [
       {
-        "desc": "White-label hokejová platforma dodaná ako 15 aplikácií z jednej spoločnej codebase, postavená na GraphQL dátových tokoch, UI riadenom cez CMS a autentifikácii Auth0.",
-        "scope": "Spoločná codebase, UI riadené CMS, multi-tenantná architektúra",
+        "positioning": "White-label hockey platform — 15 App Store apps from one shared iOS codebase.",
+        "context": "White-label hokejová platforma dodaná ako 15 aplikácií z jednej spoločnej codebase, postavená na GraphQL dátových tokoch, UI riadenom cez CMS a autentifikácii Auth0.",
+        "role": "iOS Developer on a shared platform team",
+        "owned": [
+          "Shared SwiftUI modules for CMS-driven screens across tenant app variants",
+          "GraphQL data layer and Auth0 authentication flows used platform-wide",
+          "Release support for multi-app TestFlight and App Store submissions"
+        ],
+        "problem": "One codebase had to power multiple branded apps with different CMS content, auth tenants, and release schedules.",
+        "solution": [
+          "Built reusable screen modules driven by CMS schema instead of per-app duplication",
+          "Centralized GraphQL and Auth0 integration so tenant differences stayed in configuration"
+        ],
+        "outcome": "15 branded apps maintained from one shared iOS codebase.",
         "alt": "Snímka obrazovky aplikácie Elite Prospects Hockey Stats"
       },
       {
-        "desc": "Fintech aplikácia pre firemné karty a platobné procesy, postavená na SwiftUI a TCA s dôrazom na bezpečné toky a škálovateľné dodávanie.",
-        "scope": "Architektúra TCA, bezpečné platobné toky, CI/CD",
+        "positioning": "Business fintech app — secure card and payment flows with SwiftUI and TCA.",
+        "context": "Fintech aplikácia pre firemné karty a platobné procesy, postavená na SwiftUI a TCA s dôrazom na bezpečné toky a škálovateľné dodávanie.",
+        "role": "iOS Developer on the product team",
+        "owned": [
+          "Core card and payment flows in SwiftUI with TCA state management",
+          "Secure API integration and edge-case handling for transaction states",
+          "TestFlight and CI/CD release participation"
+        ],
+        "problem": "Payment flows needed predictable state handling and safe UX under backend latency and failure cases.",
+        "solution": [
+          "Used TCA to isolate payment state and side effects per feature domain",
+          "Structured async API work with explicit loading, success, and failure UI states"
+        ],
+        "outcome": "Production payment and card flows shipped for live business users.",
         "alt": "Snímka obrazovky aplikácie Wallester business"
       },
       {
-        "desc": "Self-custody kryptopeňaženka na bezpečnú správu digitálnych aktív, s dôrazom na prehľadnosť, dôveru a bezpečnosť natívneho iOS riešenia.",
-        "scope": "Procesy peňaženky, bezpečné úložisko, vydanie v App Store",
+        "positioning": "Self-custody crypto wallet — high-stakes asset flows on native iOS.",
+        "context": "Self-custody kryptopeňaženka na bezpečnú správu digitálnych aktív, s dôrazom na prehľadnosť, dôveru a bezpečnosť natívneho iOS riešenia.",
+        "role": "iOS Developer",
+        "owned": [
+          "Wallet onboarding, asset views, and transaction flows in SwiftUI",
+          "Secure storage patterns and defensive UX for irreversible actions",
+          "App Store release preparation and submission"
+        ],
+        "problem": "Wallet actions are irreversible, so unclear UX or weak error handling directly risks user trust and funds.",
+        "solution": [
+          "Designed step-by-step flows with confirmation and recovery paths for critical actions",
+          "Separated sensitive operations into explicit, testable modules with strict state handling"
+        ],
+        "outcome": "Wallet product released on the App Store with production-ready iOS flows.",
         "alt": "Snímka obrazovky kryptopeňaženky Braavos"
-      },
+      }
+    ],
+    "archive": [
       {
-        "desc": "iOS tenisová aplikácia s podporou AI, ktorá premieňa štruktúrované tréningové dáta na prepracovaný koučovací zážitok.",
-        "scope": "Integrácia AI, funkcie riadené API, vydanie v App Store",
-        "alt": "Snímka obrazovky aplikácie Sevensix"
+        "desc": "Cross-platform fitness app with KMP shared logic and native iOS and Android store releases.",
+        "alt": "BURN fitness app screenshot"
       },
       {
         "desc": "iOS nástroj na plánovanie pôdorysov, ktorý slúži na vytváranie, úpravu a vizualizáciu interiérových dispozícií v 2D aj v reálnom 3D.",
-        "scope": "Editor 2D dispozícií, kresba v Canvase, 3D vykresľovanie",
         "alt": "Snímka obrazovky aplikácie Floor Planner"
       },
       {
         "desc": "Fitness aplikácia pre iOS a Android postavená na Kotlin Multiplatform, zameraná na riadené tréningy, video lekcie a predplatné — od nápadu klienta až po vydanie v oboch obchodoch.",
-        "scope": "Kotlin Multiplatform, zdieľaná business logika, natívne iOS a Android",
         "alt": "Snímka obrazovky fitness aplikácie BURN"
       },
       {
         "desc": "VPN aplikácia zameraná na bezpečné pripojenie, predplatné a spoľahlivý onboarding.",
-        "scope": "Procesy pripojenia, predplatné, stabilita",
         "alt": "Snímka obrazovky aplikácie Super VPN"
       },
       {
         "desc": "Biznis simulačná hra postavená na progresných systémoch, monetizácii a zapojení prostredníctvom jednoduchých tapov.",
-        "scope": "Herné mechanizmy, StoreKit, cyklus vydávania",
         "alt": "Snímka obrazovky aplikácie Business Empire"
       },
       {
         "desc": "Aplikácia na prípravu na autoškolu so štruktúrovanými študijnými postupmi, sledovaním pokroku a synchronizovanými výučbovými dátami.",
-        "scope": "Výučbové procesy, lokálna perzistencia, synchronizačná architektúra",
         "alt": "Snímka obrazovky aplikácie DriverPro"
       }
-    ]
-  },
-  "expertise": {
-    "eyebrow": "Odbornosť",
-    "heading": "Kde môžem pomôcť",
-    "items": [
-      {
-        "title": "Vývoj iOS produktov",
-        "text": "Vytváranie natívnych funkcií a aplikácií pre iOS vo Swifte, SwiftUI a UIKite — od implementácie až po produkčné vydanie."
-      },
-      {
-        "title": "Architektúra a refaktoring",
-        "text": "Zlepšovanie štruktúry kódu, ujasňovanie zodpovedností jednotlivých častí a uľahčenie dlhodobej údržby a rozširovania produktu."
-      },
-      {
-        "title": "Integrácia API a služieb",
-        "text": "Integrácia REST API, autentifikácie, analytiky, push notifikácií, Firebase a externých SDK."
-      },
-      {
-        "title": "Výkon a stabilita",
-        "text": "Skúmanie výkonových problémov, obmedzovanie zbytočnej práce, zrýchľovanie štartu aplikácie a zvyšovanie predvídateľnosti jej správania."
-      },
-      {
-        "title": "CI/CD a vydávanie do App Store",
-        "text": "Príprava opakovateľných build pipeline, distribúcie cez TestFlight, správa viacerých prostredí a vydávanie do App Store."
-      },
-      {
-        "title": "Rozvoj existujúcich produktov",
-        "text": "Zapojenie do zabehnutých tímov, orientácia v existujúcom kóde a dodávanie novej funkcionality bez destabilizácie produktu."
-      }
-    ]
-  },
-  "stack": {
-    "eyebrow": "Technológie",
-    "heading": "Kľúčové technológie",
-    "lead": "Ucelená sada technológií a postupov, ktoré používam pri vytváraní, vylepšovaní a vydávaní natívnych iOS produktov.",
-    "groups": [
-      { "title": "Základy iOS" },
-      { "title": "Architektúra" },
-      { "title": "Dáta a integrácie" },
-      { "title": "Kvalita a výkon" },
-      { "title": "Nasadenie a nástroje" }
-    ]
-  },
-  "experience": {
-    "eyebrow": "Skúsenosti",
-    "heading": "Skúsenosti so zložitými mobilnými produktmi",
-    "lead": "Mám skúsenosti s prácou na mobilných produktoch, ktoré vyžadujú viacero konfigurácií aplikácie, nastavenia podľa prostredia, obsah riadený cez API a koordinované procesy vydávania. Súčasťou je aj spolupráca s backendom, QA, dizajnom, DevOps a produktovými stakeholdermi v distribuovaných tímoch.",
-    "items": [
-      "Viacero konfigurácií iOS aplikácie",
-      "White-label architektúra",
-      "Konfigurácie podľa prostredia",
-      "Obsah riadený cez API",
-      "Autentifikácia a analytika",
-      "TestFlight a procesy vydávania",
-      "Spolupráca v distribuovaných tímoch",
-      "Podpora produkčných aplikácií"
-    ]
-  },
-  "process": {
-    "eyebrow": "Proces",
-    "heading": "Prehľadný spôsob práce",
-    "items": [
-      { "title": "Pochopenie", "text": "Ujasňujem cieľ produktu, technický kontext, obmedzenia a očakávaný výsledok." },
-      { "title": "Plánovanie", "text": "Rozdelím prácu do praktického implementačného plánu a včas identifikujem možné riziká." },
-      { "title": "Vývoj", "text": "Implementujem riešenie, komunikujem postup a overujem dôležité hraničné prípady." },
-      { "title": "Dodanie", "text": "Pripravujem funkciu na testovanie, vydanie a budúcu údržbu." }
     ]
   },
   "writing": {
     "eyebrow": "Články",
     "heading": "Písanie o vývoji pre iOS",
-    "items": [
-      {
-        "category": "Bezpečnosť",
-        "desc": "Návod na tvorbu bezpečnejších iOS aplikácií s modernými bezpečnostnými vzormi vo Swifte a postupmi zameranými na produkčné nasadenie.",
-        "alt": "Titulný obrázok článku Security in Swift"
-      },
+    "lead": "Selected engineering notes on production Swift, security, and reliability.",
+    "featured": {
+      "category": "Bezpečnosť",
+      "desc": "Návod na tvorbu bezpečnejších iOS aplikácií s modernými bezpečnostnými vzormi vo Swifte a postupmi zameranými na produkčné nasadenie.",
+      "alt": "Titulný obrázok článku Security in Swift"
+    },
+    "more": [
       {
         "category": "Kešovanie",
-        "desc": "Praktický pohľad na stratégiu kešovania v iOS — ako sa dáta ukladajú, obnovujú a poskytujú vo chvíľach, keď je sieť pomalá alebo nedostupná.",
+        "desc": "Praktický pohľad na stratégiu kešovania v iOS .",
         "alt": "Titulný obrázok článku The Coffee Shop Problem"
       },
       {
         "category": "Pamäť a ARC",
-        "desc": "Hľadanie a odstraňovanie memory leakov súvisiacich s ARC vo SwiftUI — retain cykly, silné referencie a debugovanie pomocou Instruments.",
+        "desc": "Hľadanie a odstraňovanie memory leakov súvisiacich s ARC vo SwiftUI .",
         "alt": "Titulný obrázok článku Fixing Memory Leaks in a SwiftUI App"
-      },
-      {
-        "category": "AI a ML",
-        "desc": "Integrácia Core ML a veľkých jazykových modelov do natívnych iOS aplikácií — praktické prístupy k on-device inteligencii a šikovnejším produktovým funkciám.",
-        "alt": "Titulný obrázok článku How iOS Developers Can Use AI in Their Projects"
-      },
-      {
-        "category": "Základy Swiftu",
-        "desc": "Syntax a zmysel generík vo Swifte — prečo existujú, ako fungujú a ako ich čisto používať v projektoch so SwiftUI.",
-        "alt": "Titulný obrázok článku Generics in Swift"
-      },
-      {
-        "category": "Súbežnosť",
-        "desc": "Použitie async/await v iOS aplikáciách pre čistejší asynchrónny kód a predvídateľnejší chod programu.",
-        "alt": "Titulný obrázok článku Swift Concurrency"
       }
     ]
   },
