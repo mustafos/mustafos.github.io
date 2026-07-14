@@ -22,51 +22,53 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  # Single deploy job since we're just deploying
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Inject GA4 measurement ID
+        env:
+          GA_MEASUREMENT_ID: ${{ vars.GA_MEASUREMENT_ID || secrets.GA_MEASUREMENT_ID }}
+        run: node scripts/inject-site-config.mjs
+
+      - name: Verify site config output
+        run: |
+          if grep -q "gaMeasurementId: ''" assets/js/config.js; then
+            echo "::warning title=GA4 disabled::Deployed config still has an empty gaMeasurementId. Add repository secret or variable GA_MEASUREMENT_ID."
+          else
+            echo "Site config contains a GA measurement ID."
+          fi
+
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: pages-build
+          path: .
+          include-hidden-files: true
+
   deploy:
+    needs: build
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-      - name: Inject GA4 measurement ID
-        env:
-          GA_MEASUREMENT_ID: ${{ secrets.GA_MEASUREMENT_ID }}
-        run: |
-          node -e "
-            const fs = require('fs');
-            const file = 'assets/js/config.js';
-            const id = (process.env.GA_MEASUREMENT_ID || '').trim();
-            if (!id) {
-              console.log('::warning title=GA4 disabled::GA_MEASUREMENT_ID secret is not set. Analytics will be disabled in this deploy.');
-              process.exit(0);
-            }
-            if (!/^G-[A-Z0-9]+$/i.test(id)) {
-              console.error('::error::GA_MEASUREMENT_ID must be a GA4 web stream ID like G-XXXXXXXXXX. Received: ' + id);
-              process.exit(1);
-            }
-            const content = fs.readFileSync(file, 'utf8');
-            if (!/gaMeasurementId:\s*''/.test(content)) {
-              console.error('::error::Expected empty gaMeasurementId placeholder in assets/js/config.js');
-              process.exit(1);
-            }
-            const updated = content.replace(/gaMeasurementId:\s*''/, \"gaMeasurementId: '\" + id + \"'\");
-            fs.writeFileSync(file, updated);
-            if (!updated.includes(\"gaMeasurementId: '\" + id + \"'\")) {
-              console.error('::error::Failed to write GA measurement ID into assets/js/config.js');
-              process.exit(1);
-            }
-            console.log('GA4 measurement ID injected for deploy.');
-          "
+      - name: Download build artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: pages-build
+          path: .
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
-      - name: Upload artifact
+
+      - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # Upload entire repository
           path: '.'
+
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
