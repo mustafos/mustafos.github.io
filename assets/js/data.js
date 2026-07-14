@@ -52,44 +52,62 @@ window.SITE_DATA = {
     ],
     projects: [
         {
+            title: 'Elite Prospects',
+            desc: 'A white-label hockey platform delivered as 15 apps from one shared codebase, combining GraphQL data flows, Strapi CMS, and Auth0 authentication in a scalable multi-tenant architecture.',
+            image: 'assets/images/project8.png',
+            alt: 'Elite Prospects Hockey Stats app screenshot',
+            tags: ['SwiftUI', 'GraphQL', 'Auth0'],
+            scope: 'Shared codebase, CMS-driven UI, multi-tenant architecture',
+            url: 'https://apps.apple.com/app/id6737055644'
+        },
+        {
+            title: 'Wallester',
+            desc: 'A large-scale fintech app for business card and payment workflows, built with TCA to support secure feature delivery and scalable mobile architecture.',
+            image: 'assets/images/project9.png',
+            alt: 'Wallester business app screenshot',
+            tags: ['SwiftUI', 'TCA', 'Fintech'],
+            scope: 'TCA architecture, secure payment flows, CI/CD',
+            url: 'https://wallester.com/business'
+        },
+        {
+            title: 'Braavos',
+            desc: 'A self-custody crypto wallet built for secure digital asset management and a native iOS experience that prioritizes trust, clarity, and safety.',
+            image: 'assets/images/project7.png',
+            alt: 'Braavos crypto wallet app screenshot',
+            tags: ['SwiftUI', 'Web3', 'Security'],
+            scope: 'Wallet flows, secure storage, App Store release',
+            url: 'https://apps.apple.com/app/id1636013523'
+        },
+        {
             title: 'Sevensix',
-            desc: 'A native iOS application focused on delivering a polished mobile experience with structured data and smooth user interactions.',
+            desc: 'An AI-powered native iOS tennis coach that turns structured training data into a polished mobile experience with intuitive user interactions.',
             image: 'assets/images/project1.png',
             alt: 'Sevensix app screenshot',
-            tags: ['Swift', 'UIKit', 'REST API'],
-            scope: 'Core features, API integration, App Store release',
+            tags: ['Swift', 'UIKit', 'AI'],
+            scope: 'AI integration, API-driven features, App Store release',
             url: 'https://apps.apple.com/app/id1505604446'
         },
         {
-            title: 'QırımKey',
-            desc: 'A custom keyboard application providing localized input support with a focus on usability and system integration.',
-            image: 'assets/images/project2.png',
-            alt: 'QırımKey app screenshot',
-            tags: ['Swift', 'SwiftUI', 'UIKit'],
-            scope: 'Keyboard extension, system integration, App Store release',
-            url: 'https://apps.apple.com/app/id6739430313'
-        },
-        {
-            title: 'DriverPro',
-            desc: 'A study and preparation app helping users plan and practice for driving tests with structured learning content.',
-            image: 'assets/images/project3.png',
-            alt: 'DriverPro app screenshot',
-            tags: ['Swift', 'SwiftUI', 'Firebase'],
-            scope: 'Learning flows, Firebase, in-app purchases',
-            url: 'https://appadvice.com/app/driverpro-plan-study-test/6474212227'
-        },
-        {
-            title: 'Pulse Measure',
-            desc: 'A health-focused iOS application for measuring and tracking vital data with a clear, accessible interface.',
+            title: 'Floor Planner',
+            desc: 'An iOS floor planning tool for creating, editing, and visualizing interior layouts with intuitive 2D drawing and real-time 3D previews.',
             image: 'assets/images/project4.png',
-            alt: 'Pulse Measure app screenshot',
-            tags: ['Swift', 'UIKit', 'Core Data'],
-            scope: 'Measurement features, local persistence, UI performance',
-            url: 'https://apps.apple.com/app/id1589931101'
+            alt: 'Floor Planner app screenshot',
+            tags: ['SwiftUI', 'Canvas', 'SceneKit'],
+            scope: '2D layout editor, Canvas drawing, 3D rendering',
+            url: 'https://floorplanner.com'
+        },
+        {
+            title: 'BURN',
+            desc: 'A cross-platform fitness product built around guided workouts and video training, delivered from client idea through to store release.',
+            image: 'assets/images/project2.png',
+            alt: 'BURN fitness app screenshot',
+            tags: ['SwiftUI', 'Video', 'Fitness'],
+            scope: 'Product delivery, video playback UX, cross-platform collaboration',
+            url: 'https://www.burnbyrebecca.com'
         },
         {
             title: 'Super VPN',
-            desc: 'A VPN application providing secure connectivity with subscription management and a streamlined onboarding experience.',
+            desc: 'A VPN app focused on secure connectivity, subscription flows, and stable onboarding, with a deeper emphasis on networking and protocol behavior.',
             image: 'assets/images/project5.png',
             alt: 'Super VPN app screenshot',
             tags: ['Swift', 'UIKit', 'StoreKit'],
@@ -98,12 +116,21 @@ window.SITE_DATA = {
         },
         {
             title: 'Business Empire',
-            desc: 'A business simulation game with progression mechanics, in-app purchases and engaging mobile gameplay.',
+            desc: 'A business simulation game built around progression, monetization, and tap-driven engagement loops.',
             image: 'assets/images/project6.png',
             alt: 'Business Empire app screenshot',
             tags: ['Swift', 'UIKit', 'StoreKit'],
             scope: 'Game mechanics, StoreKit, release cycle',
             url: 'https://apps.apple.com/app/id6451208928'
+        },
+        {
+            title: 'DriverPro',
+            desc: 'A learning app for driving-test preparation with structured study flows, progress tracking, and reliable synced data.',
+            image: 'assets/images/project3.png',
+            alt: 'DriverPro app screenshot',
+            tags: ['SwiftUI', 'SwiftData', 'Supabase'],
+            scope: 'Learning flows, local persistence, sync architecture',
+            url: 'https://www.ayvens.com/cs-cz/mobilni-aplikace/'
         }
     ],
     focus: [
@@ -117,6 +144,30 @@ window.SITE_DATA = {
         'Production application support'
     ],
     articles: [
+        {
+            title: 'Security in Swift',
+            category: 'Security',
+            desc: 'A practical guide to building safer iOS apps with modern Swift security patterns and real-world considerations for production code.',
+            image: 'assets/images/public4.png',
+            alt: 'Security in Swift article cover',
+            url: 'https://medium.com/@mustafos/security-in-swift-a-practical-guide-for-ios-developers-2025-a763e3efde48'
+        },
+        {
+            title: 'The Coffee Shop Problem',
+            category: 'Performance',
+            desc: 'Why caching strategy defines user experience — and how thoughtful data handling shapes the way mobile apps feel in everyday use.',
+            image: 'assets/images/public5.png',
+            alt: 'The Coffee Shop Problem article cover',
+            url: 'https://www.linkedin.com/pulse/coffee-shop-problem-why-caching-defines-user-mustafa-bekirov-ptaje'
+        },
+        {
+            title: 'Fixing Memory Leaks in a SwiftUI App',
+            category: 'SwiftUI',
+            desc: 'A practical walkthrough of identifying and resolving memory leaks in a production SwiftUI application.',
+            image: 'assets/images/public6.png',
+            alt: 'Fixing Memory Leaks in a SwiftUI App article cover',
+            url: 'https://www.linkedin.com/pulse/fixing-memory-leaks-swiftui-app-mustafa-bekirov-5k4le'
+        },
         {
             title: 'AI in iOS',
             category: 'iOS Development',
