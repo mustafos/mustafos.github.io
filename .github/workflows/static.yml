@@ -1,24 +1,64 @@
 # Sole production GitHub Pages workflow for this static site.
-# Pages must use Source = GitHub Actions in repo settings.
-# Branch-based Pages deploy runs jekyll-build-pages and bypasses GA injection.
+# If branch-based Jekyll Pages deploy is still enabled, this workflow redeploys
+# after Jekyll finishes so the injected GA config is not overwritten.
 name: Deploy static content to Pages
 
 on:
   push:
     branches: ["master"]
   workflow_dispatch:
+  workflow_run:
+    workflows: ["pages build and deployment"]
+    types: [completed]
+    branches: ["master"]
 
 permissions:
   contents: read
   pages: write
   id-token: write
+  actions: read
 
 concurrency:
   group: "pages"
   cancel-in-progress: false
 
 jobs:
+  detect-jekyll-overwrite:
+    if: github.event_name == 'workflow_run'
+    runs-on: ubuntu-latest
+    outputs:
+      needs_redeploy: ${{ steps.check.outputs.needs_redeploy }}
+    steps:
+      - name: Detect Jekyll branch build
+        id: check
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const runId = context.payload.workflow_run.id;
+            const { data } = await github.rest.actions.listJobsForWorkflowRun({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              run_id: runId,
+            });
+
+            const needsRedeploy = data.jobs.some((job) =>
+              job.steps?.some((step) => step.name === 'Build with Jekyll')
+            );
+
+            core.setOutput('needs_redeploy', needsRedeploy ? 'true' : 'false');
+
   deploy:
+    needs: [detect-jekyll-overwrite]
+    if: >
+      always() && (
+        github.event_name == 'push' ||
+        github.event_name == 'workflow_dispatch' ||
+        (
+          github.event_name == 'workflow_run' &&
+          needs.detect-jekyll-overwrite.result == 'success' &&
+          needs.detect-jekyll-overwrite.outputs.needs_redeploy == 'true'
+        )
+      )
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -26,6 +66,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.workflow_run.head_sha || github.sha }}
 
       - name: Inject GA4 measurement ID
         env:
