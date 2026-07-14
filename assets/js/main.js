@@ -15,21 +15,10 @@
         yearEl.textContent = new Date().getFullYear();
     }
 
-    /* Header scroll */
-    function onScroll() {
-        if (header) {
-            header.classList.toggle('is-scrolled', window.scrollY > 16);
-        }
-    }
-
-    window.addEventListener('scroll', onScroll, { passive: true });
-    onScroll();
-
-    /* Mobile menu */
     function openDrawer() {
         if (!menuToggle || !mobileDrawer) return;
         menuToggle.setAttribute('aria-expanded', 'true');
-        menuToggle.setAttribute('aria-label', 'Close menu');
+        menuToggle.setAttribute('aria-label', window.I18n ? window.I18n.t('common.closeMenu') : 'Close menu');
         mobileDrawer.removeAttribute('hidden');
         document.body.classList.add('is-locked');
     }
@@ -37,7 +26,7 @@
     function closeDrawer() {
         if (!menuToggle || !mobileDrawer) return;
         menuToggle.setAttribute('aria-expanded', 'false');
-        menuToggle.setAttribute('aria-label', 'Open menu');
+        menuToggle.setAttribute('aria-label', window.I18n ? window.I18n.t('common.openMenu') : 'Open menu');
         mobileDrawer.setAttribute('hidden', '');
         document.body.classList.remove('is-locked');
     }
@@ -67,7 +56,15 @@
         if (window.innerWidth >= 960) closeDrawer();
     });
 
-    /* Active nav via IntersectionObserver */
+    function onScroll() {
+        if (header) {
+            header.classList.toggle('is-scrolled', window.scrollY > 16);
+        }
+    }
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+
     var navMap = {
         hero: null,
         about: 'about',
@@ -125,7 +122,6 @@
         });
     }
 
-    /* Scroll reveal */
     var revealEls = document.querySelectorAll('.reveal');
     var reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
@@ -156,13 +152,30 @@
     revealEls.forEach(observeReveal);
     window.__observeReveal = observeReveal;
 
-    if (typeof window.renderSiteSections === 'function') {
-        window.renderSiteSections();
-        document.querySelectorAll('.reveal').forEach(function (el) {
-            if (!el.classList.contains('is-visible')) {
-                observeReveal(el);
+    function boot() {
+        if (typeof window.renderSiteSections === 'function') {
+            window.renderSiteSections();
+            document.querySelectorAll('.reveal').forEach(function (el) {
+                if (!el.classList.contains('is-visible')) {
+                    observeReveal(el);
+                }
+            });
+        }
+    }
+
+    if (window.I18n) {
+        window.I18n.init().then(boot);
+        document.addEventListener('localechange', function () {
+            if (typeof window.renderSiteSections === 'function') {
+                window.renderSiteSections();
             }
+            mobileLinks.forEach(function (link) {
+                link.removeEventListener('click', closeDrawer);
+                link.addEventListener('click', closeDrawer);
+            });
         });
+    } else {
+        boot();
     }
 })();
 
@@ -170,6 +183,24 @@ function goBack() {
     if (window.history.length > 1) {
         window.history.back();
     } else {
-        window.location.href = '/';
+        var locale = window.I18n ? window.I18n.getLocale() : 'en';
+        window.location.href = locale === 'en' ? 'index.html' : 'index.html?lang=' + locale;
     }
+}
+
+function initLegalPage() {
+    if (!window.I18n) return;
+    window.I18n.init().then(function () {
+        var titleKey = document.body.getAttribute('data-legal-title');
+        if (titleKey) {
+            document.title = window.I18n.t(titleKey) + ' — Mustafa Bekirov';
+        }
+        var locale = window.I18n.getLocale();
+        var suffix = locale === 'en' ? '' : '?lang=' + locale;
+        document.querySelectorAll('a[href="index.html"]').forEach(function (link) {
+            link.setAttribute('href', 'index.html' + suffix);
+        });
+        var yearEl = document.getElementById('year');
+        if (yearEl) yearEl.textContent = new Date().getFullYear();
+    });
 }

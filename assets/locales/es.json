@@ -1,0 +1,262 @@
+{
+  "meta": {
+    "lang": "es",
+    "title": "Mustafa Bekirov — Desarrollador iOS e Ingeniero de Producto Móvil",
+    "description": "Mustafa Bekirov es Desarrollador iOS e Ingeniero de Producto Móvil, y ayuda a startups y equipos de producto a crear, mejorar y publicar aplicaciones iOS nativas con Swift, SwiftUI y UIKit.",
+    "ogTitle": "Mustafa Bekirov — Desarrollador iOS e Ingeniero de Producto Móvil",
+    "ogDescription": "Desarrollo nativo para iOS orientado a startups y equipos de producto, desde el trabajo de funcionalidades y arquitectura hasta el lanzamiento y la mejora continua del producto.",
+    "jobTitle": "Desarrollador iOS e Ingeniero de Producto Móvil"
+  },
+  "languages": {
+    "en": "English",
+    "cs": "Čeština",
+    "es": "Español",
+    "uk": "Українська",
+    "sk": "Slovenčina"
+  },
+  "common": {
+    "skipToContent": "Saltar al contenido",
+    "home": "Inicio",
+    "openMenu": "Abrir menú",
+    "closeMenu": "Cerrar menú",
+    "back": "Volver",
+    "backHome": "Volver al inicio",
+    "language": "Idioma",
+    "viewProject": "Ver proyecto",
+    "readArticle": "Leer artículo",
+    "projectRole": "Desarrollador iOS",
+    "capability": "capacidad",
+    "showSlide": "Mostrar diapositiva",
+    "socialProfiles": "Perfiles sociales",
+    "heroVisual": "Vista previa interactiva de un iPhone con capacidades de desarrollo iOS",
+    "portraitAlt": "Retrato de Mustafa Bekirov",
+    "rightsReserved": "Todos los derechos reservados.",
+    "mainNav": "Navegación principal",
+    "mobileNav": "Navegación móvil"
+  },
+  "nav": {
+    "about": "Sobre mí",
+    "expertise": "Especialización",
+    "projects": "Proyectos",
+    "articles": "Artículos",
+    "contact": "Contacto",
+    "downloadCv": "Descargar CV"
+  },
+  "hero": {
+    "status": "Disponible para colaboraciones remotas seleccionadas",
+    "eyebrow": "Mustafa Bekirov",
+    "title": "Creo y mejoro productos iOS nativos para startups y equipos de producto.",
+    "lead": "Ayudo a startups y equipos de producto a crear, perfeccionar y publicar aplicaciones iOS nativas con Swift, SwiftUI y UIKit.",
+    "ctaPrimary": "Iniciar una conversación",
+    "ctaSecondary": "Ver trabajo seleccionado",
+    "profile": {
+      "title": "Mustafa Bekirov",
+      "role": "Desarrollador iOS",
+      "text": "Creo y publico productos iOS nativos para startups y equipos de producto."
+    },
+    "floats": [
+      { "label": "SwiftUI", "category": "Interfaz", "text": "Interfaces declarativas para productos iOS escalables y fáciles de mantener." },
+      { "label": "Swift", "category": "Lenguaje", "text": "Swift moderno con concurrencia y código orientado a producción." },
+      { "label": "Arquitectura", "category": "Estructura", "text": "Estructura clara para productos que necesitan crecer con el tiempo." },
+      { "label": "Integración API", "category": "Servicios", "text": "Autenticación, flujos de datos con el backend y servicios de terceros." },
+      { "label": "Rendimiento", "category": "Calidad", "text": "Arranque más rápido, menor sobrecarga e interacción más fluida." },
+      { "label": "Seguridad", "category": "Confianza", "text": "Flujos móviles más seguros para fintech, cripto y datos de usuario." },
+      { "label": "AI / LLM", "category": "Inteligencia", "text": "Integración de capacidades modernas de IA en productos iOS nativos." },
+      { "label": "CI/CD", "category": "Entrega", "text": "TestFlight, builds repetibles y flujos de trabajo listos para publicar." }
+    ]
+  },
+  "about": {
+    "eyebrow": "Sobre mí",
+    "heading": "Construyo productos móviles, no solo funcionalidades.",
+    "p1": "Construyo y evoluciono productos iOS nativos para startups y equipos de producto, cubriendo implementación, arquitectura, integración de APIs, flujos de publicación y colaboración multidisciplinar.",
+    "p2": "Valoro el código Swift mantenible, la comunicación clara y una entrega confiable. Mi objetivo es alinear el trabajo de ingeniería con las necesidades del producto y entregar funcionalidades que sigan siendo fiables en producción.",
+    "downloadCv": "Descargar CV",
+    "values": [
+      {
+        "title": "El contexto de producto primero",
+        "text": "Empiezo por entender el objetivo del usuario, las restricciones del negocio y cómo encaja una funcionalidad en el producto, antes de escribir código."
+      },
+      {
+        "title": "Ingeniería mantenible",
+        "text": "Escribo código Swift claro y testeable con una arquitectura sensata, para que el producto pueda ampliarse y mantenerse con el tiempo."
+      },
+      {
+        "title": "Entrega confiable",
+        "text": "Comunico con claridad, atiendo los casos límite y preparo el trabajo con cuidado para QA, TestFlight y el lanzamiento en la App Store."
+      }
+    ]
+  },
+  "projects": {
+    "eyebrow": "Proyectos",
+    "heading": "Trabajo seleccionado",
+    "lead": "Trabajo iOS seleccionado en productos de consumo, fintech, cripto y equipos de plataforma.",
+    "items": [
+      {
+        "desc": "Una plataforma de hockey de marca blanca entregada como 15 aplicaciones desde una única base de código, construida sobre flujos de datos GraphQL, UI gestionada por CMS y autenticación con Auth0.",
+        "scope": "Base de código compartida, UI gestionada por CMS, arquitectura multi-tenant",
+        "alt": "Captura de pantalla de la app Elite Prospects Hockey Stats"
+      },
+      {
+        "desc": "Una app fintech para tarjetas empresariales y flujos de pago, construida con SwiftUI y TCA para dar soporte a flujos seguros y una entrega escalable.",
+        "scope": "Arquitectura TCA, flujos de pago seguros, CI/CD",
+        "alt": "Captura de pantalla de la app Wallester business"
+      },
+      {
+        "desc": "Un monedero cripto de autocustodia para la gestión segura de activos digitales, con énfasis en la claridad, la confianza y la seguridad propias de iOS nativo.",
+        "scope": "Flujos del monedero, almacenamiento seguro, publicación en la App Store",
+        "alt": "Captura de pantalla del monedero cripto Braavos"
+      },
+      {
+        "desc": "Una app de tenis para iOS impulsada por IA que convierte datos de entrenamiento estructurados en una experiencia de coaching pulida.",
+        "scope": "Integración de IA, funcionalidades basadas en API, publicación en la App Store",
+        "alt": "Captura de pantalla de la app Sevensix"
+      },
+      {
+        "desc": "Una herramienta iOS de planificación de plantas para crear, editar y visualizar distribuciones de interiores en 2D y en 3D en tiempo real.",
+        "scope": "Editor de planos 2D, dibujo con Canvas, renderizado 3D",
+        "alt": "Captura de pantalla de la app Floor Planner"
+      },
+      {
+        "desc": "App de fitness para iOS y Android con Kotlin Multiplatform, centrada en entrenamientos guiados, vídeo y suscripciones, desde la idea del cliente hasta su publicación en ambas tiendas.",
+        "scope": "Kotlin Multiplatform, lógica compartida, apps nativas para iOS y Android",
+        "alt": "Captura de pantalla de la app de fitness BURN"
+      },
+      {
+        "desc": "Una app VPN centrada en la conectividad segura, las suscripciones y un onboarding fiable.",
+        "scope": "Flujos de conexión, suscripciones, estabilidad",
+        "alt": "Captura de pantalla de la app Super VPN"
+      },
+      {
+        "desc": "Un juego de simulación de negocios construido alrededor de sistemas de progresión, monetización e interacción basada en toques.",
+        "scope": "Mecánicas de juego, StoreKit, ciclo de publicación",
+        "alt": "Captura de pantalla de la app Business Empire"
+      },
+      {
+        "desc": "Una app de preparación para el examen de conducir con flujos de estudio estructurados, seguimiento del progreso y datos de aprendizaje sincronizados.",
+        "scope": "Flujos de aprendizaje, persistencia local, arquitectura de sincronización",
+        "alt": "Captura de pantalla de la app DriverPro"
+      }
+    ]
+  },
+  "expertise": {
+    "eyebrow": "Especialización",
+    "heading": "En qué puedo ayudar",
+    "items": [
+      {
+        "title": "Desarrollo de productos iOS",
+        "text": "Construcción de funcionalidades y aplicaciones iOS nativas con Swift, SwiftUI y UIKit, desde la implementación hasta la publicación en producción."
+      },
+      {
+        "title": "Arquitectura y refactorización",
+        "text": "Mejora de la estructura del código, clarificación de responsabilidades y productos más fáciles de mantener y ampliar."
+      },
+      {
+        "title": "Integración de APIs y servicios",
+        "text": "Integración de APIs REST, autenticación, analítica, notificaciones push, Firebase y SDKs externos."
+      },
+      {
+        "title": "Rendimiento y estabilidad",
+        "text": "Investigación de cuellos de botella, reducción de trabajo innecesario, mejora del tiempo de arranque y un comportamiento más predecible de la aplicación."
+      },
+      {
+        "title": "CI/CD y publicación en la App Store",
+        "text": "Preparación de pipelines de build repetibles, distribuciones en TestFlight, múltiples entornos y lanzamientos en la App Store."
+      },
+      {
+        "title": "Desarrollo sobre productos existentes",
+        "text": "Incorporación a equipos ya establecidos, comprensión de bases de código existentes y entrega de nueva funcionalidad sin desestabilizar el producto."
+      }
+    ]
+  },
+  "stack": {
+    "eyebrow": "Stack",
+    "heading": "Tecnologías principales",
+    "lead": "Un conjunto concreto de tecnologías y prácticas que utilizo para construir, mejorar y publicar productos iOS nativos.",
+    "groups": [
+      { "title": "Fundamentos de iOS" },
+      { "title": "Arquitectura" },
+      { "title": "Datos e integraciones" },
+      { "title": "Calidad y rendimiento" },
+      { "title": "Entrega y herramientas" }
+    ]
+  },
+  "experience": {
+    "eyebrow": "Experiencia",
+    "heading": "Experiencia con productos móviles complejos",
+    "lead": "Tengo experiencia trabajando en productos móviles que requieren múltiples configuraciones de app, ajustes según el entorno, contenido gestionado por API y flujos de publicación coordinados. Esto incluye colaboración con backend, QA, diseño, DevOps y stakeholders de producto en equipos distribuidos.",
+    "items": [
+      "Múltiples configuraciones de app iOS",
+      "Arquitectura de marca blanca",
+      "Configuraciones según el entorno",
+      "Contenido gestionado por API",
+      "Autenticación y analítica",
+      "TestFlight y flujos de publicación",
+      "Colaboración en equipos distribuidos",
+      "Soporte de aplicaciones en producción"
+    ]
+  },
+  "process": {
+    "eyebrow": "Proceso",
+    "heading": "Una forma clara de trabajar",
+    "items": [
+      { "title": "Entender", "text": "Aclaro el objetivo del producto, el contexto técnico, las restricciones y el resultado esperado." },
+      { "title": "Planificar", "text": "Divido el trabajo en un plan de implementación práctico e identifico riesgos potenciales desde el principio." },
+      { "title": "Construir", "text": "Implemento la solución, comunico el progreso y verifico los casos límite importantes." },
+      { "title": "Entregar", "text": "Preparo la funcionalidad para las pruebas, el lanzamiento y el mantenimiento futuro." }
+    ]
+  },
+  "writing": {
+    "eyebrow": "Artículos",
+    "heading": "Artículos sobre desarrollo iOS",
+    "items": [
+      {
+        "category": "Seguridad",
+        "desc": "Una guía para construir apps iOS más seguras con patrones modernos de seguridad en Swift y prácticas orientadas a producción.",
+        "alt": "Portada del artículo Security in Swift"
+      },
+      {
+        "category": "Caché",
+        "desc": "Una mirada práctica a la estrategia de caché en iOS: cómo se almacenan, actualizan y sirven los datos cuando la red es lenta o no está disponible.",
+        "alt": "Portada del artículo The Coffee Shop Problem"
+      },
+      {
+        "category": "Memoria y ARC",
+        "desc": "Encontrar y corregir fugas de memoria relacionadas con ARC en SwiftUI: ciclos de retención, referencias fuertes y depuración con Instruments.",
+        "alt": "Portada del artículo Fixing Memory Leaks in a SwiftUI App"
+      },
+      {
+        "category": "IA y ML",
+        "desc": "Integración de Core ML y LLMs en apps iOS nativas: patrones prácticos para añadir inteligencia en el dispositivo y funcionalidades de producto más inteligentes.",
+        "alt": "Portada del artículo How iOS Developers Can Use AI in Their Projects"
+      },
+      {
+        "category": "Fundamentos de Swift",
+        "desc": "Sintaxis y motivación de los genéricos en Swift: por qué existen, cómo funcionan y cómo usarlos con claridad en proyectos SwiftUI.",
+        "alt": "Portada del artículo Generics in Swift"
+      },
+      {
+        "category": "Concurrencia",
+        "desc": "Uso de async/await en aplicaciones iOS para un código asíncrono más limpio y una ejecución más predecible.",
+        "alt": "Portada del artículo Swift Concurrency"
+      }
+    ]
+  },
+  "contact": {
+    "eyebrow": "Contacto",
+    "heading": "Abierto a proyectos de producto con sentido",
+    "lead": "Si estás construyendo o mejorando un producto iOS, cuéntame el contexto y en qué necesitas ayuda. Te responderé con un siguiente paso claro.",
+    "ctaPrimary": "Escribir por Telegram",
+    "ctaSecondary": "Enviar un correo",
+    "note": "Abierto a contratos remotos, equipos de producto y colaboraciones seleccionadas a largo plazo."
+  },
+  "footer": {
+    "role": "Desarrollador iOS e Ingeniero de Producto Móvil",
+    "terms": "Términos de uso",
+    "privacy": "Política de privacidad",
+    "copyright": "© {year} Mustafa Bekirov. Todos los derechos reservados."
+  },
+  "legal": {
+    "privacyTitle": "Política de privacidad",
+    "termsTitle": "Términos de uso"
+  }
+}

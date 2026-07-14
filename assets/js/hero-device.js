@@ -61,7 +61,11 @@
         resetProgress();
     }
 
+    var visualBound = false;
+
     function bindChip(chip, index) {
+        if (chip.dataset.heroBound === '1') return;
+        chip.dataset.heroBound = '1';
         var slideIndex = index + 1;
 
         chip.addEventListener('click', function () {
@@ -88,6 +92,8 @@
     }
 
     function bindDot(dot, index) {
+        if (dot.dataset.heroBound === '1') return;
+        dot.dataset.heroBound = '1';
         dot.addEventListener('click', function () {
             goTo(index);
             startTimer();
@@ -106,7 +112,8 @@
         dots.forEach(bindDot);
 
         var visual = document.querySelector('.hero__visual');
-        if (visual) {
+        if (visual && !visualBound) {
+            visualBound = true;
             visual.addEventListener('mouseenter', function () {
                 if (reducedMotion) return;
                 paused = true;
