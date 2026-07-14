@@ -35,17 +35,31 @@ jobs:
         env:
           GA_MEASUREMENT_ID: ${{ secrets.GA_MEASUREMENT_ID }}
         run: |
-          if [ -n "$GA_MEASUREMENT_ID" ]; then
-            node -e "
-              const fs = require('fs');
-              const file = 'assets/js/config.js';
-              const content = fs.readFileSync(file, 'utf8').replace(
-                /gaMeasurementId:\\s*''/,
-                \"gaMeasurementId: '\" + process.env.GA_MEASUREMENT_ID + \"'\"
-              );
-              fs.writeFileSync(file, content);
-            "
-          fi
+          node -e "
+            const fs = require('fs');
+            const file = 'assets/js/config.js';
+            const id = (process.env.GA_MEASUREMENT_ID || '').trim();
+            if (!id) {
+              console.log('::warning title=GA4 disabled::GA_MEASUREMENT_ID secret is not set. Analytics will be disabled in this deploy.');
+              process.exit(0);
+            }
+            if (!/^G-[A-Z0-9]+$/i.test(id)) {
+              console.error('::error::GA_MEASUREMENT_ID must be a GA4 web stream ID like G-XXXXXXXXXX. Received: ' + id);
+              process.exit(1);
+            }
+            const content = fs.readFileSync(file, 'utf8');
+            if (!/gaMeasurementId:\s*''/.test(content)) {
+              console.error('::error::Expected empty gaMeasurementId placeholder in assets/js/config.js');
+              process.exit(1);
+            }
+            const updated = content.replace(/gaMeasurementId:\s*''/, \"gaMeasurementId: '\" + id + \"'\");
+            fs.writeFileSync(file, updated);
+            if (!updated.includes(\"gaMeasurementId: '\" + id + \"'\")) {
+              console.error('::error::Failed to write GA measurement ID into assets/js/config.js');
+              process.exit(1);
+            }
+            console.log('GA4 measurement ID injected for deploy.');
+          "
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact

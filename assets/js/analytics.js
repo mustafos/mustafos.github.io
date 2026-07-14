@@ -109,6 +109,10 @@
     function init() {
         initConsentDefaults();
         bindTracking();
+
+        if (location.hostname.indexOf('mustafabekirov.com') !== -1 && !getMeasurementId()) {
+            console.warn('[Analytics] GA measurement ID is missing. Set GitHub secret GA_MEASUREMENT_ID and redeploy from master.');
+        }
     }
 
     init();
