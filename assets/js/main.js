@@ -1,129 +1,206 @@
-/* ----- NAVIGATION BAR FUNCTION ----- */
-function myMenuFunction(){
-    var menuBtn = document.getElementById("myNavMenu");
-    
-    if(menuBtn.className === "nav-menu"){
-        menuBtn.className += " responsive";
-    } else {
-        menuBtn.className = "nav-menu";
+(function () {
+    'use strict';
+
+    document.documentElement.classList.add('js');
+
+    var header = document.getElementById('header');
+    var menuToggle = document.getElementById('menu-toggle');
+    var mobileDrawer = document.getElementById('mobile-drawer');
+    var yearEl = document.getElementById('year');
+    var navSections = document.querySelectorAll('[data-nav-section]');
+    var navLinks = document.querySelectorAll('[data-nav]');
+    var mobileLinks = document.querySelectorAll('.mobile-drawer__link[href^="#"]');
+
+    if (yearEl) {
+        yearEl.textContent = new Date().getFullYear();
     }
-}
 
-/* ----- ADD SHADOW ON NAVIGATION BAR WHILE SCROLLING ----- */
-window.onscroll = function() {headerShadow()};
-
-function headerShadow() {
-    const navHeader =document.getElementById("header");
-    
-    if (document.body.scrollTop > 50 || document.documentElement.scrollTop >  50) {
-        
-        navHeader.style.boxShadow = "0 1px 6px rgba(0, 0, 0, 0.1)";
-        navHeader.style.height = "70px";
-        navHeader.style.lineHeight = "70px";
-        
-    } else {
-        
-        navHeader.style.boxShadow = "none";
-        navHeader.style.height = "90px";
-        navHeader.style.lineHeight = "90px";
-        
+    function openDrawer() {
+        if (!menuToggle || !mobileDrawer) return;
+        menuToggle.setAttribute('aria-expanded', 'true');
+        menuToggle.setAttribute('aria-label', window.I18n ? window.I18n.t('common.closeMenu') : 'Close menu');
+        mobileDrawer.removeAttribute('hidden');
+        document.body.classList.add('is-locked');
     }
-}
 
-/* ----- TYPING EFFECT ----- */
-var typingEffect = new Typed(".typedText",{
-    strings : ["iOS","Swift","Mobile", "Apple"],
-    loop : true,
-    typeSpeed : 100,
-    backSpeed : 80,
-    backDelay : 2000
-})
+    function closeDrawer() {
+        if (!menuToggle || !mobileDrawer) return;
+        menuToggle.setAttribute('aria-expanded', 'false');
+        menuToggle.setAttribute('aria-label', window.I18n ? window.I18n.t('common.openMenu') : 'Open menu');
+        mobileDrawer.setAttribute('hidden', '');
+        document.body.classList.remove('is-locked');
+    }
 
-/* ----- ## -- SCROLL REVEAL ANIMATION -- ## ----- */
-const sr = ScrollReveal({
-origin: 'top',
-distance: '80px',
-duration: 2000,
-reset: true
-})
+    if (menuToggle) {
+        menuToggle.addEventListener('click', function () {
+            if (menuToggle.getAttribute('aria-expanded') === 'true') {
+                closeDrawer();
+            } else {
+                openDrawer();
+            }
+        });
+    }
 
-/* -- HOME -- */
-sr.reveal('.featured-text-card',{})
-sr.reveal('.featured-name',{delay: 100})
-sr.reveal('.featured-text-info',{delay: 200})
-sr.reveal('.featured-text-btn',{delay: 200})
-sr.reveal('.social_icons',{delay: 200})
-sr.reveal('.featured-image',{delay: 300})
+    mobileLinks.forEach(function (link) {
+        link.addEventListener('click', closeDrawer);
+    });
 
-
-/* -- PROJECT BOX -- */
-sr.reveal('.project-box',{interval: 200})
-
-function toggleProjectInfo(projectBox) {
-    const projectImage = projectBox.querySelector('.project-image');
-    const projectText = projectBox.querySelector('h3, label');
-
-    projectImage.classList.toggle('hidden');
-    projectText.classList.toggle('hidden');
-}
-
-function openURL(url) {
-    window.open(url, '_blank');
-}
-
-/* -- HEADINGS -- */
-sr.reveal('.top-header',{})
-
-/* ----- ## -- SCROLL REVEAL LEFT_RIGHT ANIMATION -- ## ----- */
-
-/* -- ABOUT INFO & CONTACT INFO -- */
-const srLeft = ScrollReveal({
-origin: 'left',
-distance: '80px',
-duration: 2000,
-reset: true
-})
-
-srLeft.reveal('.about-info',{delay: 100})
-srLeft.reveal('.contact-info',{delay: 100})
-
-/* -- ABOUT SKILLS & FORM BOX -- */
-const srRight = ScrollReveal({
-origin: 'right',
-distance: '80px',
-duration: 2000,
-reset: true
-})
-
-srRight.reveal('.skills-box',{delay: 100})
-srRight.reveal('.form-control',{delay: 100})
-
-/* -- GO BACK BUTTON -- */
-function goBack() {
-    window.history.back();
-}
-
-/* ----- CHANGE ACTIVE LINK ----- */
-const sections = document.querySelectorAll('section[id]')
-
-function scrollActive() {
-    const scrollY = window.scrollY;
-    
-    sections.forEach(current =>{
-        const sectionHeight = current.offsetHeight,
-        sectionTop = current.offsetTop - 50,
-        sectionId = current.getAttribute('id')
-        
-        if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-            
-            document.querySelector('.nav-menu a[href*=' + sectionId + ']').classList.add('active-link')
-            
-        }  else {
-            
-            document.querySelector('.nav-menu a[href*=' + sectionId + ']').classList.remove('active-link')
-            
+    document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && menuToggle && menuToggle.getAttribute('aria-expanded') === 'true') {
+            closeDrawer();
+            menuToggle.focus();
         }
-    })
+    });
+
+    window.addEventListener('resize', function () {
+        if (window.innerWidth >= 960) closeDrawer();
+    });
+
+    function onScroll() {
+        if (header) {
+            header.classList.toggle('is-scrolled', window.scrollY > 16);
+        }
+    }
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+
+    var navMap = {
+        hero: null,
+        about: 'about',
+        projects: 'projects',
+        expertise: 'expertise',
+        stack: 'expertise',
+        focus: 'expertise',
+        process: 'about',
+        articles: 'articles',
+        contact: 'contact'
+    };
+
+    function setActive(navId) {
+        navLinks.forEach(function (link) {
+            var active = link.getAttribute('data-nav') === navId;
+            link.classList.toggle('is-active', active);
+            if (active) {
+                link.setAttribute('aria-current', 'true');
+            } else {
+                link.removeAttribute('aria-current');
+            }
+        });
+    }
+
+    if ('IntersectionObserver' in window && navSections.length) {
+        var visible = new Map();
+
+        var navObserver = new IntersectionObserver(
+            function (entries) {
+                entries.forEach(function (entry) {
+                    visible.set(entry.target.id, entry.isIntersecting ? entry.intersectionRatio : 0);
+                });
+
+                var bestId = null;
+                var bestRatio = 0;
+
+                visible.forEach(function (ratio, id) {
+                    if (ratio > bestRatio) {
+                        bestRatio = ratio;
+                        bestId = id;
+                    }
+                });
+
+                if (bestId && navMap[bestId]) {
+                    setActive(navMap[bestId]);
+                } else if (bestId === 'hero') {
+                    setActive(null);
+                }
+            },
+            { rootMargin: '-40% 0px -45% 0px', threshold: [0, 0.15, 0.35, 0.55] }
+        );
+
+        navSections.forEach(function (section) {
+            navObserver.observe(section);
+        });
+    }
+
+    var revealEls = document.querySelectorAll('.reveal');
+    var reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    function observeReveal(el) {
+        if (!revealObserver || reducedMotion) {
+            el.classList.add('is-visible');
+            return;
+        }
+        revealObserver.observe(el);
+    }
+
+    var revealObserver = null;
+
+    if ('IntersectionObserver' in window && !reducedMotion) {
+        revealObserver = new IntersectionObserver(
+            function (entries) {
+                entries.forEach(function (entry) {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        revealObserver.unobserve(entry.target);
+                    }
+                });
+            },
+            { threshold: 0.12, rootMargin: '0px 0px -32px 0px' }
+        );
+    }
+
+    revealEls.forEach(observeReveal);
+    window.__observeReveal = observeReveal;
+
+    function boot() {
+        if (typeof window.renderSiteSections === 'function') {
+            window.renderSiteSections();
+            document.querySelectorAll('.reveal').forEach(function (el) {
+                if (!el.classList.contains('is-visible')) {
+                    observeReveal(el);
+                }
+            });
+        }
+    }
+
+    if (window.I18n) {
+        window.I18n.init().then(boot);
+        document.addEventListener('localechange', function () {
+            if (typeof window.renderSiteSections === 'function') {
+                window.renderSiteSections();
+            }
+            mobileLinks.forEach(function (link) {
+                link.removeEventListener('click', closeDrawer);
+                link.addEventListener('click', closeDrawer);
+            });
+        });
+    } else {
+        boot();
+    }
+})();
+
+function goBack() {
+    if (window.history.length > 1) {
+        window.history.back();
+    } else {
+        var locale = window.I18n ? window.I18n.getLocale() : 'en';
+        window.location.href = locale === 'en' ? 'index.html' : 'index.html?lang=' + locale;
+    }
 }
 
-window.addEventListener('scroll', scrollActive)
+function initLegalPage() {
+    if (!window.I18n) return;
+    window.I18n.init().then(function () {
+        var titleKey = document.body.getAttribute('data-legal-title');
+        if (titleKey) {
+            document.title = window.I18n.t(titleKey) + ' — Mustafa Bekirov';
+        }
+        var locale = window.I18n.getLocale();
+        var suffix = locale === 'en' ? '' : '?lang=' + locale;
+        document.querySelectorAll('a[href="index.html"]').forEach(function (link) {
+            link.setAttribute('href', 'index.html' + suffix);
+        });
+        var yearEl = document.getElementById('year');
+        if (yearEl) yearEl.textContent = new Date().getFullYear();
+    });
+}
