@@ -71,12 +71,12 @@
     var navMap = {
         hero: null,
         about: 'about',
+        projects: 'projects',
         expertise: 'expertise',
         stack: 'expertise',
-        projects: 'projects',
-        focus: 'projects',
-        articles: 'articles',
+        focus: 'expertise',
         process: 'about',
+        articles: 'articles',
         contact: 'contact'
     };
 
