@@ -9,9 +9,9 @@ const root = path.join(__dirname, '..');
 const LOCALES = ['en', 'cs', 'es', 'uk', 'sk'];
 const EXPECTED = {
   en: {
-    heroTitle: 'I build and improve native iOS products for startups and product teams.',
-    profileRole: 'iOS Developer',
-    profileText: 'I build and ship native iOS products for startups and product teams.',
+    heroTitle: 'I build and ship native iOS products for startups and product teams.',
+    profileRole: 'Mobile Product Engineer',
+    profileText: 'Platform, fintech, and cross-platform delivery.',
     navAbout: 'About',
     floatLabel: 'Architecture',
     floatCategory: 'Structure',
@@ -60,12 +60,10 @@ function createDom() {
     'iphone-slides': '',
     'iphone-dots': '',
     'hero-floats': '',
-    'expertise-grid': '',
-    'tech-grid': '',
     'projects-grid': '',
-    'focus-grid': '',
-    'articles-grid': '',
-    'process-track': ''
+    'archive-grid': '',
+    'writing-featured': '',
+    'writing-secondary': ''
   };
 
   const elements = new Map();

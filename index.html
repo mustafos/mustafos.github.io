@@ -85,10 +85,9 @@
 
             <nav class="header__nav" data-i18n-attr="aria-label:common.mainNav" aria-label="Main navigation">
                 <ul class="header__links" id="nav-links">
+                    <li><a href="#projects" class="header__link" data-nav="projects" data-i18n="nav.work">Work</a></li>
                     <li><a href="#about" class="header__link" data-nav="about" data-i18n="nav.about">About</a></li>
-                    <li><a href="#expertise" class="header__link" data-nav="expertise" data-i18n="nav.expertise">Expertise</a></li>
-                    <li><a href="#projects" class="header__link" data-nav="projects" data-i18n="nav.projects">Projects</a></li>
-                    <li><a href="#articles" class="header__link" data-nav="articles" data-i18n="nav.articles">Articles</a></li>
+                    <li><a href="#articles" class="header__link" data-nav="articles" data-i18n="nav.articles">Writing</a></li>
                     <li><a href="#contact" class="header__link" data-nav="contact" data-i18n="nav.contact">Contact</a></li>
                 </ul>
             </nav>
@@ -118,10 +117,9 @@
     <div class="mobile-drawer" id="mobile-drawer" hidden>
         <nav data-i18n-attr="aria-label:common.mobileNav" aria-label="Mobile navigation">
             <ul class="mobile-drawer__list">
+                <li><a href="#projects" class="mobile-drawer__link" data-nav="projects" data-i18n="nav.work">Work</a></li>
                 <li><a href="#about" class="mobile-drawer__link" data-nav="about" data-i18n="nav.about">About</a></li>
-                <li><a href="#expertise" class="mobile-drawer__link" data-nav="expertise" data-i18n="nav.expertise">Expertise</a></li>
-                <li><a href="#projects" class="mobile-drawer__link" data-nav="projects" data-i18n="nav.projects">Projects</a></li>
-                <li><a href="#articles" class="mobile-drawer__link" data-nav="articles" data-i18n="nav.articles">Articles</a></li>
+                <li><a href="#articles" class="mobile-drawer__link" data-nav="articles" data-i18n="nav.articles">Writing</a></li>
                 <li><a href="#contact" class="mobile-drawer__link" data-nav="contact" data-i18n="nav.contact">Contact</a></li>
                 <li><a href="assets/pdf/BekirovCV.pdf" class="mobile-drawer__link" download data-i18n="nav.downloadCv" data-track="click_download_cv" data-track-location="mobile-drawer">Download CV</a></li>
             </ul>
@@ -139,8 +137,9 @@
                         <span data-i18n="hero.status">Available for selected remote opportunities</span>
                     </p>
                     <p class="eyebrow" data-i18n="hero.eyebrow">Mustafa Bekirov</p>
-                    <h1 class="display" data-i18n="hero.title">I build and improve native iOS products for startups and product teams.</h1>
-                    <p class="lead" data-i18n="hero.lead">I help startups and product teams build, refine, and release native iOS applications with Swift, SwiftUI, and UIKit.</p>
+                    <h1 class="display" data-i18n="hero.title">I build and ship native iOS products for startups and product teams.</h1>
+                    <p class="hero__proof" data-i18n="hero.proof">White-label platforms, fintech, and crypto — from architecture to App Store release.</p>
+                    <p class="lead" data-i18n="hero.lead">Swift, SwiftUI, and UIKit across complex product environments.</p>
                     <div class="hero__cta">
                         <a href="https://t.me/mustafosID" class="btn btn--primary" target="_blank" rel="noopener noreferrer" data-track="click_telegram" data-track-location="hero">
                             <span data-i18n="hero.ctaPrimary">Start a conversation</span>
@@ -172,17 +171,35 @@
             </div>
         </section>
 
+        <!-- Projects -->
+        <section class="section" id="projects" data-nav-section>
+            <div class="wrap">
+                <header class="section__header section__header--compact reveal">
+                    <p class="eyebrow" data-i18n="projects.eyebrow">Selected work</p>
+                    <h2 class="heading" data-i18n="projects.heading">Selected work</h2>
+                    <p class="section__lead section__lead--short" data-i18n="projects.lead">Platform, fintech, and crypto.</p>
+                </header>
+                <div class="showcase-grid" id="projects-grid"></div>
+
+                <div class="work-rail reveal" role="region" aria-labelledby="work-rail-heading">
+                    <h3 class="work-rail__title" id="work-rail-heading" data-i18n="projects.moreHeading">More shipped products</h3>
+                    <div class="work-rail__viewport">
+                        <div class="work-rail__track" id="archive-grid" tabindex="0" role="list"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- About -->
         <section class="section" id="about" data-nav-section>
             <div class="wrap">
                 <header class="section__header reveal">
                     <p class="eyebrow" data-i18n="about.eyebrow">About</p>
-                    <h2 class="heading" data-i18n="about.heading">Engineering mobile products, not just features.</h2>
+                    <h2 class="heading" data-i18n="about.heading">Product-minded iOS engineering</h2>
                 </header>
                 <div class="split reveal">
                     <div class="prose">
-                        <p data-i18n="about.p1">I build and evolve native iOS products for startups and product teams, across implementation, architecture, API integration, release workflows, and cross-functional collaboration.</p>
-                        <p data-i18n="about.p2">I value maintainable Swift code, clear communication, and dependable delivery. My goal is to align engineering work with product needs and ship features that remain reliable in production.</p>
+                        <p data-i18n="about.p1">I join startups and product teams to build, improve, and release native iOS work that holds up in production — from implementation and architecture to API integration and App Store delivery.</p>
                         <a href="assets/pdf/BekirovCV.pdf" class="btn btn--ghost" download data-i18n="about.downloadCv" data-track="click_download_cv" data-track-location="about">Download CV</a>
                     </div>
                     <div class="stack">
@@ -203,72 +220,14 @@
             </div>
         </section>
 
-        <!-- Projects -->
-        <section class="section" id="projects" data-nav-section>
-            <div class="wrap">
-                <header class="section__header reveal">
-                    <p class="eyebrow" data-i18n="projects.eyebrow">Projects</p>
-                    <h2 class="heading" data-i18n="projects.heading">Selected work</h2>
-                    <p class="section__lead" data-i18n="projects.lead">Selected iOS product work across consumer, fintech, crypto, and platform teams.</p>
-                </header>
-                <div class="grid grid--3" id="projects-grid"></div>
-            </div>
-        </section>
-
-        <!-- Expertise -->
-        <section class="section" id="expertise" data-nav-section>
-            <div class="wrap">
-                <header class="section__header reveal">
-                    <p class="eyebrow" data-i18n="expertise.eyebrow">Expertise</p>
-                    <h2 class="heading" data-i18n="expertise.heading">Where I can help</h2>
-                </header>
-                <div class="grid grid--3" id="expertise-grid"></div>
-            </div>
-        </section>
-
-        <!-- Stack -->
-        <section class="section section--supporting" id="stack" data-nav-section>
-            <div class="wrap">
-                <header class="section__header section__header--center reveal">
-                    <p class="eyebrow" data-i18n="stack.eyebrow">Stack</p>
-                    <h2 class="heading" data-i18n="stack.heading">Core technologies</h2>
-                    <p class="section__lead section__lead--wide" data-i18n="stack.lead">A focused set of technologies and practices I use to build, improve, and ship native iOS products.</p>
-                </header>
-                <div class="grid grid--stack" id="tech-grid"></div>
-            </div>
-        </section>
-
-        <!-- Experience -->
-        <section class="section" id="focus" data-nav-section>
-            <div class="wrap">
-                <header class="section__header section__header--center reveal">
-                    <p class="eyebrow" data-i18n="experience.eyebrow">Experience</p>
-                    <h2 class="heading" data-i18n="experience.heading">Experience with complex mobile products</h2>
-                    <p class="section__lead section__lead--wide" data-i18n="experience.lead">I have experience working with mobile products that require multiple app configurations, environment-based setup, API-driven content, and coordinated release workflows. This includes collaboration with backend, QA, design, DevOps, and product stakeholders in distributed teams.</p>
-                </header>
-                <ul class="focus-grid" id="focus-grid"></ul>
-            </div>
-        </section>
-
-        <!-- Process -->
-        <section class="section" id="process" data-nav-section>
-            <div class="wrap">
-                <header class="section__header reveal">
-                    <p class="eyebrow" data-i18n="process.eyebrow">Process</p>
-                    <h2 class="heading" data-i18n="process.heading">A clear way of working</h2>
-                </header>
-                <div class="process-track" id="process-track"></div>
-            </div>
-        </section>
-
         <!-- Writing -->
-        <section class="section" id="articles" data-nav-section>
+        <section class="section section--supporting" id="articles" data-nav-section>
             <div class="wrap">
-                <header class="section__header reveal">
+                <header class="section__header section__header--compact reveal">
                     <p class="eyebrow" data-i18n="writing.eyebrow">Writing</p>
-                    <h2 class="heading" data-i18n="writing.heading">Writing about iOS development</h2>
                 </header>
-                <div class="grid grid--3" id="articles-grid"></div>
+                <div id="writing-featured"></div>
+                <div class="writing-secondary reveal" id="writing-secondary" role="list" aria-label="More articles"></div>
             </div>
         </section>
 

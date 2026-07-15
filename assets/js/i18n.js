@@ -244,36 +244,30 @@
         var fallback = getFallback();
         if (!base) return null;
 
+        function mergeList(baseList, path) {
+            if (!baseList) return [];
+            return baseList.map(function (item, i) {
+                return Object.assign({}, item, localizedSlice(null, path, i));
+            });
+        }
+
         return {
-            expertise: base.expertise.map(function (item, i) {
-                return Object.assign({}, item, localizedSlice(null, 'expertise.items', i));
-            }),
-            tech: base.tech.map(function (group, i) {
-                var loc = localizedSlice(null, 'stack.groups', i);
-                var fbTitle = fallback.stack && fallback.stack.groups && fallback.stack.groups[i];
-                return Object.assign({}, group, { title: loc.title || (fbTitle && fbTitle.title) || group.title });
-            }),
-            projects: base.projects.map(function (item, i) {
-                return Object.assign({}, item, localizedSlice(null, 'projects.items', i));
-            }),
-            focus: (messages.experience && messages.experience.items)
-                || (fallback.experience && fallback.experience.items)
-                || [],
-            articles: base.articles.map(function (item, i) {
-                return Object.assign({}, item, localizedSlice(null, 'writing.items', i));
-            }),
-            process: base.process.map(function (item, i) {
-                return Object.assign({}, item, localizedSlice(null, 'process.items', i));
-            }),
+            flagshipProjects: mergeList(base.flagshipProjects, 'projects.flagship'),
+            archiveProjects: mergeList(base.archiveProjects, 'projects.archive'),
+            featuredArticle: Object.assign(
+                {},
+                base.featuredArticle,
+                (getFallback().writing && getFallback().writing.featured) || {},
+                (messages.writing && messages.writing.featured) || {}
+            ),
+            moreArticles: mergeList(base.moreArticles, 'writing.more'),
             heroProfile: Object.assign(
                 {},
                 base.heroProfile,
                 (fallback.hero && fallback.hero.profile) || {},
                 (messages.hero && messages.hero.profile) || {}
             ),
-            heroFloats: base.heroFloats.map(function (item, i) {
-                return Object.assign({}, item, localizedSlice(null, 'hero.floats', i));
-            })
+            heroFloats: mergeList(base.heroFloats, 'hero.floats')
         };
     }
 
