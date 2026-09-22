@@ -102,7 +102,7 @@ window.__LOCALE_FALLBACK={
       {
         "positioning": "White-label hockey platform — 15 App Store apps from one shared iOS codebase.",
         "outcome": "15 branded apps from one shared codebase.",
-        "alt": "Elite Prospects Hockey Stats app screenshot"
+        "alt": "HockeyAllsvenskan app screenshot"
       },
       {
         "positioning": "Business fintech app — secure card and payment flows with SwiftUI and TCA.",

@@ -119,7 +119,7 @@ window.__LOCALES = {
         {
           "desc": "A white-label hockey platform delivered as 15 apps from one shared codebase, built around GraphQL data flows, CMS-driven UI, and Auth0 authentication.",
           "scope": "Shared codebase, CMS-driven UI, multi-tenant architecture",
-          "alt": "Elite Prospects Hockey Stats app screenshot"
+          "alt": "HockeyAllsvenskan app screenshot"
         },
         {
           "desc": "A fintech app for business card and payment workflows, built with SwiftUI and TCA to support secure flows and scalable delivery.",
@@ -427,7 +427,7 @@ window.__LOCALES = {
         {
           "desc": "White-label hokejová platforma dodaná jako 15 aplikací z jedné sdílené codebase, postavená na GraphQL datových tocích, UI řízeném přes CMS a autentizaci Auth0.",
           "scope": "Sdílená codebase, UI řízené CMS, multi-tenantní architektura",
-          "alt": "Snímek obrazovky aplikace Elite Prospects Hockey Stats"
+          "alt": "Snímek obrazovky aplikace HockeyAllsvenskan"
         },
         {
           "desc": "Fintech aplikace pro firemní karty a platební procesy, postavená na SwiftUI a TCA s důrazem na bezpečné toky a škálovatelné dodávání.",
@@ -735,7 +735,7 @@ window.__LOCALES = {
         {
           "desc": "Una plataforma de hockey de marca blanca entregada como 15 aplicaciones desde una única base de código, construida sobre flujos de datos GraphQL, UI gestionada por CMS y autenticación con Auth0.",
           "scope": "Base de código compartida, UI gestionada por CMS, arquitectura multi-tenant",
-          "alt": "Captura de pantalla de la app Elite Prospects Hockey Stats"
+          "alt": "Captura de pantalla de la app HockeyAllsvenskan"
         },
         {
           "desc": "Una app fintech para tarjetas empresariales y flujos de pago, construida con SwiftUI y TCA para dar soporte a flujos seguros y una entrega escalable.",
@@ -1043,7 +1043,7 @@ window.__LOCALES = {
         {
           "desc": "White-label хокейна платформа, реалізована як 15 застосунків з єдиної спільної кодової бази, побудована на потоках даних GraphQL, інтерфейсі, керованому CMS, та автентифікації Auth0.",
           "scope": "Спільна кодова база, UI, керований CMS, мультитенантна архітектура",
-          "alt": "Знімок екрана застосунку Elite Prospects Hockey Stats"
+          "alt": "Знімок екрана застосунку HockeyAllsvenskan"
         },
         {
           "desc": "Фінтех-застосунок для корпоративних карток і платіжних процесів, створений на SwiftUI та TCA для підтримки безпечних потоків і масштабованої розробки.",
@@ -1351,7 +1351,7 @@ window.__LOCALES = {
         {
           "desc": "White-label hokejová platforma dodaná ako 15 aplikácií z jednej spoločnej codebase, postavená na GraphQL dátových tokoch, UI riadenom cez CMS a autentifikácii Auth0.",
           "scope": "Spoločná codebase, UI riadené CMS, multi-tenantná architektúra",
-          "alt": "Snímka obrazovky aplikácie Elite Prospects Hockey Stats"
+          "alt": "Snímka obrazovky aplikácie HockeyAllsvenskan"
         },
         {
           "desc": "Fintech aplikácia pre firemné karty a platobné procesy, postavená na SwiftUI a TCA s dôrazom na bezpečné toky a škálovateľné dodávanie.",

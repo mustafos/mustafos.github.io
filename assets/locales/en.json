@@ -100,7 +100,7 @@
       {
         "desc": "A white-label hockey platform delivered as 15 apps from one shared codebase, built around GraphQL data flows, CMS-driven UI, and Auth0 authentication.",
         "scope": "Shared codebase, CMS-driven UI, multi-tenant architecture",
-        "alt": "Elite Prospects Hockey Stats app screenshot"
+        "alt": "HockeyAllsvenskan app screenshot"
       },
       {
         "desc": "A fintech app for business card and payment workflows, built with SwiftUI and TCA to support secure flows and scalable delivery.",
