@@ -17,10 +17,10 @@ window.SITE_DATA = {
     ],
     projects: [
         {
-            title: 'Elite Prospects',
+            title: 'HockeyAllsvenskan',
             image: 'assets/images/project8.png',
             tags: ['SwiftUI', 'GraphQL', 'Auth0'],
-            url: 'https://apps.apple.com/app/id6737055644'
+            url: 'https://apps.apple.com/us/app/hockeyallsvenskan/id6808266347'
         },
         {
             title: 'Wallester',

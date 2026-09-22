@@ -100,7 +100,7 @@
       {
         "desc": "White-label hokejová platforma dodaná ako 15 aplikácií z jednej spoločnej codebase, postavená na GraphQL dátových tokoch, UI riadenom cez CMS a autentifikácii Auth0.",
         "scope": "Spoločná codebase, UI riadené CMS, multi-tenantná architektúra",
-        "alt": "Snímka obrazovky aplikácie Elite Prospects Hockey Stats"
+        "alt": "Snímka obrazovky aplikácie HockeyAllsvenskan"
       },
       {
         "desc": "Fintech aplikácia pre firemné karty a platobné procesy, postavená na SwiftUI a TCA s dôrazom na bezpečné toky a škálovateľné dodávanie.",

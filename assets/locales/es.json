@@ -100,7 +100,7 @@
       {
         "desc": "Una plataforma de hockey de marca blanca entregada como 15 aplicaciones desde una única base de código, construida sobre flujos de datos GraphQL, UI gestionada por CMS y autenticación con Auth0.",
         "scope": "Base de código compartida, UI gestionada por CMS, arquitectura multi-tenant",
-        "alt": "Captura de pantalla de la app Elite Prospects Hockey Stats"
+        "alt": "Captura de pantalla de la app HockeyAllsvenskan"
       },
       {
         "desc": "Una app fintech para tarjetas empresariales y flujos de pago, construida con SwiftUI y TCA para dar soporte a flujos seguros y una entrega escalable.",
